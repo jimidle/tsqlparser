@@ -1,0 +1,1 @@
+SELECT project_name FROM project WHERE budget*0.51 > 60000
