@@ -79,20 +79,19 @@ select_list
 		;
 
 select_element
-		: OPMUL														// Simply select all columns in the 'table'
-		| func_keyw_id OPEQ expression		// Assignment of column alias to something
-		| expression                      			// Your semantic phase should validate the expression and OPEQ etc
+		: OPMUL									// Simply select all columns in the 'table'
+		| func_keyw_id OPEQ expression		    // Assignment of column alias to something
+		| expression                     		// Your semantic phase should validate the expression and OPEQ etc
 			(
-				  ( ac=as_clause) 			// A function such as an aggregate or OVER functions
-				| DOT OPMUL				// All columns at a level such as table, view, table alias
-				| c=COLON COLON f=func_keyw_id				// Means we were actually parsing a udt CLR routine
+				  ( ac=as_clause) 			    // A function such as an aggregate or OVER functions
+				| DOT OPMUL				        // All columns at a level such as table, view, table alias
+				| c=COLON COLON f=func_keyw_id	// Means we were actually parsing a udt CLR routine
 				|
 			)
 		;
 
 as_clause
 		: // Watch out for SELECT 'x'\n Label, as may be ambiguous in parse
-
             AS? (func_keyw_id | SQ_LITERAL |DQ_LITERAL)
 		;
 

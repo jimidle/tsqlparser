@@ -68,8 +68,8 @@
                     <outputDirectory>${project.build.directory}/generated-sources/antlr4</outputDirectory>
                     <libDirectory>src/main/antlr4/ws/idle/parsers/tsql</libDirectory>
                     <includes>
-                        <include>**/tsqlparser.g4</include>
-                        <include>**/tsqltokens.g4</include>
+                        <include>**/TSqlParser.g4</include>
+                        <include>**/TSqlTokens.g4</include>
                     </includes>
                 </configuration>
                 <executions>

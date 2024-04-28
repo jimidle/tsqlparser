@@ -787,8 +787,8 @@ send_message_type
 set_statement
     : SET
         (
-              set_vars
-            | set_flags
+               set_flags
+            |  set_vars
         )
         SEMI?
     ;
@@ -800,8 +800,6 @@ set_flags
 
 common_flags_list
     : c+=common_flags (COMMA c+=common_flags)*
-
-
     ;
 
 common_flags
@@ -813,7 +811,6 @@ common_flags
 
 special_flags
     : DEADLOCK_PRIORITY
-
         (
               LOW
             | NORMAL
@@ -832,49 +829,17 @@ special_flags
     ;
 
 set_vars
-    : set_target
-      setOperators
-      set_source
-    ;
-
-setOperators
-    : OPEQ
-    | OPPLUSEQ
-    | OPMINUSEQ
-    | OPMULEQ
-    | OPDIVEQ
-    | OPMODEQ
-    | OPBANDEQ
-    | OPBOREQ
-    | OPBXOREQ
-    ;
-    
-set_target
-    : keyw_id
-        (
-            // Static property
-            //
-            COLON COLON keyw_id
-        )?
+    : set_source expression
     ;
 
 set_source
     : expression
-        (
-            // Static property
-            //
-            COLON COLON keyw_id
-        )?
-            (set_func_parms)?
-
     | CURSOR common_cursor_decl
     | DEFAULT
     ;
 
 set_func_parms
     : LPAREN e=expression_list RPAREN
-
-
     ;
 // End: SET
 ///////////////////////////////////////////////////////////
@@ -885,7 +850,7 @@ set_func_parms
 set_user
     : SETUSER
         (
-            keyw_id (WITH RESET)?
+            (keyw_id | SQ_LITERAL) (WITH RESET)?
         )?
     ;
 // End:
@@ -905,9 +870,7 @@ shutdown_statement
 //
 truncate_statement
     : TRUNCATE TABLE
-
         keyw_id
-
         SEMI?
     ;
 // End:
@@ -918,12 +881,10 @@ truncate_statement
 //
 update_statement
     : UPDATE
-
         (
               update_table
             | update_statistics
         )
-
         SEMI?
     ;
 
@@ -944,8 +905,6 @@ update_set
 
 update_set_list
     : u+=update_element (COMMA u+=update_element)*
-
-
     ;
 
 update_element
@@ -989,8 +948,6 @@ update_stats_with
 
 update_stats_streams
     : s+=uss_stream (COMMA s+=uss_stream)*
-
-
     ;
 
 uss_stream
