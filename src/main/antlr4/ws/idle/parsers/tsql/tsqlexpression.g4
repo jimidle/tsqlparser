@@ -7,66 +7,53 @@ parser grammar tsqlexpression;
 // it is used.
 
 // Expression is either used directly or used in a higher construct such as search_condition
+// Note that it accepts syntax that is not valid but looks valid to the parser. This is normal
+// practice, and your walker or semantic pass should catch these errors.
+//
+// For instance promitives such as ON or OFF are really only valid for setting options
+// in a SET statement, but the parser will accept them as valid expressions. Such as:
+//
+// SELECT A + ON
+//
+// This will also accept tings liek logical expression for set expressions, so you
+// must make sure that the expression is valid in the context in which it is used.
 //
 expression
-    : LPAREN expression RPAREN	// An expression with precedence
-    | (OPMINUS | OPPLUS | OPBNOT) expression
-    | keyw_id               // An identifier, which may take x.y.z form
-    | atoms
-    | money     			// A DECIMAL or integer, preceded by a currency symbol
-    | functions_and_vars	// Function calls and variable references
-    | paren_sub_query       // Subquery (though must be scalar for an expression, and this should be checked in your next phase)
-    | function              // Function call is not always valid, use your semantic checker to verify
-    | expression DOT expression
-    | someAllAny predicated_paren_sub_query
-    | expression op1=operators_prec_1 expression
-    | expression op2=operators_prec_2 expression
-    | expression (op3=operators_prec_3 | do=dodgy_operators)
-             expression
-    | expression op4=operators_prec_4 expression
-    | expression order_by_collate
-    | expression COLON COLON expression // Static property
-    ;
+    : LPAREN expression RPAREN	                                #exprPrecedence
+    | <assoc=right> expression (DOT expression)+                #exprDot
+    | <assoc=right> OPBNOT expression                           #exprBitNot
+    | <assoc=right> op=(OPMINUS | OPPLUS) expression            #exprUnary
+    | expression op=(OPMUL | OPDIV | OPMOD) expression          #exprOpPrec1
+    | expression op=(OPPLUS | OPMINUS) expression               #exprOpPrec2
+    | expression op=(OPBAND | OPBXOR | OPBOR) expression        #exprOpPrec3
+    | expression OPCAT expression                               #exprOpCat
+    | expression op=(OPSEQ | OPMULEQ | OPDIVEQ |
+                     OPMODEQ | OPBANDEQ | OPBOREQ | OPMINUSEQ
+                     | OPBXOREQ)
+                     expression                                 #exprOpPrec5
+    | expression op=(
+                          OPEQ | OPNE | OPGE | OPNGT | OPLE
+                        | OPLT | OPGT
+                        | OPNLT | OPNGT
+                    )
+                    expression                                  #exprOpPrec6
+    | expression op=(KNOT | BANG) expression                    #exprLogicNot
+    | expression op=KOR expression                              #exprLogicOr
+    | expression op=KAND expression                             #exprLogicAnd
 
-operators_prec_1
-    : OPMUL | OPDIV | OPMOD
-    ;
+    // Not expression opertors per-se, but used in expressions and recurse to expression
+    // They are labelled because they must all be labeled. But are likely better visited
+    // directly.
 
-operators_prec_2
-    : OPPLUS | OPMINUS
-    ;
-
-operators_prec_3
-    : OPSEQ | OPMULEQ | OPDIVEQ | OPMODEQ | OPBANDEQ | OPBOREQ | OPMINUSEQ | OPBXOREQ
-    | OPEQ | OPNE | OPGE | OPNGT | OPLE | OPNLT | OPLT | OPGT
-    | OPBAND | OPBXOR | OPBOR | OPBNOT
-    ;
-
-operators_prec_4
-    : KAND | KOR | KNOT
-    ;
-
-// T-SQL lexer is weak and allows <      > to mean OPNE and so on
-//
-dodgy_operators
-    : ol=OPLT
-        (
-              OPGT
-            | OPEQ
-            |
-        )
-
-    | og=OPGT
-        (
-              OPEQ
-            |
-        )
-
-    | BANG
-        (
-              OPLT
-            | OPGT
-        )
+    | functions_and_vars	                    #exprFV     // Function calls and variable references
+    | paren_sub_query                           #exprPSQ    // Subquery (though must be scalar for an expression, and should be checked)
+    | someAllAny predicated_paren_sub_query     #exprSAA    // SOME / ANY / ALL with a subquery
+    | expression order_by_collate               #exprOBC    // Collations and ORDER BY
+    | case_expression                           #exprCase   // An atomic value based on a CASE expression
+    | expression COLON COLON expression         #exprStatic // Static property
+    | keyw_id_part                              #exprId     // An identifier, which may be [bracketed] etc
+    | money     			                    #exprMoney  // A DECIMAL or integer, preceded by a currency symbol
+    | atoms                                     #exprAtoms  // An atomic value
     ;
 
 // Elements that are atoms are elements that can be reduced no further
@@ -81,7 +68,8 @@ atoms
     | SQ_LITERAL        // A string literal
     | DQ_LITERAL        // A string literal
     | BR_LITERAL        // A string literal
-	| case_expression	// An atomic value based on a CASE expression
+    | ON                // ON is easier to just stick here and use it only when it is allowed
+    | OFF
 	;
 
 case_expression

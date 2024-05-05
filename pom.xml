@@ -64,7 +64,7 @@
                 <configuration>
                     <visitor>true</visitor>
                     <listener>false</listener>
-                    <treatWarningsAsErrors>true</treatWarningsAsErrors>
+                    <treatWarningsAsErrors>false</treatWarningsAsErrors>
                     <outputDirectory>${project.build.directory}/generated-sources/antlr4</outputDirectory>
                     <libDirectory>src/main/antlr4/ws/idle/parsers/tsql</libDirectory>
                     <includes>

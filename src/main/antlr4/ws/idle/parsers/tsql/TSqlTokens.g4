@@ -810,6 +810,7 @@ DOLLAR		:	'$'             ;
 OPPLUSEQ    :   '+='            ;
 OPPLUS		: 	'+'             ;
 BANG        :	'!'             ;
+OPCAT       :	'||'            ;
 
 OPMINUSEQ   :   '-='            ;
 OPMINUS		:	'-'             ;
@@ -829,11 +830,14 @@ OPBNOT		:	'~'             ;
 OPEQ		:	'='             ;
 OPGT		:	'>'             ;
 OPLT		:	'<'             ;
-OPGE		:	'>='            ;
-OPLE		:	'<='            ;
-OPNE		:	'<>' | '!='     ;
-OPNLT		:	'!<'            ;
-OPNGT		:	'!>'            ;
+// T-SQL lexer/parser is weak and allows "<      >" to mean OPNE and so on
+// It likely does not define them as separate tokens
+OPGE		:	'>' WSfrag* '=' ;
+OPLE		:	'<' WSfrag* '=' ;
+OPNE		:	'<' WSfrag* '>'
+            |   '!' WSfrag* '=' ;
+OPNLT		:	'!' WSfrag* '<' ;
+OPNGT		:	'!' WSfrag* '>' ;
 OPSEQ       :   '=*'            ;
 COLON		:	':'         	;
 SEMI		:	';'             ;
@@ -860,9 +864,9 @@ CURRENCY_SYMBOL
 			| '\ufdfc'				// Yemen Rials
 			;
 
-// The lexer should never raise errors as errors shoudl propagate
+// The lexer should never raise errors as errors should propagate
 // as high up the tool chain as they can go. In this case, the parser
-// will report the error as a BAD_CHARACTER token.
+// will report the error as a BAD_CHARACTER syntax error.
 BAD_CHARACTER
             : .
             ;

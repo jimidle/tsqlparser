@@ -257,7 +257,7 @@ expression_list
 // Generic function handler. Because some of the functions are without
 // parameters and the () are optional for these, we basically just track everything here and then
 // rewrite to the tree based on what we can make sense of here syntactically. The
-// tree parsing phase will verify the semantic of everything else based on declarations
+// tree parsing phase should verify the semantic of everything else based on declarations
 // and so on. Most functions are not declared as keywords here as they are just the same pattern
 // of keyword followed by a parenthesised list. Some functions, such as rowset or ranking
 // functions have specific syntax that does make sense to actually parse rather than conduct
@@ -781,6 +781,7 @@ keywords
 //	|IDENTITY
 	|IGNORE_CONSTRAINTS				
 	|IGNORE_DUP_KEY
+	|IDENTITY_INSERT
 	|IGNORE_TRIGGERS					
 	|IMMEDIATE
     |IMPERSONATE
@@ -884,8 +885,7 @@ keywords
 	|NOWAIT							
 	|NTILE
 	|NTLM							
-//	|NUMERIC_ROUNDABOUT
-	|OBJECT	
+	|OBJECT
 	|OF						
 	|OFFLINE			    			
 //	|OFF			

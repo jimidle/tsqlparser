@@ -374,8 +374,6 @@ merge_set_clause
 
 merge_set_list
     : s+=set_vars (COMMA s+=set_vars)*
-
-
     ;
     
 merge_not_matched
@@ -787,26 +785,16 @@ send_message_type
 set_statement
     : SET
         (
-               set_flags
-            |  set_vars
+            set_vars
         )
         SEMI?
     ;
 
-set_flags
-    : common_flags_list (ON|OFF|keyw_id|SQ_LITERAL|INTEGER|HEXNUM)
-    | special_flags     (ON|OFF|keyw_id|SQ_LITERAL|INTEGER|HEXNUM)?
-    ;
-
-common_flags_list
-    : c+=common_flags (COMMA c+=common_flags)*
-    ;
-
-common_flags
-    : keyw_id                    // Anything that is a flag that isn't a special keyword
-    | IDENTITY_INSERT keyw_id
-    | NUMERIC_ROUNDABORT
-    | CONCAT_NULL_YIELDS_NULL
+set_vars
+    : expression_list
+        // SET X = Y needs only one expression as expression will handle it
+        expression?
+    | special_flags
     ;
 
 special_flags
@@ -826,20 +814,8 @@ special_flags
             | SNAPSHOT
             | SERIALIZABLE
         )
-    ;
-
-set_vars
-    : set_source expression
-    ;
-
-set_source
-    : expression
     | CURSOR common_cursor_decl
     | DEFAULT
-    ;
-
-set_func_parms
-    : LPAREN e=expression_list RPAREN
     ;
 // End: SET
 ///////////////////////////////////////////////////////////
@@ -911,8 +887,8 @@ update_element
     : keyw_id
         (
 
-              OPEQ (expression|DEFAULT) (OPEQ (expression|DEFAULT))?
-            | set_func_parms
+              OPEQ (expression  | DEFAULT) (OPEQ (expression | DEFAULT))?
+            | LPAREN expression_list RPAREN
         )
     ;
 
