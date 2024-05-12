@@ -1,0 +1,717 @@
+
+(aaa_translation_unit 
+  (batch_statements 
+    (statements 
+      (sql_statements 
+        (select_statement 
+          (query_expression 
+            (query_specification select 
+              (select_list 
+                (select_element 
+                  (expression 
+                    (expression 
+                      (keyw_id_part 
+                        (func_keyw_id a
+                        )
+                      )
+                    ) . 
+                    (expression 
+                      (keyw_id_part 
+                        (func_keyw_id mid
+                        )
+                      )
+                    )
+                  )
+                )
+              ) 
+              (into_clause into 
+                (keyw_id 
+                  (keyw_id_part 
+                    (func_keyw_id agg
+                    )
+                  ) . 
+                  (keyw_id_part 
+                    (func_keyw_id dbo
+                    )
+                  ) . 
+                  (keyw_id_part 
+                    (func_keyw_id onlinecontactable_rollup
+                    )
+                  )
+                )
+              ) 
+              (from_clause from 
+                (table_source_list 
+                  (table_source 
+                    (tableSourceElement 
+                      (table_source_primitive 
+                        (primitive_table 
+                          (keyw_id 
+                            (keyw_id_part 
+                              (func_keyw_id agg
+                              )
+                            ) . 
+                            (keyw_id_part 
+                              (func_keyw_id dbo
+                              )
+                            ) . 
+                            (keyw_id_part 
+                              (func_keyw_id individual_agg_new_1
+                              )
+                            )
+                          ) 
+                          (as_clause 
+                            (func_keyw_id a
+                            )
+                          )
+                        )
+                      ) 
+                      (join_type_prefix left
+                      ) join 
+                      (tableSourceElement 
+                        (table_source_primitive 
+                          (primitive_table 
+                            (keyw_id 
+                              (keyw_id_part 
+                                (func_keyw_id agg
+                                )
+                              ) . 
+                              (keyw_id_part 
+                                (func_keyw_id dbo
+                                )
+                              ) . 
+                              (keyw_id_part 
+                                (func_keyw_id email_rollup
+                                )
+                              )
+                            ) 
+                            (as_clause 
+                              (func_keyw_id b
+                              )
+                            )
+                          )
+                        )
+                      ) 
+                      (on_join on 
+                        (search_condition 
+                          (predicate 
+                            (expression 
+                              (expression 
+                                (keyw_id_part 
+                                  (func_keyw_id a
+                                  )
+                                )
+                              ) . 
+                              (expression 
+                                (expression 
+                                  (keyw_id_part 
+                                    (func_keyw_id mid
+                                    )
+                                  )
+                                ) = 
+                                (expression 
+                                  (expression 
+                                    (keyw_id_part 
+                                      (func_keyw_id b
+                                      )
+                                    )
+                                  ) . 
+                                  (expression 
+                                    (keyw_id_part 
+                                      (func_keyw_id mid
+                                      )
+                                    )
+                                  )
+                                )
+                              )
+                            )
+                          )
+                        )
+                      ) 
+                      (join_type_prefix left
+                      ) join 
+                      (tableSourceElement 
+                        (table_source_primitive 
+                          (primitive_table 
+                            (keyw_id 
+                              (keyw_id_part 
+                                (func_keyw_id inputs
+                                )
+                              ) . 
+                              (keyw_id_part 
+                                (func_keyw_id dbo
+                                )
+                              ) . 
+                              (keyw_id_part 
+                                (func_keyw_id competitor_email_temp
+                                )
+                              )
+                            ) 
+                            (as_clause 
+                              (func_keyw_id d
+                              )
+                            )
+                          )
+                        )
+                      ) 
+                      (on_join on 
+                        (search_condition 
+                          (predicate 
+                            (expression 
+                              (expression 
+                                (keyw_id_part 
+                                  (func_keyw_id d
+                                  )
+                                )
+                              ) . 
+                              (expression 
+                                (expression 
+                                  (keyw_id_part 
+                                    (func_keyw_id mid
+                                    )
+                                  )
+                                ) = 
+                                (expression 
+                                  (expression 
+                                    (keyw_id_part 
+                                      (func_keyw_id a
+                                      )
+                                    )
+                                  ) . 
+                                  (expression 
+                                    (keyw_id_part 
+                                      (func_keyw_id mid
+                                      )
+                                    )
+                                  )
+                                )
+                              )
+                            )
+                          )
+                        )
+                      ) 
+                      (join_type_prefix left
+                      ) join 
+                      (tableSourceElement 
+                        (table_source_primitive 
+                          (primitive_table 
+                            (keyw_id 
+                              (keyw_id_part 
+                                (func_keyw_id agg
+                                )
+                              ) . 
+                              (keyw_id_part 
+                                (func_keyw_id dbo
+                                )
+                              ) . 
+                              (keyw_id_part 
+                                (func_keyw_id email_opt_temp
+                                )
+                              )
+                            ) 
+                            (as_clause 
+                              (func_keyw_id e
+                              )
+                            )
+                          )
+                        )
+                      ) 
+                      (on_join on 
+                        (search_condition 
+                          (predicate 
+                            (expression 
+                              (expression 
+                                (keyw_id_part 
+                                  (func_keyw_id e
+                                  )
+                                )
+                              ) . 
+                              (expression 
+                                (expression 
+                                  (keyw_id_part 
+                                    (func_keyw_id mid
+                                    )
+                                  )
+                                ) = 
+                                (expression 
+                                  (expression 
+                                    (keyw_id_part 
+                                      (func_keyw_id a
+                                      )
+                                    )
+                                  ) . 
+                                  (expression 
+                                    (keyw_id_part 
+                                      (func_keyw_id mid
+                                      )
+                                    )
+                                  )
+                                )
+                              )
+                            )
+                          )
+                        )
+                      )
+                    )
+                  )
+                )
+              ) 
+              (where_clause where 
+                (search_condition 
+                  (search_condition 
+                    (search_condition 
+                      (search_condition 
+                        (search_condition 
+                          (search_condition 
+                            (search_condition 
+                              ( 
+                                (search_condition 
+                                  (search_condition 
+                                    (search_condition 
+                                      (predicate 
+                                        (expression 
+                                          (expression 
+                                            (keyw_id_part 
+                                              (func_keyw_id b
+                                              )
+                                            )
+                                          ) . 
+                                          (expression 
+                                            (expression 
+                                              (keyw_id_part 
+                                                (func_keyw_id registered
+                                                )
+                                              )
+                                            ) = 
+                                            (expression 
+                                              (atoms 1
+                                              )
+                                            )
+                                          )
+                                        )
+                                      )
+                                    ) or 
+                                    (search_condition 
+                                      ( 
+                                        (search_condition 
+                                          (search_condition 
+                                            (predicate 
+                                              (expression 
+                                                (expression 
+                                                  (keyw_id_part 
+                                                    (func_keyw_id e
+                                                    )
+                                                  )
+                                                ) . 
+                                                (expression 
+                                                  (keyw_id_part 
+                                                    (func_keyw_id mid
+                                                    )
+                                                  )
+                                                )
+                                              ) is not null
+                                            )
+                                          ) and 
+                                          (search_condition 
+                                            (predicate 
+                                              (expression 
+                                                (expression 
+                                                  (keyw_id_part 
+                                                    (func_keyw_id e
+                                                    )
+                                                  )
+                                                ) . 
+                                                (expression 
+                                                  (expression 
+                                                    (keyw_id_part 
+                                                      (func_keyw_id deemed_rac_optin
+                                                      )
+                                                    )
+                                                  ) = 
+                                                  (expression 
+                                                    (atoms 1
+                                                    )
+                                                  )
+                                                )
+                                              )
+                                            )
+                                          )
+                                        ) 
+                                      )
+                                    )
+                                  ) or 
+                                  (search_condition 
+                                    (predicate 
+                                      (expression 
+                                        (expression 
+                                          (keyw_id_part 
+                                            (func_keyw_id b
+                                            )
+                                          )
+                                        ) . 
+                                        (expression 
+                                          (expression 
+                                            (keyw_id_part 
+                                              (func_keyw_id email_only
+                                              )
+                                            )
+                                          ) = 
+                                          (expression 
+                                            (atoms 1
+                                            )
+                                          )
+                                        )
+                                      )
+                                    )
+                                  )
+                                ) 
+                              )
+                            ) and 
+                            (search_condition 
+                              (predicate 
+                                (expression 
+                                  (expression 
+                                    (keyw_id_part 
+                                      (func_keyw_id b
+                                      )
+                                    )
+                                  ) . 
+                                  (expression 
+                                    (expression 
+                                      (expression 
+                                        (keyw_id_part 
+                                          (func_keyw_id email_valid
+                                          )
+                                        )
+                                      ) = 
+                                      (expression 
+                                        (atoms 1
+                                        )
+                                      )
+                                    ) and 
+                                    (expression 
+                                      (expression 
+                                        (keyw_id_part 
+                                          (func_keyw_id d
+                                          )
+                                        )
+                                      ) . 
+                                      (expression 
+                                        (keyw_id_part 
+                                          (func_keyw_id mid
+                                          )
+                                        )
+                                      )
+                                    )
+                                  )
+                                ) is null
+                              )
+                            )
+                          ) and 
+                          (search_condition 
+                            (predicate 
+                              (expression 
+                                (expression 
+                                  (expression 
+                                    (expression 
+                                      (keyw_id_part 
+                                        (func_keyw_id special_program
+                                        )
+                                      )
+                                    ) = 
+                                    (expression 
+                                      (atoms 0
+                                      )
+                                    )
+                                  ) and 
+                                  (expression 
+                                    ( 
+                                      (expression 
+                                        (expression 
+                                          (keyw_id_part 
+                                            (func_keyw_id a
+                                            )
+                                          )
+                                        ) . 
+                                        (expression 
+                                          (expression 
+                                            (expression 
+                                              (keyw_id_part 
+                                                (func_keyw_id vulgar_name
+                                                )
+                                              )
+                                            ) = 
+                                            (expression 
+                                              (atoms 0
+                                              )
+                                            )
+                                          ) and 
+                                          (expression 
+                                            (expression 
+                                              (keyw_id_part 
+                                                (func_keyw_id a
+                                                )
+                                              )
+                                            ) . 
+                                            (expression 
+                                              (expression 
+                                                (keyw_id_part 
+                                                  (func_keyw_id fraud
+                                                  )
+                                                )
+                                              ) = 
+                                              (expression 
+                                                (atoms 0
+                                                )
+                                              )
+                                            )
+                                          )
+                                        )
+                                      ) 
+                                    )
+                                  )
+                                ) and 
+                                (expression 
+                                  (expression 
+                                    (keyw_id_part 
+                                      (func_keyw_id a
+                                      )
+                                    )
+                                  ) . 
+                                  (expression 
+                                    (expression 
+                                      (keyw_id_part 
+                                        (func_keyw_id deceased
+                                        )
+                                      )
+                                    ) = 
+                                    (expression 
+                                      (atoms 0
+                                      )
+                                    )
+                                  )
+                                )
+                              )
+                            )
+                          )
+                        ) and 
+                        (search_condition 
+                          ( 
+                            (search_condition 
+                              (search_condition 
+                                (predicate 
+                                  (expression 
+                                    (expression 
+                                      (keyw_id_part 
+                                        (func_keyw_id a
+                                        )
+                                      )
+                                    ) . 
+                                    (expression 
+                                      (keyw_id_part 
+                                        (func_keyw_id age
+                                        )
+                                      )
+                                    )
+                                  ) is null
+                                )
+                              ) or 
+                              (search_condition 
+                                (predicate 
+                                  (expression 
+                                    (expression 
+                                      (keyw_id_part 
+                                        (func_keyw_id a
+                                        )
+                                      )
+                                    ) . 
+                                    (expression 
+                                      (expression 
+                                        (keyw_id_part 
+                                          (func_keyw_id age
+                                          )
+                                        )
+                                      ) > 
+                                      (expression 
+                                        (atoms 12
+                                        )
+                                      )
+                                    )
+                                  )
+                                )
+                              )
+                            ) 
+                          )
+                        )
+                      ) and 
+                      (search_condition 
+                        ( 
+                          (search_condition 
+                            (search_condition 
+                              (predicate 
+                                (expression 
+                                  (expression 
+                                    (keyw_id_part 
+                                      (func_keyw_id e
+                                      )
+                                    )
+                                  ) . 
+                                  (expression 
+                                    (keyw_id_part 
+                                      (func_keyw_id mid
+                                      )
+                                    )
+                                  )
+                                ) is not null
+                              )
+                            ) and 
+                            (search_condition 
+                              (predicate 
+                                (expression 
+                                  (expression 
+                                    (keyw_id_part 
+                                      (func_keyw_id e
+                                      )
+                                    )
+                                  ) . 
+                                  (expression 
+                                    (expression 
+                                      (keyw_id_part 
+                                        (func_keyw_id email_optin
+                                        )
+                                      )
+                                    ) = 
+                                    (expression 
+                                      (atoms 1
+                                      )
+                                    )
+                                  )
+                                )
+                              )
+                            )
+                          ) 
+                        )
+                      )
+                    ) and 
+                    (search_condition 
+                      (predicate 
+                        (expression 
+                          (expression 
+                            (keyw_id_part 
+                              (func_keyw_id a
+                              )
+                            )
+                          ) . 
+                          (expression 
+                            (keyw_id_part 
+                              (func_keyw_id mid
+                              )
+                            )
+                          )
+                        ) in 
+                        ( 
+                          (predicated_sub_query 
+                            (sub_query 
+                              (select_statement 
+                                (query_expression 
+                                  (query_specification select 
+                                    (select_list 
+                                      (select_element 
+                                        (expression 
+                                          (keyw_id_part 
+                                            (func_keyw_id mid
+                                            )
+                                          )
+                                        )
+                                      )
+                                    ) 
+                                    (from_clause from 
+                                      (table_source_list 
+                                        (table_source 
+                                          (tableSourceElement 
+                                            (table_source_primitive 
+                                              (primitive_table 
+                                                (keyw_id 
+                                                  (keyw_id_part 
+                                                    (func_keyw_id agg
+                                                    )
+                                                  ) . . 
+                                                  (keyw_id_part 
+                                                    (func_keyw_id email_country_agg
+                                                    )
+                                                  )
+                                                ) 
+                                                (as_clause 
+                                                  (func_keyw_id b
+                                                  )
+                                                )
+                                              )
+                                            )
+                                          )
+                                        )
+                                      )
+                                    ) 
+                                    (where_clause where 
+                                      (search_condition 
+                                        (predicate 
+                                          (expression 
+                                            (keyw_id_part 
+                                              (func_keyw_id email
+                                              )
+                                            )
+                                          ) is not null
+                                        )
+                                      )
+                                    )
+                                  )
+                                )
+                              )
+                            )
+                          ) 
+                        )
+                      )
+                    )
+                  ) and 
+                  (search_condition 
+                    (predicate 
+                      (expression 
+                        (expression 
+                          (keyw_id_part 
+                            (func_keyw_id adhoc
+                            )
+                          )
+                        ) = 
+                        (expression 
+                          (atoms 0
+                          )
+                        )
+                      )
+                    )
+                  )
+                )
+              ) 
+              (group_by_clause group by 
+                (expression_list 
+                  (expression 
+                    (expression 
+                      (keyw_id_part 
+                        (func_keyw_id a
+                        )
+                      )
+                    ) . 
+                    (expression 
+                      (keyw_id_part 
+                        (func_keyw_id mid
+                        )
+                      )
+                    )
+                  )
+                )
+              )
+            )
+          )
+        )
+      )
+    )
+  ) <EOF>
+)

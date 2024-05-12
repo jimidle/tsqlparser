@@ -1,0 +1,34 @@
+digraph ParseTree {
+  n0 -> n1 [label="batch_statements"];
+  n1 -> n2 [label="statements"];
+  n2 -> n3 [label="ddl_statements"];
+  n3 -> n4 [label="backup_statement"];
+  n4 -> n5 [label="BACKUP"];
+  n4 -> n6 [label="DATABASE"];
+  n4 -> n7 [label="keyw_id"];
+  n7 -> n8 [label="keyw_id_part"];
+  n8 -> n9 [label="func_keyw_id"];
+  n9 -> n10 [label="Sales"];
+  n4 -> n11 [label="backup_file_or_group_list"];
+  n11 -> n12 [label="backup_file_or_group"];
+  n12 -> n13 [label="FILEGROUP"];
+  n12 -> n14 [label="="];
+  n12 -> n15 [label="'SalesGroup1'"];
+  n11 -> n16 [label=","];
+  n11 -> n17 [label="backup_file_or_group"];
+  n17 -> n18 [label="FILEGROUP"];
+  n17 -> n19 [label="="];
+  n17 -> n20 [label="'SalesGroup2'"];
+  n4 -> n21 [label="TO"];
+  n4 -> n22 [label="backup_device_list"];
+  n22 -> n23 [label="backup_device"];
+  n23 -> n24 [label="DISK"];
+  n23 -> n25 [label="="];
+  n23 -> n26 [label="'Z:\SQLServerBackups\SalesFiles.bck'"];
+  n4 -> n27 [label="mirror_to"];
+  n4 -> n28 [label="WITH"];
+  n4 -> n29 [label="DIFFERENTIAL"];
+  n1 -> n30 [label="statements"];
+  n30 -> n31 [label="GO"];
+  n0 -> n32 [label="<EOF>"];
+}

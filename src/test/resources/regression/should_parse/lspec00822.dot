@@ -1,0 +1,35 @@
+digraph ParseTree {
+  n0 -> n1 [label="batch_statements"];
+  n1 -> n2 [label="statements"];
+  n2 -> n3 [label="sql_statements"];
+  n3 -> n4 [label="miscellaneous_statements"];
+  n4 -> n5 [label="update_statement"];
+  n5 -> n6 [label="UPDATE"];
+  n5 -> n7 [label="update_table"];
+  n7 -> n8 [label="insert_into"];
+  n8 -> n9 [label="is_opt_into"];
+  n8 -> n10 [label="rowset_function"];
+  n10 -> n11 [label="OPENQUERY"];
+  n10 -> n12 [label="("];
+  n10 -> n13 [label="keyw_id_part"];
+  n13 -> n14 [label="func_keyw_id"];
+  n14 -> n15 [label="OracleSvr"];
+  n10 -> n16 [label=","];
+  n10 -> n17 [label="'SELECT name FROM joe.titles WHERE id = 101'"];
+  n10 -> n18 [label=")"];
+  n7 -> n19 [label="update_set"];
+  n19 -> n20 [label="SET"];
+  n19 -> n21 [label="update_set_list"];
+  n21 -> n22 [label="update_element"];
+  n22 -> n23 [label="keyw_id"];
+  n23 -> n24 [label="keyw_id_part"];
+  n24 -> n25 [label="func_keyw_id"];
+  n25 -> n26 [label="keywords"];
+  n26 -> n27 [label="name"];
+  n22 -> n28 [label="="];
+  n22 -> n29 [label="expression"];
+  n29 -> n30 [label="atoms"];
+  n30 -> n31 [label="'ADifferentName'"];
+  n5 -> n32 [label=";"];
+  n0 -> n33 [label="<EOF>"];
+}

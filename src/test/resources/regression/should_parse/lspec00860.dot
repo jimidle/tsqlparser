@@ -1,0 +1,30 @@
+digraph ParseTree {
+  n0 -> n1 [label="batch_statements"];
+  n1 -> n2 [label="first_exec"];
+  n2 -> n3 [label="exec_sp"];
+  n3 -> n4 [label="exec_sp_func"];
+  n4 -> n5 [label="keyw_id"];
+  n5 -> n6 [label="keyw_id_part"];
+  n6 -> n7 [label="func_keyw_id"];
+  n7 -> n8 [label="sp_configure"];
+  n4 -> n9 [label="exec_sp_param_list"];
+  n9 -> n10 [label="exec_sp_param"];
+  n10 -> n11 [label="expression"];
+  n11 -> n12 [label="atoms"];
+  n12 -> n13 [label="'recovery interval'"];
+  n9 -> n14 [label=","];
+  n9 -> n15 [label="exec_sp_param"];
+  n15 -> n16 [label="expression"];
+  n16 -> n17 [label="atoms"];
+  n17 -> n18 [label="90"];
+  n1 -> n19 [label="statements"];
+  n19 -> n20 [label="sql_statements"];
+  n20 -> n21 [label="miscellaneous_statements"];
+  n21 -> n22 [label="reconfigure_statement"];
+  n22 -> n23 [label="RECONFIGURE"];
+  n22 -> n24 [label="WITH"];
+  n22 -> n25 [label="OVERRIDE"];
+  n1 -> n26 [label="statements"];
+  n26 -> n27 [label="GO"];
+  n0 -> n28 [label="<EOF>"];
+}

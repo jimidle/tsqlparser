@@ -1,0 +1,26 @@
+digraph ParseTree {
+  n0 -> n1 [label="batch_statements"];
+  n1 -> n2 [label="statements"];
+  n2 -> n3 [label="sql_statements"];
+  n3 -> n4 [label="miscellaneous_statements"];
+  n4 -> n5 [label="kill_statement"];
+  n5 -> n6 [label="KILL"];
+  n5 -> n7 [label="kill_query"];
+  n7 -> n8 [label="QUERY"];
+  n7 -> n9 [label="NOTIFICATION"];
+  n7 -> n10 [label="SUBSCRIPTION"];
+  n7 -> n11 [label="ALL"];
+  n5 -> n12 [label=";"];
+  n1 -> n13 [label="statements"];
+  n13 -> n14 [label="sql_statements"];
+  n14 -> n15 [label="miscellaneous_statements"];
+  n15 -> n16 [label="kill_statement"];
+  n16 -> n17 [label="KILL"];
+  n16 -> n18 [label="kill_query"];
+  n18 -> n19 [label="QUERY"];
+  n18 -> n20 [label="NOTIFICATION"];
+  n18 -> n21 [label="SUBSCRIPTION"];
+  n18 -> n22 [label="73"];
+  n16 -> n23 [label=";"];
+  n0 -> n24 [label="<EOF>"];
+}

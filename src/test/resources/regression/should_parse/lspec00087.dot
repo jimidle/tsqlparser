@@ -1,0 +1,36 @@
+digraph ParseTree {
+  n0 -> n1 [label="batch_statements"];
+  n1 -> n2 [label="statements"];
+  n2 -> n3 [label="sql_statements"];
+  n3 -> n4 [label="select_statement"];
+  n4 -> n5 [label="query_expression"];
+  n5 -> n6 [label="query_specification"];
+  n6 -> n7 [label="SELECT"];
+  n6 -> n8 [label="select_list"];
+  n8 -> n9 [label="select_element"];
+  n9 -> n10 [label="expression"];
+  n10 -> n11 [label="functions_and_vars"];
+  n11 -> n12 [label="function"];
+  n12 -> n13 [label="func_name"];
+  n13 -> n14 [label="keyw_id_for_func"];
+  n14 -> n15 [label="keyw_id_orcc"];
+  n15 -> n16 [label="keyw_id_part"];
+  n16 -> n17 [label="func_keyw_id"];
+  n17 -> n18 [label="GETDATE"];
+  n12 -> n19 [label="function_args"];
+  n19 -> n20 [label="("];
+  n19 -> n21 [label=")"];
+  n9 -> n22 [label="as_clause"];
+  n22 -> n23 [label="AS"];
+  n22 -> n24 [label="'Today''s Date and Time'"];
+  n8 -> n25 [label=","];
+  n8 -> n26 [label="select_element"];
+  n26 -> n27 [label="expression"];
+  n27 -> n28 [label="keyw_id_part"];
+  n28 -> n29 [label="func_keyw_id"];
+  n29 -> n30 [label="@@CONNECTIONS"];
+  n26 -> n31 [label="as_clause"];
+  n31 -> n32 [label="AS"];
+  n31 -> n33 [label="'Login Attempts'"];
+  n0 -> n34 [label="<EOF>"];
+}

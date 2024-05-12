@@ -1,0 +1,1 @@
+(aaa_translation_unit (batch_statements (first_exec (exec_sp (exec_sp_func (keyw_id (keyw_id_part (func_keyw_id (keywords DROP)))) (exec_sp_param_list (exec_sp_param (expression (keyw_id_part (func_keyw_id (keywords LOGIN))))))))) (first_exec (exec_sp (exec_sp_func (keyw_id (keyw_id_part (func_keyw_id WilliJo))))) ;) (statements GO)) <EOF>)

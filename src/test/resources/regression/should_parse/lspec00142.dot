@@ -1,0 +1,29 @@
+digraph ParseTree {
+  n0 -> n1 [label="batch_statements"];
+  n1 -> n2 [label="statements"];
+  n2 -> n3 [label="ddl_statements"];
+  n3 -> n4 [label="alter_statement"];
+  n4 -> n5 [label="ALTER"];
+  n4 -> n6 [label="alter_authorization"];
+  n6 -> n7 [label="AUTHORIZATION"];
+  n6 -> n8 [label="aa_on"];
+  n8 -> n9 [label="ON"];
+  n8 -> n10 [label="entity_type"];
+  n10 -> n11 [label="SCHEMA"];
+  n10 -> n12 [label=":"];
+  n10 -> n13 [label=":"];
+  n8 -> n14 [label="keyw_id"];
+  n14 -> n15 [label="keyw_id_part"];
+  n15 -> n16 [label="func_keyw_id"];
+  n16 -> n17 [label="SeattleProduction11"];
+  n6 -> n18 [label="aa_to"];
+  n18 -> n19 [label="TO"];
+  n18 -> n20 [label="keyw_id"];
+  n20 -> n21 [label="keyw_id_part"];
+  n21 -> n22 [label="func_keyw_id"];
+  n22 -> n23 [label="SandraAlayo"];
+  n6 -> n24 [label=";"];
+  n1 -> n25 [label="statements"];
+  n25 -> n26 [label="GO"];
+  n0 -> n27 [label="<EOF>"];
+}

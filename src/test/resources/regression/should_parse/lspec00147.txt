@@ -1,0 +1,1 @@
+(aaa_translation_unit (batch_statements (statements (ddl_statements (alter_statement ALTER (alter_certificate CERTIFICATE (keyw_id (keyw_id_part (func_keyw_id Shipping13))) (ac_opts WITH PRIVATE KEY ( (private_key_list (private_key_spec FILE = 'c:\\importedkeys\Shipping13') , (private_key_spec DECRYPTION BY PASSWORD = 'GDFLKl8^^GGG4000%')) )) ;)))) (statements GO)) <EOF>)

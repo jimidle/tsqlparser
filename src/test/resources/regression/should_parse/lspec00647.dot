@@ -1,0 +1,35 @@
+digraph ParseTree {
+  n0 -> n1 [label="batch_statements"];
+  n1 -> n2 [label="statements"];
+  n2 -> n3 [label="sql_statements"];
+  n3 -> n4 [label="use_statement"];
+  n4 -> n5 [label="USE"];
+  n4 -> n6 [label="keyw_id"];
+  n6 -> n7 [label="keyw_id_part"];
+  n7 -> n8 [label="func_keyw_id"];
+  n8 -> n9 [label="AdventureWorks"];
+  n4 -> n10 [label=";"];
+  n1 -> n11 [label="statements"];
+  n11 -> n12 [label="GO"];
+  n1 -> n13 [label="statements"];
+  n13 -> n14 [label="execute_statement"];
+  n14 -> n15 [label="exec_one"];
+  n15 -> n16 [label="EXECUTE"];
+  n15 -> n17 [label="exec_body"];
+  n17 -> n18 [label="exec_sp"];
+  n18 -> n19 [label="exec_string_cmd"];
+  n19 -> n20 [label="("];
+  n19 -> n21 [label="exec_string_list"];
+  n21 -> n22 [label="exec_string_bit"];
+  n22 -> n23 [label="'CREATE TABLE Sales.SalesTable (SalesID int, SalesName varchar(10));'"];
+  n19 -> n24 [label=")"];
+  n19 -> n25 [label="exec_string_cmd_as"];
+  n25 -> n26 [label="AS"];
+  n25 -> n27 [label="USER"];
+  n25 -> n28 [label="="];
+  n25 -> n29 [label="'User1'"];
+  n17 -> n30 [label=";"];
+  n1 -> n31 [label="statements"];
+  n31 -> n32 [label="GO"];
+  n0 -> n33 [label="<EOF>"];
+}

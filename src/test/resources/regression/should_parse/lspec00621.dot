@@ -1,0 +1,31 @@
+digraph ParseTree {
+  n0 -> n1 [label="batch_statements"];
+  n1 -> n2 [label="statements"];
+  n2 -> n3 [label="sql_statements"];
+  n3 -> n4 [label="miscellaneous_statements"];
+  n4 -> n5 [label="close_statement"];
+  n5 -> n6 [label="CLOSE"];
+  n5 -> n7 [label="SYMMETRIC"];
+  n5 -> n8 [label="KEY"];
+  n5 -> n9 [label="keyw_id"];
+  n9 -> n10 [label="keyw_id_part"];
+  n10 -> n11 [label="func_keyw_id"];
+  n11 -> n12 [label="GailSammamishKey6"];
+  n5 -> n13 [label=";"];
+  n1 -> n14 [label="statements"];
+  n14 -> n15 [label="ddl_statements"];
+  n15 -> n16 [label="drop_statement"];
+  n16 -> n17 [label="DROP"];
+  n16 -> n18 [label="dropCommon"];
+  n18 -> n19 [label="dropElements"];
+  n19 -> n20 [label="SYMMETRIC"];
+  n19 -> n21 [label="KEY"];
+  n18 -> n22 [label="keyw_id"];
+  n22 -> n23 [label="keyw_id_part"];
+  n23 -> n24 [label="func_keyw_id"];
+  n24 -> n25 [label="GailSammamishKey6"];
+  n18 -> n26 [label=";"];
+  n1 -> n27 [label="statements"];
+  n27 -> n28 [label="GO"];
+  n0 -> n29 [label="<EOF>"];
+}

@@ -57,6 +57,7 @@ class TokenTest {
 
                 Arguments.of(TSqlTokens.LPAREN, DEFAULT, "("),
                 Arguments.of(TSqlTokens.INTEGER, DEFAULT, "42"),
+                Arguments.of(TSqlTokens.INTEGER, DEFAULT, "4"),
                 Arguments.of(TSqlTokens.DECIMAL, DEFAULT, "37.42"),
                 Arguments.of(TSqlTokens.FLOAT, DEFAULT, "1.7e-42"),
                 Arguments.of(TSqlTokens.FLOAT, DEFAULT, "1E-42"),
@@ -106,7 +107,8 @@ class TokenTest {
                 Arguments.of(TSqlTokens.BR_LITERAL, DEFAULT, "[identifier]"), // bracketed identifier
                 Arguments.of(TSqlTokens.ID, DEFAULT, "identifier42$_"), // identifier with numbers and underscore
 
-                Arguments.of(TSqlTokens.BAD_CHARACTER, DEFAULT, "☯") // Character the matches no token
+                Arguments.of(TSqlTokens.BAD_CHARACTER, DEFAULT, "☯"), // Character that matches no token
+                Arguments.of(TSqlTokens.NTILE, DEFAULT, "NTILE")
         );
     }
 

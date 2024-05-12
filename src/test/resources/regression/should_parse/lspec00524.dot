@@ -1,0 +1,70 @@
+digraph ParseTree {
+  n0 -> n1 [label="batch_statements"];
+  n1 -> n2 [label="statements"];
+  n2 -> n3 [label="ddl_statements"];
+  n3 -> n4 [label="create_statement"];
+  n4 -> n5 [label="CREATE"];
+  n4 -> n6 [label="create_xml"];
+  n6 -> n7 [label="XML"];
+  n6 -> n8 [label="SCHEMA"];
+  n6 -> n9 [label="COLLECTION"];
+  n6 -> n10 [label="keyw_id"];
+  n10 -> n11 [label="keyw_id_part"];
+  n11 -> n12 [label="func_keyw_id"];
+  n12 -> n13 [label="ProductDescriptionSchemaCollection"];
+  n6 -> n14 [label="AS"];
+  n6 -> n15 [label="'<xsd:schema targetNamespace="http://schemas.microsoft.com/sqlserver/2004/07/adventure-works/ProductModelWarrAndMain"
+    xmlns="http://schemas.microsoft.com/sqlserver/2004/07/adventure-works/ProductModelWarrAndMain" 
+    elementFormDefault="qualified" 
+    xmlns:xsd="http://www.w3.org/2001/XMLSchema" >
+    <xsd:element name="Warranty"  >
+        <xsd:complexType>
+            <xsd:sequence>
+                <xsd:element name="WarrantyPeriod" type="xsd:string"  />
+                <xsd:element name="Description" type="xsd:string"  />
+            </xsd:sequence>
+        </xsd:complexType>
+    </xsd:element>
+</xsd:schema>
+ <xs:schema targetNamespace="http://schemas.microsoft.com/sqlserver/2004/07/adventure-works/ProductModelDescription" 
+    xmlns="http://schemas.microsoft.com/sqlserver/2004/07/adventure-works/ProductModelDescription" 
+    elementFormDefault="qualified" 
+    xmlns:mstns="http://tempuri.org/XMLSchema.xsd" 
+    xmlns:xs="http://www.w3.org/2001/XMLSchema"
+    xmlns:wm="http://schemas.microsoft.com/sqlserver/2004/07/adventure-works/ProductModelWarrAndMain" >
+    <xs:import 
+namespace="http://schemas.microsoft.com/sqlserver/2004/07/adventure-works/ProductModelWarrAndMain" />
+    <xs:element name="ProductDescription" type="ProductDescription" />
+        <xs:complexType name="ProductDescription">
+            <xs:sequence>
+                <xs:element name="Summary" type="Summary" minOccurs="0" />
+            </xs:sequence>
+            <xs:attribute name="ProductModelID" type="xs:string" />
+            <xs:attribute name="ProductModelName" type="xs:string" />
+        </xs:complexType>
+        <xs:complexType name="Summary" mixed="true" >
+            <xs:sequence>
+                <xs:any processContents="skip" namespace="http://www.w3.org/1999/xhtml" minOccurs="0" maxOccurs="unbounded" />
+            </xs:sequence>
+        </xs:complexType>
+</xs:schema>'"];
+  n6 -> n16 [label=";"];
+  n1 -> n17 [label="statements"];
+  n17 -> n18 [label="GO"];
+  n1 -> n19 [label="statements"];
+  n19 -> n20 [label="ddl_statements"];
+  n20 -> n21 [label="drop_statement"];
+  n21 -> n22 [label="DROP"];
+  n21 -> n23 [label="dropCommon"];
+  n23 -> n24 [label="dropElements"];
+  n24 -> n25 [label="XML"];
+  n24 -> n26 [label="SCHEMA"];
+  n24 -> n27 [label="COLLECTION"];
+  n23 -> n28 [label="keyw_id"];
+  n28 -> n29 [label="keyw_id_part"];
+  n29 -> n30 [label="func_keyw_id"];
+  n30 -> n31 [label="ProductDescriptionSchemaCollection"];
+  n1 -> n32 [label="statements"];
+  n32 -> n33 [label="GO"];
+  n0 -> n34 [label="<EOF>"];
+}

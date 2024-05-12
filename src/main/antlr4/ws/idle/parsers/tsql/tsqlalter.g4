@@ -363,7 +363,7 @@ ad_sql_option
 	| ANSI_WARNINGS					(ON | OFF)
 	| ARITHABORT						(ON | OFF)
 	| CONCAT_NULL_YIELDS_NULL			(ON | OFF)
-	| NUMERIC_ROUNDABORT				(ON | OFF)
+	| NRA           				(ON | OFF)
 	| QUOTED_IDENTIFIER				(ON | OFF)
 	| RECURSIVE_TRIGGERS				(ON | OFF)
 	;

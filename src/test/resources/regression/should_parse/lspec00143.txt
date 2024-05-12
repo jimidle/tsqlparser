@@ -1,0 +1,1 @@
+(aaa_translation_unit (batch_statements (statements (ddl_statements (alter_statement ALTER (alter_authorization AUTHORIZATION (aa_on ON (entity_type ENDPOINT : :) (keyw_id (keyw_id_part (func_keyw_id CantabSalesServer1)))) (aa_to TO (keyw_id (keyw_id_part (func_keyw_id JaePak)))) ;)))) (statements GO)) <EOF>)

@@ -17,5 +17,5 @@ WITH [BOM_cte] ([ProductAssemblyID], [ComponentID], [ComponentDesc], [PerAssembl
         WHERE @CheckDate >= b.[StartDate]
             AND @CheckDate <= ISNULL(b.[EndDate], @CheckDate)
         )
-
+SELECT [ProductAssemblyID], [ComponentID], [ComponentDesc], [PerAssemblyQty], [StandardCost], [ListPrice], [BOMLevel], [RecursionLevel]
 

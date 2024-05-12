@@ -1,0 +1,1 @@
+(aaa_translation_unit (batch_statements (statements (ddl_statements (create_statement CREATE (create_route ROUTE (keyw_id_part (func_keyw_id LogRequests)) (route_with WITH (route_option_list (route_option (route_option_element SERVICE_NAME = '//Adventure-Works.com/LogRequests')) , (route_option (route_option_element ADDRESS = 'LOCAL')))) ;))))) <EOF>)

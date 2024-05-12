@@ -1,0 +1,30 @@
+digraph ParseTree {
+  n0 -> n1 [label="batch_statements"];
+  n1 -> n2 [label="statements"];
+  n2 -> n3 [label="ddl_statements"];
+  n3 -> n4 [label="alter_statement"];
+  n4 -> n5 [label="ALTER"];
+  n4 -> n6 [label="alter_service"];
+  n6 -> n7 [label="SERVICE"];
+  n6 -> n8 [label="keyw_id_part"];
+  n8 -> n9 [label="func_keyw_id"];
+  n9 -> n10 [label="[//Adventure-Works.com/Expenses]"];
+  n6 -> n11 [label="as_queue_opts"];
+  n11 -> n12 [label="service_opts_list"];
+  n12 -> n13 [label="("];
+  n12 -> n14 [label="service_opts"];
+  n14 -> n15 [label="ADD"];
+  n14 -> n16 [label="CONTRACT"];
+  n14 -> n17 [label="keyw_id_part"];
+  n17 -> n18 [label="func_keyw_id"];
+  n18 -> n19 [label="[//Adventure-Works.com/Expenses/ExpenseProcessing]"];
+  n12 -> n20 [label=","];
+  n12 -> n21 [label="service_opts"];
+  n21 -> n22 [label="DROP"];
+  n21 -> n23 [label="CONTRACT"];
+  n21 -> n24 [label="keyw_id_part"];
+  n24 -> n25 [label="func_keyw_id"];
+  n25 -> n26 [label="[//Adventure-Works.com/Expenses/ExpenseSubmission]"];
+  n12 -> n27 [label=")"];
+  n0 -> n28 [label="<EOF>"];
+}

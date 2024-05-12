@@ -45,6 +45,7 @@ expression
     // They are labelled because they must all be labeled. But are likely better visited
     // directly.
 
+    | special_flags                             #exprSpecialFlags // Special flags for SET options
     | functions_and_vars	                    #exprFV     // Function calls and variable references
     | paren_sub_query                           #exprPSQ    // Subquery (though must be scalar for an expression, and should be checked)
     | someAllAny predicated_paren_sub_query     #exprSAA    // SOME / ANY / ALL with a subquery
@@ -68,8 +69,6 @@ atoms
     | SQ_LITERAL        // A string literal
     | DQ_LITERAL        // A string literal
     | BR_LITERAL        // A string literal
-    | ON                // ON is easier to just stick here and use it only when it is allowed
-    | OFF
 	;
 
 case_expression

@@ -1,0 +1,1 @@
+(aaa_translation_unit (batch_statements (statements (ddl_statements (alter_statement ALTER (alter_credential (create_credential CREDENTIAL (keyw_id (keyw_id_part (func_keyw_id Saddles))) WITH IDENTITY = 'RettigB' , SECRET = 'sdrlk8$40-dksli87nNN8' ;))))) (statements GO)) <EOF>)

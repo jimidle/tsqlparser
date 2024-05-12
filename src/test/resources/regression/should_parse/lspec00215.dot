@@ -1,0 +1,25 @@
+digraph ParseTree {
+  n0 -> n1 [label="batch_statements"];
+  n1 -> n2 [label="statements"];
+  n2 -> n3 [label="ddl_statements"];
+  n3 -> n4 [label="alter_statement"];
+  n4 -> n5 [label="ALTER"];
+  n4 -> n6 [label="alter_service"];
+  n6 -> n7 [label="SERVICE"];
+  n6 -> n8 [label="as_master"];
+  n8 -> n9 [label="MASTER"];
+  n8 -> n10 [label="KEY"];
+  n8 -> n11 [label="as_recover_opt"];
+  n11 -> n12 [label="WITH"];
+  n11 -> n13 [label="OLD_ACCOUNT"];
+  n11 -> n14 [label="="];
+  n11 -> n15 [label="'AdvWorks\MiraG'"];
+  n11 -> n16 [label=","];
+  n11 -> n17 [label="OLD_PASSWORD"];
+  n11 -> n18 [label="="];
+  n11 -> n19 [label="'0i0035MDFh6##gfk576t'"];
+  n6 -> n20 [label=";"];
+  n1 -> n21 [label="statements"];
+  n21 -> n22 [label="GO"];
+  n0 -> n23 [label="<EOF>"];
+}

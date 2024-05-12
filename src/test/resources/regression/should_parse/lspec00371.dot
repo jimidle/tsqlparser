@@ -1,0 +1,36 @@
+digraph ParseTree {
+  n0 -> n1 [label="batch_statements"];
+  n1 -> n2 [label="statements"];
+  n2 -> n3 [label="ddl_statements"];
+  n3 -> n4 [label="create_statement"];
+  n4 -> n5 [label="CREATE"];
+  n4 -> n6 [label="create_asymmetric"];
+  n6 -> n7 [label="ASYMMETRIC"];
+  n6 -> n8 [label="KEY"];
+  n6 -> n9 [label="keyw_id"];
+  n9 -> n10 [label="keyw_id_part"];
+  n10 -> n11 [label="func_keyw_id"];
+  n11 -> n12 [label="PacificSales19"];
+  n6 -> n13 [label="authorization"];
+  n13 -> n14 [label="AUTHORIZATION"];
+  n13 -> n15 [label="keyw_id"];
+  n15 -> n16 [label="keyw_id_part"];
+  n16 -> n17 [label="func_keyw_id"];
+  n17 -> n18 [label="SyedAbbas"];
+  n6 -> n19 [label="create_asm_option"];
+  n19 -> n20 [label="FROM"];
+  n19 -> n21 [label="asym_key_source"];
+  n21 -> n22 [label="FILE"];
+  n21 -> n23 [label="="];
+  n21 -> n24 [label="' c:\PacSales\Managers\SyedAbbasCerts.tmp'"];
+  n6 -> n25 [label="ak_password_option"];
+  n25 -> n26 [label="ENCRYPTION"];
+  n25 -> n27 [label="BY"];
+  n25 -> n28 [label="PASSWORD"];
+  n25 -> n29 [label="="];
+  n25 -> n30 [label="'35698ofg0sjlkfLKJ4548872$$$2'"];
+  n6 -> n31 [label=";"];
+  n1 -> n32 [label="statements"];
+  n32 -> n33 [label="GO"];
+  n0 -> n34 [label="<EOF>"];
+}

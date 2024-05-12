@@ -182,20 +182,12 @@ keyw_id_list
 // Definition of a search condition
 //
 search_condition
-		: sc=search_conditions
-		;
-
-search_conditions
-		: or_predicate (KOR or_predicate)*
-		;
-
-or_predicate
-		: and_predicate (KAND and_predicate)*
-		;
-
-and_predicate
-		: (KNOT)? predicate
-		;
+    : LPAREN search_condition RPAREN            #scPrec
+    | KNOT search_condition                     #scNot
+    | search_condition KAND search_condition    #scAnd
+    | search_condition KOR search_condition     #scOr
+    | predicate                                 #scPredicate
+    ;
 
 predicate
 	: expression
@@ -267,11 +259,12 @@ functions_and_vars
 	: aggregate_windowed_functions
     | ranking_functions
     | function
-    | keyw_id_for_func
 	;
 
 function
-    : func_name
+    : CONVERT LPAREN dt=data_type COMMA e=expression (COMMA i2=expression)? RPAREN
+    | CAST LPAREN e=expression AS dt=data_type RPAREN
+    | func_name
         (
             function_args
         )
@@ -280,7 +273,7 @@ function
 func_name
     : keyw_id_for_func
 
-    // Some functions, if list in the keyword as var list, will cause massive ambiguity
+    // Some functions, if listed in the keyword as var list, will cause massive ambiguity
     // so
     | UPDATE
     | RIGHT
@@ -289,7 +282,7 @@ func_name
     ;
 
 function_args
-	: LPAREN pl=param_list_or_all? RPAREN
+	: LPAREN param_list_or_all? RPAREN
 	;
 	
 param_list_or_all
@@ -302,9 +295,8 @@ param_list
 	;
 
 param_list_el
-    :  LPAREN RPAREN
-    | LPAREN param_list RPAREN  // 2008 R2 table constructor
-    | expression
+    : expression // 2008 R2 table constructor looks like precedence
+    | LPAREN RPAREN
     | DEFAULT
     ;
 	
@@ -367,15 +359,10 @@ oledbProvider
 connectionString
 	: s1=SQ_LITERAL								// Connection/Initialization string
 		(SEMI s2=SQ_LITERAL SEMI s3=SQ_LITERAL)?		// Connection string is optionally 3 params ds, user, passwd
-		
-
-					
 	;
 	
 bulk_options
 	: (COMMA boe+=bulk_options_ents)+
-	
-
 	;
 	
 bulk_options_ents
@@ -389,7 +376,6 @@ bulk_options_ents
 		
 fc_table_clause
 	: LPAREN
-	  
 	  	keyw_id				// Table name
 	  	COMMA
 	  		(
@@ -406,7 +392,6 @@ fc_table_clause
 	  	)?
 	  	(COMMA expression)?			// Ranking limiter - probably literal or @var only, but it isn't the job of the
 	  								// parser to work that out yet.	
-	  	
 	  RPAREN
 	;
 	
@@ -548,8 +533,6 @@ keyw_id_for_func
 
 keyw_id_orcc
     : keyw_id_part
-    | CAST LPAREN e=expression AS dt=data_type RPAREN
-	| CONVERT LPAREN dt=data_type COMMA e=expression (COMMA i2=expression)? RPAREN
     ;
 
 keyw_id
@@ -589,7 +572,7 @@ dq_br_literal
     | BR_LITERAL
     ;
 
-// Keywords allowed as IDs. This is an optional thing in TSQL, though why you woudl allow it
+// Keywords allowed as IDs. This is an optional thing in TSQL, though why you woula allow it
 // is beyond me. It is a bit of a pain to parse, but it is allowed.
 //
 keywords	
@@ -597,32 +580,32 @@ keywords
 	|ACTIVE							
 	|ACTIVATION
 	|ACCENT_SENSITIVITY
-//	|KADD
+	|KADD
 	|ADDRESS				
 	|AFTER
 	|ALGORITHM						
-//	|ALL								
+	|ALL
 	|ALLOW_ROW_LOCKS
 	|ALLOW_PAGE_LOCKS
 	|ALLOW_SNAPSHOT_ISOLATION		
 	|ALL_RESULTS						
-//	|ALTER							
+	|ALTER
 	|ANONYMOUS
 	|ANSI_NULL_DEFAULT 				
 	|ANSI_NULLS						
 	|ANSI_PADDING					
 	|ANSI_WARNINGS					
-//	|ANY								
+	|ANY
 	|APPLICATION						
 	|APPLY							
 	|ARITHABORT
     |AT
-//	|AS								
-//	|ASC								
+	|AS
+	|ASC
 	|ASSEMBLY						
 	|ASYMMETRIC						
 	|AUTHENTICATION					
-//	|AUTHORIZATION					
+	|AUTHORIZATION
 	|AUTH_REALM						
 	|AUTO							
 	|AUTO_CLOSE 						
@@ -634,26 +617,26 @@ keywords
 	|BASIC							
 	|BATCHES	
 	|BATCHSIZE
-//	|BEGIN
+    |BEGIN
 	|BEGIN_DIALOG					
-//	|BETWEEN							
+	|BETWEEN
 	|BINARY							
 	|BINDING							
 	|BLOCKSIZE
-//	|BREAK
+	|BREAK
 	|BROKER_INSTANCE
-//	|BROWSE							
-//	|BULK	
+	|BROWSE
+	|BULK
 	|BUFFERCOUNT						
 	|BULK_LOGGED						
-//	|BY		
+	|BY
 	|CASCADE						
 	|CATALOG							
 	|CATCH
 	|CERTIFICATE						
 	|CHANGE_TRACKING
 	|CHARACTER_SET		
-//	|CHECK		
+	|CHECK
 	|CHECK_EXPIRATION	
 	|CHECK_CONSTRAINTS
 	|CHECK_POLICY
@@ -662,36 +645,37 @@ keywords
     |CLEANUP
 	|CLEAR							
 	|CLEAR_PORT	
-//	|CLUSTERED
+	|CLUSTERED
 	|CODEPAGE						
-//	|COLLATE							
+	|COLLATE
 	|COLLECTION
 	|COLUMNS
 	|COMPRESSION						
-//	|COMPUTE							
+	|COMPUTE
 	|CONCAT							
-//	|CONCAT_NULL_YIELDS_KNULL
-//	|CONTAINS						
-//	|CONTAINSTABLE
-//	|CONTINUE
+	|CONCAT_NULL_YIELDS_NULL
+	|CONTAINS
+	|CONTAINSTABLE
+	|CONTINUE
 	|CONTINUE_AFTER_ERROR	
 	|CONTENT				
 	|CONTRACT
     |CONTROL
 	|CONVERSATION
-//	|CONSTRAINT
+	|CONSTRAINT
     |COOKIE
 	|COPY					
 	|COUNT_BIG						
 	|COUNT							
 	|COUNTER							
 	|CREDENTIAL						
-//	|CROSS							
-	|CUBE							
+	|CROSS
+	|CUBE
+	|CURSOR
 	|CURSOR_CLOSE_ON_COMMIT			
 	|CURSOR_DEFAULT
     |CURRENT
-	//|DATABASE						
+    |DATABASE
 	|DATABASE_MIRRORING
     |DATABASE_SNAPSHOT
 	|DATA		
@@ -705,35 +689,35 @@ keywords
 	|DEFAULT_LOGON_DOMAIN			
 	|DEFAULT_SCHEMA
     |DEFINITION
-//	|KDELETE
+	|KDELETE
 	|DENSE_RANK
 	|DESCRIPTION
-//	|DESC		
+	|DESC
 	|DIALOG					
 	|DIFFERENTIAL
 	|DIGEST							
 	|DISABLE_BROKER
-//	|DISABLE
+	|DISABLE
 	|DISABLED	
 	|DISTRIBUTED					
 	|DISK
-//	|DISTINCT	
+	|DISTINCT
 	|DOCUMENT					
-//	|DROP							
+	|DROP
 	|ELEMENTS						
 	|EMERGENCY						
-//	|ENABLE
+	|ENABLE
 	|ENABLE_BROKER			    	
 	|ENABLED							
 	|ENCRYPTION				
-//	|END
+	|END
 	|ENDPOINT		
 	|EMPTY
     |ERROR
 	|ERROR_BROKER_CONVERSATIONS		
 	|ERRORFILE						
-//	|ESCAPE							
-//	|EXCEPT
+	|ESCAPE
+	|EXCEPT
     |EVENT
     |EVENTDATA
 	|EXPAND
@@ -883,8 +867,9 @@ keywords
 	|NO_WAIT
 	|NORECOVERY							
 	|NOWAIT							
-	|NTILE
-	|NTLM							
+//	|NTILE
+	|NTLM
+	|NRA
 	|OBJECT
 	|OF						
 	|OFFLINE			    			
@@ -1054,7 +1039,6 @@ keywords
 	|TB								
 	|TCP								
 	|TIES
-    
 	|TIMER						
 	|TIMEOUT			    			
 //	|TOP								
@@ -1134,6 +1118,8 @@ keywords
     | SHOWCONTIG
     | SHRINKDATABASE
     | SHRINKFILE
+    | SID
+    | SPARSE
     | SQLPERF
     | TRACEOFF
     | TRACEON
@@ -1141,7 +1127,6 @@ keywords
     | UNPINTABLE
     | UPDATEUSAGE
     | USEROPTIONS
-
     | FIRST
     | LAST
     | RELATIVE

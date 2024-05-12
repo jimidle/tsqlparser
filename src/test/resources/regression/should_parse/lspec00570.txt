@@ -1,0 +1,1 @@
+(aaa_translation_unit (batch_statements (statements (sql_statements (miscellaneous_statements (dbcc_statement DBCC (dbcc_indexdefrag INDEXDEFRAG (dbcc_form_4 ( (dbcc_dbname (keyw_id (keyw_id_part (func_keyw_id AdventureWorks)))) , 'Production.Product' , (keyw_id (keyw_id_part (func_keyw_id PK_Product_ProductID))) ))))))) (statements GO)) <EOF>)

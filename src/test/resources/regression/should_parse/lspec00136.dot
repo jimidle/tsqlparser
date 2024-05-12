@@ -1,0 +1,36 @@
+digraph ParseTree {
+  n0 -> n1 [label="batch_statements"];
+  n1 -> n2 [label="statements"];
+  n2 -> n3 [label="ddl_statements"];
+  n3 -> n4 [label="alter_statement"];
+  n4 -> n5 [label="ALTER"];
+  n4 -> n6 [label="alter_asymmetric"];
+  n6 -> n7 [label="ASYMMETRIC"];
+  n6 -> n8 [label="KEY"];
+  n6 -> n9 [label="keyw_id"];
+  n9 -> n10 [label="keyw_id_part"];
+  n10 -> n11 [label="func_keyw_id"];
+  n11 -> n12 [label="PacificSales09"];
+  n6 -> n13 [label="alter_option"];
+  n13 -> n14 [label="WITH"];
+  n13 -> n15 [label="PRIVATE"];
+  n13 -> n16 [label="KEY"];
+  n13 -> n17 [label="("];
+  n13 -> n18 [label="ak_password_option"];
+  n18 -> n19 [label="DECRYPTION"];
+  n18 -> n20 [label="BY"];
+  n18 -> n21 [label="PASSWORD"];
+  n18 -> n22 [label="="];
+  n18 -> n23 [label="'bmsA$dk7i82bv55foajsd9764'"];
+  n18 -> n24 [label=","];
+  n18 -> n25 [label="ENCRYPTION"];
+  n18 -> n26 [label="BY"];
+  n18 -> n27 [label="PASSWORD"];
+  n18 -> n28 [label="="];
+  n18 -> n29 [label="'85423sdvcx7987$$2ooo'"];
+  n13 -> n30 [label=")"];
+  n6 -> n31 [label=";"];
+  n1 -> n32 [label="statements"];
+  n32 -> n33 [label="GO"];
+  n0 -> n34 [label="<EOF>"];
+}

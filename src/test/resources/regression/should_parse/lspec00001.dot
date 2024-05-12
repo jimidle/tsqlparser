@@ -1,0 +1,10 @@
+digraph ParseTree {
+  n0 -> n1 [label="batch_statements"];
+  n1 -> n2 [label="statements"];
+  n2 -> n3 [label="GO"];
+  n1 -> n4 [label="statements"];
+  n4 -> n5 [label="GO"];
+  n1 -> n6 [label="statements"];
+  n6 -> n7 [label="GO"];
+  n0 -> n8 [label="<EOF>"];
+}

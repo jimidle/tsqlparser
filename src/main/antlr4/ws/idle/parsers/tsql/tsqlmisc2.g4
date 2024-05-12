@@ -783,20 +783,34 @@ send_message_type
 // SET statement
 //
 set_statement
-    : SET
-        (
-            set_vars
-        )
-        SEMI?
+    : SET (special_flags (ON | OFF)? | set_vars) SEMI?
     ;
 
 set_vars
-    : expression_list
-        // SET X = Y needs only one expression as expression will handle it
-        expression?
-    | special_flags
+    : set_var_list e1=expression? e2=expression?
+        (   : assop e3=expression
+            | ON
+            | OFF
+        )?
     ;
 
+assop
+    : OPEQ
+    | OPPLUSEQ
+    | OPMINUSEQ
+    | OPMULEQ
+    | OPDIVEQ
+    | OPMODEQ
+    | OPBANDEQ
+    | OPBOREQ
+    | OPBXOREQ
+    ;
+
+set_var_list
+    : keyw_id (COMMA keyw_id)*
+    ;
+
+// Parsed by expression
 special_flags
     : DEADLOCK_PRIORITY
         (

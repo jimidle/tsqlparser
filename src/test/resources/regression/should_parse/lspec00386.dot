@@ -1,0 +1,29 @@
+digraph ParseTree {
+  n0 -> n1 [label="batch_statements"];
+  n1 -> n2 [label="statements"];
+  n2 -> n3 [label="sql_statements"];
+  n3 -> n4 [label="use_statement"];
+  n4 -> n5 [label="USE"];
+  n4 -> n6 [label="keyw_id"];
+  n6 -> n7 [label="keyw_id_part"];
+  n7 -> n8 [label="func_keyw_id"];
+  n8 -> n9 [label="AdventureWorks"];
+  n4 -> n10 [label=";"];
+  n1 -> n11 [label="statements"];
+  n11 -> n12 [label="GO"];
+  n1 -> n13 [label="statements"];
+  n13 -> n14 [label="ddl_statements"];
+  n14 -> n15 [label="create_statement"];
+  n15 -> n16 [label="CREATE"];
+  n15 -> n17 [label="create_default"];
+  n17 -> n18 [label="DEFAULT"];
+  n17 -> n19 [label="keyw_id"];
+  n19 -> n20 [label="keyw_id_part"];
+  n20 -> n21 [label="func_keyw_id"];
+  n21 -> n22 [label="phonedflt"];
+  n17 -> n23 [label="AS"];
+  n17 -> n24 [label="expression"];
+  n24 -> n25 [label="atoms"];
+  n25 -> n26 [label="'unknown'"];
+  n0 -> n27 [label="<EOF>"];
+}

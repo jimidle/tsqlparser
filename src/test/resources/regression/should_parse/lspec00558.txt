@@ -1,0 +1,1 @@
+(aaa_translation_unit (batch_statements (statements (sql_statements (miscellaneous_statements (dbcc_statement DBCC (dbcc_checkalloc CHECKALLOC) ;)))) (statements GO) (statements (sql_statements (miscellaneous_statements (dbcc_statement DBCC (dbcc_checkalloc CHECKALLOC (dbcc_form_1 ( (dbcc_dbname 'AdventureWorks') ))) ;)))) (statements GO)) <EOF>)

@@ -1,0 +1,4 @@
+digraph ParseTree {
+  n0 -> n1 [label="batch_statements"];
+  n0 -> n2 [label="<EOF>"];
+}

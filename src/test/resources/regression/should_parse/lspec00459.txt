@@ -1,0 +1,1 @@
+(aaa_translation_unit (batch_statements (statements (ddl_statements (create_statement CREATE (create_queue QUEUE (keyw_id (keyw_id_part (func_keyw_id ExpenseQueue))) (queue_element_with WITH (queue_element_list (queue_element STATUS = OFF))) ;))))) <EOF>)

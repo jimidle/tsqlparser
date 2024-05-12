@@ -427,9 +427,22 @@ optimize_hint_set
 		;
 
 group_by_clause
-		:  GROUP BY (ALL)? expression_list
-				(WITH (CUBE | ROLLUP))?
+		:  GROUP BY
+		    (
+		         ALL? expression_list (WITH (CUBE | ROLLUP))?
+			    | md_sets
+			)
 		;
+
+md_sets
+    : (ROLLUP | CUBE | GROUPING SETS)
+        LPAREN
+            (
+                  expression
+                | (LPAREN expression_list? RPAREN COMMA?)+
+            )
+        RPAREN
+    ;
 
 // End: SELECT statements
 ///////////////////////////////////////////////////////////

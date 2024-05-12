@@ -1,0 +1,35 @@
+digraph ParseTree {
+  n0 -> n1 [label="batch_statements"];
+  n1 -> n2 [label="statements"];
+  n2 -> n3 [label="sql_statements"];
+  n3 -> n4 [label="use_statement"];
+  n4 -> n5 [label="USE"];
+  n4 -> n6 [label="keyw_id"];
+  n6 -> n7 [label="keyw_id_part"];
+  n7 -> n8 [label="func_keyw_id"];
+  n8 -> n9 [label="AdventureWorks"];
+  n4 -> n10 [label=";"];
+  n1 -> n11 [label="statements"];
+  n11 -> n12 [label="ddl_statements"];
+  n12 -> n13 [label="alter_statement"];
+  n13 -> n14 [label="ALTER"];
+  n13 -> n15 [label="alter_user"];
+  n15 -> n16 [label="USER"];
+  n15 -> n17 [label="keyw_id"];
+  n17 -> n18 [label="keyw_id_part"];
+  n18 -> n19 [label="func_keyw_id"];
+  n19 -> n20 [label="Mary5"];
+  n15 -> n21 [label="WITH"];
+  n15 -> n22 [label="common_set_item_list"];
+  n22 -> n23 [label="common_set_item"];
+  n23 -> n24 [label="NAME"];
+  n23 -> n25 [label="="];
+  n23 -> n26 [label="keyw_id"];
+  n26 -> n27 [label="keyw_id_part"];
+  n27 -> n28 [label="func_keyw_id"];
+  n28 -> n29 [label="Mary51"];
+  n15 -> n30 [label=";"];
+  n1 -> n31 [label="statements"];
+  n31 -> n32 [label="GO"];
+  n0 -> n33 [label="<EOF>"];
+}

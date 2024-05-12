@@ -1,0 +1,1 @@
+(aaa_translation_unit (batch_statements (statements (ddl_statements (create_statement CREATE (create_remote REMOTE SERVICE BINDING (keyw_id (keyw_id_part (func_keyw_id APBinding))) TO SERVICE '//Adventure-Works.com/services/AccountsPayable' (create_remote_with WITH (remote_user_opt USER = (keyw_id_part (func_keyw_id APUser))) , (remote_anon_opt ANONYMOUS = ON)) ;))))) <EOF>)

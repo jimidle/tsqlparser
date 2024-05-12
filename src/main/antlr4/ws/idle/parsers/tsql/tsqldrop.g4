@@ -144,18 +144,12 @@ dropIndex
     ;
 
 dropIndexOnWith
-    : keyw_id (ON keyw_id column_list? dropIndexWith?)?
+    : keyw_id (ON keyw_id column_list? dropIndexWith? )?
     ;
 
 dropIndexWith
     : WITH
-        LPAREN dropClusteredIndexOptionList RPAREN
-    ;
-
-dropClusteredIndexOptionList
-    : d+=dropClusteredIndexOption (COMMA d+=dropClusteredIndexOption)*
-
-
+        LPAREN (dropClusteredIndexOption COMMA?)+ RPAREN
     ;
 
 dropClusteredIndexOption
@@ -165,6 +159,7 @@ dropClusteredIndexOption
         (
               keyw_id (LPAREN keyw_id RPAREN)?
         )
+    | FILESTREAM_ON (keyw_id | DEFAULT)
     ;
 // End: DROP INDEX
 ///////////////////////////////////////////////////////////

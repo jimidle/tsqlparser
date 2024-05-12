@@ -1,0 +1,7 @@
+CREATE TABLE t (i int SPARSE, cs xml column_set FOR ALL_SPARSE_COLUMNS)
+GO
+INSERT t(cs) VALUES ('<i/>')
+GO
+SELECT i FROM t
+GO
+

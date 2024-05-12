@@ -1,0 +1,29 @@
+digraph ParseTree {
+  n0 -> n1 [label="batch_statements"];
+  n1 -> n2 [label="statements"];
+  n2 -> n3 [label="sql_statements"];
+  n3 -> n4 [label="miscellaneous_statements"];
+  n4 -> n5 [label="dbcc_statement"];
+  n5 -> n6 [label="DBCC"];
+  n5 -> n7 [label="dbcc_checkalloc"];
+  n7 -> n8 [label="CHECKALLOC"];
+  n5 -> n9 [label=";"];
+  n1 -> n10 [label="statements"];
+  n10 -> n11 [label="GO"];
+  n1 -> n12 [label="statements"];
+  n12 -> n13 [label="sql_statements"];
+  n13 -> n14 [label="miscellaneous_statements"];
+  n14 -> n15 [label="dbcc_statement"];
+  n15 -> n16 [label="DBCC"];
+  n15 -> n17 [label="dbcc_checkalloc"];
+  n17 -> n18 [label="CHECKALLOC"];
+  n17 -> n19 [label="dbcc_form_1"];
+  n19 -> n20 [label="("];
+  n19 -> n21 [label="dbcc_dbname"];
+  n21 -> n22 [label="'AdventureWorks'"];
+  n19 -> n23 [label=")"];
+  n15 -> n24 [label=";"];
+  n1 -> n25 [label="statements"];
+  n25 -> n26 [label="GO"];
+  n0 -> n27 [label="<EOF>"];
+}

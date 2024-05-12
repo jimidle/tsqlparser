@@ -1,0 +1,1 @@
+(aaa_translation_unit (batch_statements (statements (ddl_statements (create_statement CREATE (create_asymmetric ASYMMETRIC KEY (keyw_id (keyw_id_part (func_keyw_id PacificSales09))) (create_asm_option WITH ALGORITHM = (keyw_id (keyw_id_part (func_keyw_id RSA_2048)))) (ak_password_option ENCRYPTION BY PASSWORD = 'bmsA$dk7i82bv55foajsd9764') ;)))) (statements GO)) <EOF>)

@@ -9,18 +9,29 @@
 	FROM  UNV_JOINCONTENT A,
 		 UNV_TABLE B,
 		 UNV_TABLE C 
-	WHERE	 (A.UNIVERSE_ID  = B.UNIVERSE_ID
-	 AND	A.JN_TABLE1_ID  = B.TABLE_ID
-	 AND	A.UNIVERSE_ID  = C.UNIVERSE_ID
-	 AND	A.JN_TABLE2_ID  = C.TABLE_ID
-	 AND	NOT (B.TABLE_ID  > 65536
-	 AND	C.TABLE_ID  > 65536))
-	 OR	(A.UNIVERSE_ID  = C.UNIVERSE_ID
-	 AND	A.JN_TABLE1_ID  = C.TABLE_ID
-	 AND	A.UNIVERSE_ID  = B.UNIVERSE_ID
-	 AND	A.JN_TABLE2_ID  = B.TABLE_ID
-	 AND	NOT (B.TABLE_ID  > 65536
-	 AND	C.TABLE_ID  > 65536))
+	WHERE
+        (
+                A.UNIVERSE_ID  = B.UNIVERSE_ID
+         AND	A.JN_TABLE1_ID  = B.TABLE_ID
+         AND	A.UNIVERSE_ID  = C.UNIVERSE_ID
+         AND	A.JN_TABLE2_ID  = C.TABLE_ID
+         AND	NOT (
+                            B.TABLE_ID  > 65536
+                        AND
+                            C.TABLE_ID  > 65536
+                    )
+        )
+	 OR	(
+                A.UNIVERSE_ID  = C.UNIVERSE_ID
+            AND	A.JN_TABLE1_ID  = C.TABLE_ID
+            AND	A.UNIVERSE_ID  = B.UNIVERSE_ID
+            AND	A.JN_TABLE2_ID  = B.TABLE_ID
+            AND	NOT (
+                            B.TABLE_ID  > 65536
+                        AND	C.TABLE_ID  > 65536
+                    )
+        )
+
 	UNION
 	 SELECT
 			 A.UNIVERSE_ID AS JOIN_UNIVERSE_ID,
@@ -32,7 +43,7 @@
 			 C.TAB_NAME AS JOINED_TO_TABLE
 	FROM  UNV_JOINCONTENT A,
 		 UNV_TABLE B,
-		 UNV_TABLE C 
+		 UNV_TABLE C
 	WHERE	 (B.TABLE_ID  > 65536
 	 AND	(A.JN_TABLE1_ID + (A.UNIVERSE_ID * 65536))  = B.TABLE_ID
 	 AND	(A.JN_TABLE2_ID + (A.UNIVERSE_ID * 65536))  = C.TABLE_ID
@@ -41,4 +52,3 @@
 	 AND	(A.JN_TABLE1_ID + (A.UNIVERSE_ID * 65536))  = C.TABLE_ID
 	 AND	(A.JN_TABLE2_ID + (A.UNIVERSE_ID * 65536))  = B.TABLE_ID
 	 AND	B.UNIVERSE_ID  = C.UNIVERSE_ID)
-	 
