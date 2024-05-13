@@ -179,7 +179,7 @@ digraph ParseTree {
   n172 -> n178 [label="iut_value"];
   n178 -> n179 [label="expression"];
   n179 -> n180 [label="keyw_id_part"];
-  n180 -> n181 [label=""'Text in single quotes'""];
+  n180 -> n181 [label="'Text in single quotes'"];
   n170 -> n182 [label=")"];
   n1 -> n183 [label="statements"];
   n183 -> n184 [label="sql_statements"];
@@ -278,7 +278,7 @@ digraph ParseTree {
   n271 -> n277 [label="iut_value"];
   n277 -> n278 [label="expression"];
   n278 -> n279 [label="atoms"];
-  n279 -> n280 [label="'"Text in double quotes"'"];
+  n279 -> n280 [label="'Text in double quotes'"];
   n269 -> n281 [label=")"];
   n1 -> n282 [label="statements"];
   n282 -> n283 [label="sql_statements"];
@@ -311,7 +311,7 @@ digraph ParseTree {
   n304 -> n310 [label="iut_value"];
   n310 -> n311 [label="expression"];
   n311 -> n312 [label="keyw_id_part"];
-  n312 -> n313 [label=""""Text in double quotes""""];
+  n312 -> n313 [label="Text in double quotes"];
   n302 -> n314 [label=")"];
   n1 -> n315 [label="statements"];
   n315 -> n316 [label="sql_statements"];
@@ -344,7 +344,7 @@ digraph ParseTree {
   n337 -> n343 [label="iut_value"];
   n343 -> n344 [label="expression"];
   n344 -> n345 [label="keyw_id_part"];
-  n345 -> n346 [label=""Text with 2 """" double quotes""];
+  n345 -> n346 [label="Text with 2  double quotes"];
   n335 -> n347 [label=")"];
   n1 -> n348 [label="statements"];
   n348 -> n349 [label="GO"];
@@ -377,7 +377,7 @@ digraph ParseTree {
   n375 -> n376 [label="dbo"];
   n373 -> n377 [label="."];
   n373 -> n378 [label="keyw_id_part"];
-  n378 -> n379 [label=""Test""];
+  n378 -> n379 [label="Test"];
   n368 -> n380 [label="insert_update_target"];
   n380 -> n381 [label="insert_update_target_tbl"];
   n381 -> n382 [label="insert_update_target_values"];

@@ -146,10 +146,10 @@ digraph ParseTree {
   n144 -> n145 [label="while_statement"];
   n145 -> n146 [label="WHILE"];
   n145 -> n147 [label="search_condition"];
-  n147 -> n148 [label="predicate"];
-  n148 -> n149 [label="expression"];
-  n149 -> n150 [label="("];
-  n149 -> n151 [label="expression"];
+  n147 -> n148 [label="("];
+  n147 -> n149 [label="search_condition"];
+  n149 -> n150 [label="predicate"];
+  n150 -> n151 [label="expression"];
   n151 -> n152 [label="expression"];
   n152 -> n153 [label="keyw_id_part"];
   n153 -> n154 [label="func_keyw_id"];
@@ -160,7 +160,7 @@ digraph ParseTree {
   n157 -> n159 [label="expression"];
   n159 -> n160 [label="atoms"];
   n160 -> n161 [label="1"];
-  n149 -> n162 [label=")"];
+  n147 -> n162 [label=")"];
   n145 -> n163 [label="statements"];
   n163 -> n164 [label="sql_statements"];
   n164 -> n165 [label="miscellaneous_statements"];

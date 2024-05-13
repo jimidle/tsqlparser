@@ -32,10 +32,11 @@ digraph ParseTree {
   n30 -> n31 [label="keyw_id_part"];
   n31 -> n32 [label="func_keyw_id"];
   n32 -> n33 [label="@MyCounter"];
-  n28 -> n34 [label="="];
-  n28 -> n35 [label="expression"];
-  n35 -> n36 [label="atoms"];
-  n36 -> n37 [label="1"];
-  n26 -> n38 [label=";"];
-  n0 -> n39 [label="<EOF>"];
+  n28 -> n34 [label="assop"];
+  n34 -> n35 [label="="];
+  n28 -> n36 [label="expression"];
+  n36 -> n37 [label="atoms"];
+  n37 -> n38 [label="1"];
+  n26 -> n39 [label=";"];
+  n0 -> n40 [label="<EOF>"];
 }

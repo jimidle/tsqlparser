@@ -63,7 +63,7 @@ digraph ParseTree {
   n40 -> n62 [label="param_list_el"];
   n62 -> n63 [label="expression"];
   n63 -> n64 [label="keyw_id_part"];
-  n64 -> n65 [label=""Any time""];
+  n64 -> n65 [label="Any time"];
   n40 -> n66 [label=","];
   n40 -> n67 [label="param_list_el"];
   n67 -> n68 [label="expression"];

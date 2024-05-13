@@ -73,15 +73,14 @@ digraph ParseTree {
   n71 -> n72 [label="ListPrice"];
   n68 -> n73 [label="BETWEEN"];
   n68 -> n74 [label="expression"];
-  n74 -> n75 [label="expression"];
-  n75 -> n76 [label="atoms"];
-  n76 -> n77 [label="350.00"];
-  n74 -> n78 [label="AND"];
-  n74 -> n79 [label="expression"];
-  n79 -> n80 [label="atoms"];
-  n80 -> n81 [label="400.00"];
-  n15 -> n82 [label=";"];
-  n1 -> n83 [label="statements"];
-  n83 -> n84 [label="GO"];
-  n0 -> n85 [label="<EOF>"];
+  n74 -> n75 [label="atoms"];
+  n75 -> n76 [label="350.00"];
+  n68 -> n77 [label="AND"];
+  n68 -> n78 [label="expression"];
+  n78 -> n79 [label="atoms"];
+  n79 -> n80 [label="400.00"];
+  n15 -> n81 [label=";"];
+  n1 -> n82 [label="statements"];
+  n82 -> n83 [label="GO"];
+  n0 -> n84 [label="<EOF>"];
 }

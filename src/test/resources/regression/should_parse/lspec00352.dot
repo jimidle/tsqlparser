@@ -67,7 +67,7 @@ digraph ParseTree {
   n58 -> n66 [label="param_list_el"];
   n66 -> n67 [label="expression"];
   n67 -> n68 [label="atoms"];
-  n68 -> n69 [label="' "Mountain" OR "Road" '"];
+  n68 -> n69 [label="' Mountain OR Road '"];
   n55 -> n70 [label=")"];
   n1 -> n71 [label="statements"];
   n71 -> n72 [label="GO"];

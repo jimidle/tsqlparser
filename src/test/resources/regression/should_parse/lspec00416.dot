@@ -211,15 +211,14 @@ digraph ParseTree {
   n209 -> n210 [label="PostalCode"];
   n206 -> n211 [label="BETWEEN"];
   n206 -> n212 [label="expression"];
-  n212 -> n213 [label="expression"];
-  n213 -> n214 [label="atoms"];
-  n214 -> n215 [label="N'98000'"];
-  n212 -> n216 [label="and"];
-  n212 -> n217 [label="expression"];
-  n217 -> n218 [label="atoms"];
-  n218 -> n219 [label="N'99999'"];
-  n153 -> n220 [label=";"];
-  n1 -> n221 [label="statements"];
-  n221 -> n222 [label="GO"];
-  n0 -> n223 [label="<EOF>"];
+  n212 -> n213 [label="atoms"];
+  n213 -> n214 [label="N'98000'"];
+  n206 -> n215 [label="and"];
+  n206 -> n216 [label="expression"];
+  n216 -> n217 [label="atoms"];
+  n217 -> n218 [label="N'99999'"];
+  n153 -> n219 [label=";"];
+  n1 -> n220 [label="statements"];
+  n220 -> n221 [label="GO"];
+  n0 -> n222 [label="<EOF>"];
 }
