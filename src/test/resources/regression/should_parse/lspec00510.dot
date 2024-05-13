@@ -1,0 +1,24 @@
+digraph ParseTree {
+  n0 -> n1 [label="batch_statements"];
+  n1 -> n2 [label="statements"];
+  n2 -> n3 [label="ddl_statements"];
+  n3 -> n4 [label="permissions_ddl"];
+  n4 -> n5 [label="grant_statement"];
+  n5 -> n6 [label="GRANT"];
+  n5 -> n7 [label="permission_set"];
+  n7 -> n8 [label="permission_set_element"];
+  n8 -> n9 [label="permission_name"];
+  n9 -> n10 [label="permission_spec"];
+  n10 -> n11 [label="CONNECT"];
+  n5 -> n12 [label="permission_to"];
+  n12 -> n13 [label="TO"];
+  n12 -> n14 [label="keyw_id_list"];
+  n14 -> n15 [label="keyw_id"];
+  n15 -> n16 [label="keyw_id_part"];
+  n16 -> n17 [label="func_keyw_id"];
+  n17 -> n18 [label="guest"];
+  n5 -> n19 [label=";"];
+  n1 -> n20 [label="statements"];
+  n20 -> n21 [label="GO"];
+  n0 -> n22 [label="<EOF>"];
+}

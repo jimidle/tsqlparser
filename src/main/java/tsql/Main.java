@@ -3,8 +3,8 @@ package tsql;
 import org.antlr.v4.runtime.CharStream;
 import org.antlr.v4.runtime.CharStreams;
 import org.antlr.v4.runtime.CommonTokenStream;
-import ws.idle.parsers.tsql.tsqlparser;
-import ws.idle.parsers.tsql.tsqltokens;
+import ws.idle.parsers.tsql.TSqlParser;
+import ws.idle.parsers.tsql.TSqlTokens;
 
 import java.io.File;
 import java.nio.charset.StandardCharsets;
@@ -18,7 +18,7 @@ import java.util.Objects;
  */
 class Main {
 
-    static tsqltokens lexer;
+    static TSqlTokens lexer;
 
     /**
      * Just a simple test driver for the ASP parser
@@ -26,7 +26,7 @@ class Main {
      */
 
     public static void main(String[] args) {
-        lexer = new tsqltokens(CharStreams.fromString(""));
+        lexer = new TSqlTokens(CharStreams.fromString(""));
         try {
             if (args.length > 0) {
 
@@ -85,12 +85,9 @@ class Main {
         }
     }
 
-    public static void parseSource(String source) throws Exception {
-        // Parse an ASP.Net page
-        //
-
+    public static void parseSource(String source) {
         try {
-            // First create a file stream using the povided file/path
+            // First create a file stream using the provided file/path
             // and tell the lexer that that is the character source.
             // You can also use text that you have already read of course
             // by using the string stream.
@@ -105,7 +102,7 @@ class Main {
 
             // Now we need an instance of our parser
             //
-            tsqlparser parser = new tsqlparser(tokens);
+            TSqlParser parser = new TSqlParser(tokens);
 
             System.out.println("file: " + source);
             System.out.println("    Lexer Start");

@@ -64,12 +64,18 @@
                 <configuration>
                     <visitor>true</visitor>
                     <listener>false</listener>
-                    <treatWarningsAsErrors>true</treatWarningsAsErrors>
+                    <treatWarningsAsErrors>false</treatWarningsAsErrors>
                     <outputDirectory>${project.build.directory}/generated-sources/antlr4</outputDirectory>
                     <libDirectory>src/main/antlr4/ws/idle/parsers/tsql</libDirectory>
                     <includes>
-                        <include>**/tsqlparser.g4</include>
-                        <include>**/tsqltokens.g4</include>
+                        <!--
+                            The following are the grammar files that we want to process.
+                            The order is important, as they are built in order if the plugin
+                            does not infer dependencies. It used to do that correctly, but
+                            it seems to have changed quite a lot  since I wrote it.
+                          -->
+                        <include>**/TSqlTokens.g4</include>
+                        <include>**/TSqlParser.g4</include>
                     </includes>
                 </configuration>
                 <executions>

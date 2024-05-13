@@ -1,0 +1,37 @@
+digraph ParseTree {
+  n0 -> n1 [label="batch_statements"];
+  n1 -> n2 [label="statements"];
+  n2 -> n3 [label="ddl_statements"];
+  n3 -> n4 [label="create_statement"];
+  n4 -> n5 [label="CREATE"];
+  n4 -> n6 [label="create_rule"];
+  n6 -> n7 [label="RULE"];
+  n6 -> n8 [label="keyw_id"];
+  n8 -> n9 [label="keyw_id_part"];
+  n9 -> n10 [label="func_keyw_id"];
+  n10 -> n11 [label="list_rule"];
+  n6 -> n12 [label="AS"];
+  n6 -> n13 [label="search_condition"];
+  n13 -> n14 [label="predicate"];
+  n14 -> n15 [label="expression"];
+  n15 -> n16 [label="keyw_id_part"];
+  n16 -> n17 [label="func_keyw_id"];
+  n17 -> n18 [label="@list"];
+  n14 -> n19 [label="IN"];
+  n14 -> n20 [label="("];
+  n14 -> n21 [label="expression_list"];
+  n21 -> n22 [label="expression"];
+  n22 -> n23 [label="atoms"];
+  n23 -> n24 [label="'1389'"];
+  n21 -> n25 [label=","];
+  n21 -> n26 [label="expression"];
+  n26 -> n27 [label="atoms"];
+  n27 -> n28 [label="'0736'"];
+  n21 -> n29 [label=","];
+  n21 -> n30 [label="expression"];
+  n30 -> n31 [label="atoms"];
+  n31 -> n32 [label="'0877'"];
+  n14 -> n33 [label=")"];
+  n6 -> n34 [label=";"];
+  n0 -> n35 [label="<EOF>"];
+}

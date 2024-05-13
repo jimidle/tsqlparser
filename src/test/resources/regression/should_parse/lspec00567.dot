@@ -1,0 +1,16 @@
+digraph ParseTree {
+  n0 -> n1 [label="batch_statements"];
+  n1 -> n2 [label="statements"];
+  n2 -> n3 [label="sql_statements"];
+  n3 -> n4 [label="miscellaneous_statements"];
+  n4 -> n5 [label="dbcc_statement"];
+  n5 -> n6 [label="DBCC"];
+  n5 -> n7 [label="dbcc_dll"];
+  n7 -> n8 [label="func_keyw_id"];
+  n8 -> n9 [label="xp_sample"];
+  n7 -> n10 [label="("];
+  n7 -> n11 [label="FREE"];
+  n7 -> n12 [label=")"];
+  n5 -> n13 [label=";"];
+  n0 -> n14 [label="<EOF>"];
+}

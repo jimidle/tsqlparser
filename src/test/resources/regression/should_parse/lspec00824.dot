@@ -1,0 +1,23 @@
+digraph ParseTree {
+  n0 -> n1 [label="batch_statements"];
+  n1 -> n2 [label="statements"];
+  n2 -> n3 [label="sql_statements"];
+  n3 -> n4 [label="miscellaneous_statements"];
+  n4 -> n5 [label="delete_statement"];
+  n5 -> n6 [label="DELETE"];
+  n5 -> n7 [label="delete_from_clause"];
+  n7 -> n8 [label="opt_from"];
+  n7 -> n9 [label="table_source_primitive"];
+  n9 -> n10 [label="primitive_table"];
+  n10 -> n11 [label="rowset_function"];
+  n11 -> n12 [label="OPENQUERY"];
+  n11 -> n13 [label="("];
+  n11 -> n14 [label="keyw_id_part"];
+  n14 -> n15 [label="func_keyw_id"];
+  n15 -> n16 [label="OracleSvr"];
+  n11 -> n17 [label=","];
+  n11 -> n18 [label="'SELECT name FROM joe.titles WHERE name = ''NewTitle'''"];
+  n11 -> n19 [label=")"];
+  n5 -> n20 [label=";"];
+  n0 -> n21 [label="<EOF>"];
+}

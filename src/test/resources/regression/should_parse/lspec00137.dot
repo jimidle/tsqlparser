@@ -1,0 +1,22 @@
+digraph ParseTree {
+  n0 -> n1 [label="batch_statements"];
+  n1 -> n2 [label="statements"];
+  n2 -> n3 [label="ddl_statements"];
+  n3 -> n4 [label="alter_statement"];
+  n4 -> n5 [label="ALTER"];
+  n4 -> n6 [label="alter_asymmetric"];
+  n6 -> n7 [label="ASYMMETRIC"];
+  n6 -> n8 [label="KEY"];
+  n6 -> n9 [label="keyw_id"];
+  n9 -> n10 [label="keyw_id_part"];
+  n10 -> n11 [label="func_keyw_id"];
+  n11 -> n12 [label="PacificSales19"];
+  n6 -> n13 [label="alter_option"];
+  n13 -> n14 [label="REMOVE"];
+  n13 -> n15 [label="PRIVATE"];
+  n13 -> n16 [label="KEY"];
+  n6 -> n17 [label=";"];
+  n1 -> n18 [label="statements"];
+  n18 -> n19 [label="GO"];
+  n0 -> n20 [label="<EOF>"];
+}

@@ -1,0 +1,3849 @@
+
+(aaa_translation_unit 
+  (batch_statements 
+    (statements 
+      (sql_statements 
+        (select_statement 
+          (query_expression 
+            (query_specification select 
+              (select_list 
+                (select_element 
+                  (expression 
+                    (keyw_id_part 
+                      (func_keyw_id a
+                      )
+                    )
+                  ) . *
+                ) , 
+                (select_element 
+                  (expression 
+                    (functions_and_vars 
+                      (function convert 
+                        ( 
+                          (data_type 
+                            (data_type_el 
+                              (keyw_id 
+                                (keyw_id_part 
+                                  (func_keyw_id bit
+                                  )
+                                )
+                              )
+                            )
+                          ) , 
+                          (expression 
+                            (case_expression case 
+                              (case_boolean_when_clause when 
+                                (search_condition 
+                                  (predicate 
+                                    (expression 
+                                      (expression 
+                                        (keyw_id_part 
+                                          (func_keyw_id b
+                                          )
+                                        )
+                                      ) . 
+                                      (expression 
+                                        (keyw_id_part 
+                                          (func_keyw_id mid
+                                          )
+                                        )
+                                      )
+                                    ) is not null
+                                  )
+                                ) then 
+                                (expression 
+                                  (atoms 1
+                                  )
+                                )
+                              ) 
+                              (case_else else 
+                                (expression 
+                                  (atoms 0
+                                  )
+                                )
+                              ) end
+                            )
+                          ) 
+                        )
+                      )
+                    )
+                  ) 
+                  (as_clause as 
+                    (func_keyw_id special_program
+                    )
+                  )
+                ) , 
+                (select_element 
+                  (expression 
+                    (functions_and_vars 
+                      (function convert 
+                        ( 
+                          (data_type 
+                            (data_type_el 
+                              (keyw_id 
+                                (keyw_id_part 
+                                  (func_keyw_id bit
+                                  )
+                                )
+                              )
+                            )
+                          ) , 
+                          (expression 
+                            (functions_and_vars 
+                              (function 
+                                (func_name 
+                                  (keyw_id_for_func 
+                                    (keyw_id_orcc 
+                                      (keyw_id_part 
+                                        (func_keyw_id isnull
+                                        )
+                                      )
+                                    )
+                                  )
+                                ) 
+                                (function_args 
+                                  ( 
+                                    (param_list_or_all 
+                                      (param_list 
+                                        (param_list_el 
+                                          (expression 
+                                            (expression 
+                                              (keyw_id_part 
+                                                (func_keyw_id c
+                                                )
+                                              )
+                                            ) . 
+                                            (expression 
+                                              (keyw_id_part 
+                                                (func_keyw_id registered
+                                                )
+                                              )
+                                            )
+                                          )
+                                        ) , 
+                                        (param_list_el 
+                                          (expression 
+                                            (atoms 0
+                                            )
+                                          )
+                                        )
+                                      )
+                                    ) 
+                                  )
+                                )
+                              )
+                            )
+                          ) 
+                        )
+                      )
+                    )
+                  ) 
+                  (as_clause as 
+                    (func_keyw_id registered
+                    )
+                  )
+                ) , 
+                (select_element 
+                  (expression 
+                    (functions_and_vars 
+                      (function convert 
+                        ( 
+                          (data_type 
+                            (data_type_el 
+                              (keyw_id 
+                                (keyw_id_part 
+                                  (func_keyw_id bit
+                                  )
+                                )
+                              )
+                            )
+                          ) , 
+                          (expression 
+                            (functions_and_vars 
+                              (function 
+                                (func_name 
+                                  (keyw_id_for_func 
+                                    (keyw_id_orcc 
+                                      (keyw_id_part 
+                                        (func_keyw_id isnull
+                                        )
+                                      )
+                                    )
+                                  )
+                                ) 
+                                (function_args 
+                                  ( 
+                                    (param_list_or_all 
+                                      (param_list 
+                                        (param_list_el 
+                                          (expression 
+                                            (expression 
+                                              (keyw_id_part 
+                                                (func_keyw_id c
+                                                )
+                                              )
+                                            ) . 
+                                            (expression 
+                                              (keyw_id_part 
+                                                (func_keyw_id us_registered
+                                                )
+                                              )
+                                            )
+                                          )
+                                        ) , 
+                                        (param_list_el 
+                                          (expression 
+                                            (atoms 0
+                                            )
+                                          )
+                                        )
+                                      )
+                                    ) 
+                                  )
+                                )
+                              )
+                            )
+                          ) 
+                        )
+                      )
+                    )
+                  ) 
+                  (as_clause as 
+                    (func_keyw_id us_registered
+                    )
+                  )
+                ) , 
+                (select_element 
+                  (expression 
+                    (functions_and_vars 
+                      (function convert 
+                        ( 
+                          (data_type 
+                            (data_type_el 
+                              (keyw_id 
+                                (keyw_id_part 
+                                  (func_keyw_id char
+                                  )
+                                )
+                              ) 
+                              ( 1 
+                              )
+                            )
+                          ) , 
+                          (expression 
+                            (expression 
+                              (keyw_id_part 
+                                (func_keyw_id c
+                                )
+                              )
+                            ) . 
+                            (expression 
+                              (keyw_id_part 
+                                (func_keyw_id registration_country
+                                )
+                              )
+                            )
+                          ) 
+                        )
+                      )
+                    )
+                  ) 
+                  (as_clause as 
+                    (func_keyw_id registration_country
+                    )
+                  )
+                ) , 
+                (select_element 
+                  (expression 
+                    (functions_and_vars 
+                      (function convert 
+                        ( 
+                          (data_type 
+                            (data_type_el 
+                              (keyw_id 
+                                (keyw_id_part 
+                                  (func_keyw_id bit
+                                  )
+                                )
+                              )
+                            )
+                          ) , 
+                          (expression 
+                            (functions_and_vars 
+                              (function 
+                                (func_name 
+                                  (keyw_id_for_func 
+                                    (keyw_id_orcc 
+                                      (keyw_id_part 
+                                        (func_keyw_id isnull
+                                        )
+                                      )
+                                    )
+                                  )
+                                ) 
+                                (function_args 
+                                  ( 
+                                    (param_list_or_all 
+                                      (param_list 
+                                        (param_list_el 
+                                          (expression 
+                                            (expression 
+                                              (keyw_id_part 
+                                                (func_keyw_id d
+                                                )
+                                              )
+                                            ) . 
+                                            (expression 
+                                              (keyw_id_part 
+                                                (func_keyw_id optin
+                                                )
+                                              )
+                                            )
+                                          )
+                                        ) , 
+                                        (param_list_el 
+                                          (expression 
+                                            (atoms 0
+                                            )
+                                          )
+                                        )
+                                      )
+                                    ) 
+                                  )
+                                )
+                              )
+                            )
+                          ) 
+                        )
+                      )
+                    )
+                  ) 
+                  (as_clause as 
+                    (func_keyw_id optin
+                    )
+                  )
+                ) , 
+                (select_element 
+                  (expression 
+                    (functions_and_vars 
+                      (function convert 
+                        ( 
+                          (data_type 
+                            (data_type_el 
+                              (keyw_id 
+                                (keyw_id_part 
+                                  (func_keyw_id bit
+                                  )
+                                )
+                              )
+                            )
+                          ) , 
+                          (expression 
+                            (functions_and_vars 
+                              (function 
+                                (func_name 
+                                  (keyw_id_for_func 
+                                    (keyw_id_orcc 
+                                      (keyw_id_part 
+                                        (func_keyw_id isnull
+                                        )
+                                      )
+                                    )
+                                  )
+                                ) 
+                                (function_args 
+                                  ( 
+                                    (param_list_or_all 
+                                      (param_list 
+                                        (param_list_el 
+                                          (expression 
+                                            (expression 
+                                              (keyw_id_part 
+                                                (func_keyw_id d
+                                                )
+                                              )
+                                            ) . 
+                                            (expression 
+                                              (keyw_id_part 
+                                                (func_keyw_id us_optin
+                                                )
+                                              )
+                                            )
+                                          )
+                                        ) , 
+                                        (param_list_el 
+                                          (expression 
+                                            (atoms 0
+                                            )
+                                          )
+                                        )
+                                      )
+                                    ) 
+                                  )
+                                )
+                              )
+                            )
+                          ) 
+                        )
+                      )
+                    )
+                  ) 
+                  (as_clause as 
+                    (func_keyw_id us_optin
+                    )
+                  )
+                ) , 
+                (select_element 
+                  (expression 
+                    (functions_and_vars 
+                      (function convert 
+                        ( 
+                          (data_type 
+                            (data_type_el 
+                              (keyw_id 
+                                (keyw_id_part 
+                                  (func_keyw_id bit
+                                  )
+                                )
+                              )
+                            )
+                          ) , 
+                          (expression 
+                            (functions_and_vars 
+                              (function 
+                                (func_name 
+                                  (keyw_id_for_func 
+                                    (keyw_id_orcc 
+                                      (keyw_id_part 
+                                        (func_keyw_id isnull
+                                        )
+                                      )
+                                    )
+                                  )
+                                ) 
+                                (function_args 
+                                  ( 
+                                    (param_list_or_all 
+                                      (param_list 
+                                        (param_list_el 
+                                          (expression 
+                                            (expression 
+                                              (keyw_id_part 
+                                                (func_keyw_id c
+                                                )
+                                              )
+                                            ) . 
+                                            (expression 
+                                              (keyw_id_part 
+                                                (func_keyw_id email_only
+                                                )
+                                              )
+                                            )
+                                          )
+                                        ) , 
+                                        (param_list_el 
+                                          (expression 
+                                            (atoms 0
+                                            )
+                                          )
+                                        )
+                                      )
+                                    ) 
+                                  )
+                                )
+                              )
+                            )
+                          ) 
+                        )
+                      )
+                    )
+                  ) 
+                  (as_clause as 
+                    (func_keyw_id email_only
+                    )
+                  )
+                ) , 
+                (select_element 
+                  (expression 
+                    (functions_and_vars 
+                      (function convert 
+                        ( 
+                          (data_type 
+                            (data_type_el 
+                              (keyw_id 
+                                (keyw_id_part 
+                                  (func_keyw_id bit
+                                  )
+                                )
+                              )
+                            )
+                          ) , 
+                          (expression 
+                            (functions_and_vars 
+                              (function 
+                                (func_name 
+                                  (keyw_id_for_func 
+                                    (keyw_id_orcc 
+                                      (keyw_id_part 
+                                        (func_keyw_id isnull
+                                        )
+                                      )
+                                    )
+                                  )
+                                ) 
+                                (function_args 
+                                  ( 
+                                    (param_list_or_all 
+                                      (param_list 
+                                        (param_list_el 
+                                          (expression 
+                                            (expression 
+                                              (keyw_id_part 
+                                                (func_keyw_id c
+                                                )
+                                              )
+                                            ) . 
+                                            (expression 
+                                              (keyw_id_part 
+                                                (func_keyw_id email_valid
+                                                )
+                                              )
+                                            )
+                                          )
+                                        ) , 
+                                        (param_list_el 
+                                          (expression 
+                                            (atoms 0
+                                            )
+                                          )
+                                        )
+                                      )
+                                    ) 
+                                  )
+                                )
+                              )
+                            )
+                          ) 
+                        )
+                      )
+                    )
+                  ) 
+                  (as_clause as 
+                    (func_keyw_id email_valid
+                    )
+                  )
+                ) , 
+                (select_element 
+                  (expression 
+                    (functions_and_vars 
+                      (function convert 
+                        ( 
+                          (data_type 
+                            (data_type_el 
+                              (keyw_id 
+                                (keyw_id_part 
+                                  (func_keyw_id bit
+                                  )
+                                )
+                              )
+                            )
+                          ) , 
+                          (expression 
+                            (case_expression case 
+                              (case_boolean_when_clause when 
+                                (search_condition 
+                                  (predicate 
+                                    (expression 
+                                      (expression 
+                                        (keyw_id_part 
+                                          (func_keyw_id j
+                                          )
+                                        )
+                                      ) . 
+                                      (expression 
+                                        (keyw_id_part 
+                                          (func_keyw_id mid
+                                          )
+                                        )
+                                      )
+                                    ) is not null
+                                  )
+                                ) then 
+                                (expression 
+                                  (atoms 1
+                                  )
+                                )
+                              ) 
+                              (case_else else 
+                                (expression 
+                                  (atoms 0
+                                  )
+                                )
+                              ) end
+                            )
+                          ) 
+                        )
+                      )
+                    )
+                  ) 
+                  (as_clause as 
+                    (func_keyw_id email_responsive
+                    )
+                  )
+                ) , 
+                (select_element 
+                  (expression 
+                    (functions_and_vars 
+                      (function convert 
+                        ( 
+                          (data_type 
+                            (data_type_el 
+                              (keyw_id 
+                                (keyw_id_part 
+                                  (func_keyw_id bit
+                                  )
+                                )
+                              )
+                            )
+                          ) , 
+                          (expression 
+                            (functions_and_vars 
+                              (function 
+                                (func_name 
+                                  (keyw_id_for_func 
+                                    (keyw_id_orcc 
+                                      (keyw_id_part 
+                                        (func_keyw_id isnull
+                                        )
+                                      )
+                                    )
+                                  )
+                                ) 
+                                (function_args 
+                                  ( 
+                                    (param_list_or_all 
+                                      (param_list 
+                                        (param_list_el 
+                                          (expression 
+                                            (expression 
+                                              (keyw_id_part 
+                                                (func_keyw_id e
+                                                )
+                                              )
+                                            ) . 
+                                            (expression 
+                                              (keyw_id_part 
+                                                (func_keyw_id buyer
+                                                )
+                                              )
+                                            )
+                                          )
+                                        ) , 
+                                        (param_list_el 
+                                          (expression 
+                                            (atoms 0
+                                            )
+                                          )
+                                        )
+                                      )
+                                    ) 
+                                  )
+                                )
+                              )
+                            )
+                          ) 
+                        )
+                      )
+                    )
+                  ) 
+                  (as_clause as 
+                    (func_keyw_id buyer
+                    )
+                  )
+                ) , 
+                (select_element 
+                  (expression 
+                    (functions_and_vars 
+                      (function convert 
+                        ( 
+                          (data_type 
+                            (data_type_el 
+                              (keyw_id 
+                                (keyw_id_part 
+                                  (func_keyw_id bit
+                                  )
+                                )
+                              )
+                            )
+                          ) , 
+                          (expression 
+                            (case_expression case 
+                              (case_boolean_when_clause when 
+                                (search_condition 
+                                  (predicate 
+                                    (expression 
+                                      (expression 
+                                        (keyw_id_part 
+                                          (func_keyw_id f
+                                          )
+                                        )
+                                      ) . 
+                                      (expression 
+                                        (keyw_id_part 
+                                          (func_keyw_id mid
+                                          )
+                                        )
+                                      )
+                                    ) is not null
+                                  )
+                                ) then 
+                                (expression 
+                                  (atoms 1
+                                  )
+                                )
+                              ) 
+                              (case_else else 
+                                (expression 
+                                  (atoms 0
+                                  )
+                                )
+                              ) end
+                            )
+                          ) 
+                        )
+                      )
+                    )
+                  ) 
+                  (as_clause as 
+                    (func_keyw_id payer
+                    )
+                  )
+                ) , 
+                (select_element 
+                  (expression 
+                    (functions_and_vars 
+                      (function convert 
+                        ( 
+                          (data_type 
+                            (data_type_el 
+                              (keyw_id 
+                                (keyw_id_part 
+                                  (func_keyw_id bit
+                                  )
+                                )
+                              )
+                            )
+                          ) , 
+                          (expression 
+                            (case_expression case 
+                              (case_boolean_when_clause when 
+                                (search_condition 
+                                  (predicate 
+                                    (expression 
+                                      (expression 
+                                        (keyw_id_part 
+                                          (func_keyw_id g
+                                          )
+                                        )
+                                      ) . 
+                                      (expression 
+                                        (keyw_id_part 
+                                          (func_keyw_id mid
+                                          )
+                                        )
+                                      )
+                                    ) is not null
+                                  )
+                                ) then 
+                                (expression 
+                                  (atoms 1
+                                  )
+                                )
+                              ) 
+                              (case_else else 
+                                (expression 
+                                  (atoms 0
+                                  )
+                                )
+                              ) end
+                            )
+                          ) 
+                        )
+                      )
+                    )
+                  ) 
+                  (as_clause as 
+                    (func_keyw_id shipto
+                    )
+                  )
+                ) , 
+                (select_element 
+                  (expression 
+                    (functions_and_vars 
+                      (function convert 
+                        ( 
+                          (data_type 
+                            (data_type_el 
+                              (keyw_id 
+                                (keyw_id_part 
+                                  (func_keyw_id bit
+                                  )
+                                )
+                              )
+                            )
+                          ) , 
+                          (expression 
+                            (functions_and_vars 
+                              (function 
+                                (func_name 
+                                  (keyw_id_for_func 
+                                    (keyw_id_orcc 
+                                      (keyw_id_part 
+                                        (func_keyw_id coalesce
+                                        )
+                                      )
+                                    )
+                                  )
+                                ) 
+                                (function_args 
+                                  ( 
+                                    (param_list_or_all 
+                                      (param_list 
+                                        (param_list_el 
+                                          (expression 
+                                            (expression 
+                                              (keyw_id_part 
+                                                (func_keyw_id g
+                                                )
+                                              )
+                                            ) . 
+                                            (expression 
+                                              (keyw_id_part 
+                                                (func_keyw_id gift_recipient
+                                                )
+                                              )
+                                            )
+                                          )
+                                        ) , 
+                                        (param_list_el 
+                                          (expression 
+                                            (atoms 0
+                                            )
+                                          )
+                                        )
+                                      )
+                                    ) 
+                                  )
+                                )
+                              )
+                            )
+                          ) 
+                        )
+                      )
+                    )
+                  ) 
+                  (as_clause as 
+                    (func_keyw_id gift_recipient
+                    )
+                  )
+                ) , 
+                (select_element 
+                  (expression 
+                    (functions_and_vars 
+                      (function convert 
+                        ( 
+                          (data_type 
+                            (data_type_el 
+                              (keyw_id 
+                                (keyw_id_part 
+                                  (func_keyw_id bit
+                                  )
+                                )
+                              )
+                            )
+                          ) , 
+                          (expression 
+                            (functions_and_vars 
+                              (function 
+                                (func_name 
+                                  (keyw_id_for_func 
+                                    (keyw_id_orcc 
+                                      (keyw_id_part 
+                                        (func_keyw_id isnull
+                                        )
+                                      )
+                                    )
+                                  )
+                                ) 
+                                (function_args 
+                                  ( 
+                                    (param_list_or_all 
+                                      (param_list 
+                                        (param_list_el 
+                                          (expression 
+                                            (expression 
+                                              (keyw_id_part 
+                                                (func_keyw_id e
+                                                )
+                                              )
+                                            ) . 
+                                            (expression 
+                                              (keyw_id_part 
+                                                (func_keyw_id web_buyer
+                                                )
+                                              )
+                                            )
+                                          )
+                                        ) , 
+                                        (param_list_el 
+                                          (expression 
+                                            (atoms 0
+                                            )
+                                          )
+                                        )
+                                      )
+                                    ) 
+                                  )
+                                )
+                              )
+                            )
+                          ) 
+                        )
+                      )
+                    )
+                  ) 
+                  (as_clause as 
+                    (func_keyw_id web_buyer
+                    )
+                  )
+                ) , 
+                (select_element 
+                  (expression 
+                    (functions_and_vars 
+                      (function convert 
+                        ( 
+                          (data_type 
+                            (data_type_el 
+                              (keyw_id 
+                                (keyw_id_part 
+                                  (func_keyw_id bit
+                                  )
+                                )
+                              )
+                            )
+                          ) , 
+                          (expression 
+                            (functions_and_vars 
+                              (function 
+                                (func_name 
+                                  (keyw_id_for_func 
+                                    (keyw_id_orcc 
+                                      (keyw_id_part 
+                                        (func_keyw_id isnull
+                                        )
+                                      )
+                                    )
+                                  )
+                                ) 
+                                (function_args 
+                                  ( 
+                                    (param_list_or_all 
+                                      (param_list 
+                                        (param_list_el 
+                                          (expression 
+                                            (expression 
+                                              (keyw_id_part 
+                                                (func_keyw_id e
+                                                )
+                                              )
+                                            ) . 
+                                            (expression 
+                                              (keyw_id_part 
+                                                (func_keyw_id online_buyer
+                                                )
+                                              )
+                                            )
+                                          )
+                                        ) , 
+                                        (param_list_el 
+                                          (expression 
+                                            (atoms 0
+                                            )
+                                          )
+                                        )
+                                      )
+                                    ) 
+                                  )
+                                )
+                              )
+                            )
+                          ) 
+                        )
+                      )
+                    )
+                  ) 
+                  (as_clause as 
+                    (func_keyw_id online_buyer
+                    )
+                  )
+                ) , 
+                (select_element 
+                  (expression 
+                    (functions_and_vars 
+                      (function convert 
+                        ( 
+                          (data_type 
+                            (data_type_el 
+                              (keyw_id 
+                                (keyw_id_part 
+                                  (func_keyw_id bit
+                                  )
+                                )
+                              )
+                            )
+                          ) , 
+                          (expression 
+                            (functions_and_vars 
+                              (function 
+                                (func_name 
+                                  (keyw_id_for_func 
+                                    (keyw_id_orcc 
+                                      (keyw_id_part 
+                                        (func_keyw_id isnull
+                                        )
+                                      )
+                                    )
+                                  )
+                                ) 
+                                (function_args 
+                                  ( 
+                                    (param_list_or_all 
+                                      (param_list 
+                                        (param_list_el 
+                                          (expression 
+                                            (expression 
+                                              (keyw_id_part 
+                                                (func_keyw_id e
+                                                )
+                                              )
+                                            ) . 
+                                            (expression 
+                                              (keyw_id_part 
+                                                (func_keyw_id retail_buyer
+                                                )
+                                              )
+                                            )
+                                          )
+                                        ) , 
+                                        (param_list_el 
+                                          (expression 
+                                            (atoms 0
+                                            )
+                                          )
+                                        )
+                                      )
+                                    ) 
+                                  )
+                                )
+                              )
+                            )
+                          ) 
+                        )
+                      )
+                    )
+                  ) 
+                  (as_clause as 
+                    (func_keyw_id retail_buyer
+                    )
+                  )
+                ) , 
+                (select_element 
+                  (expression 
+                    (functions_and_vars 
+                      (function convert 
+                        ( 
+                          (data_type 
+                            (data_type_el 
+                              (keyw_id 
+                                (keyw_id_part 
+                                  (func_keyw_id bit
+                                  )
+                                )
+                              )
+                            )
+                          ) , 
+                          (expression 
+                            (functions_and_vars 
+                              (function 
+                                (func_name 
+                                  (keyw_id_for_func 
+                                    (keyw_id_orcc 
+                                      (keyw_id_part 
+                                        (func_keyw_id isnull
+                                        )
+                                      )
+                                    )
+                                  )
+                                ) 
+                                (function_args 
+                                  ( 
+                                    (param_list_or_all 
+                                      (param_list 
+                                        (param_list_el 
+                                          (expression 
+                                            (expression 
+                                              (keyw_id_part 
+                                                (func_keyw_id e
+                                                )
+                                              )
+                                            ) . 
+                                            (expression 
+                                              (keyw_id_part 
+                                                (func_keyw_id cs_buyer
+                                                )
+                                              )
+                                            )
+                                          )
+                                        ) , 
+                                        (param_list_el 
+                                          (expression 
+                                            (atoms 0
+                                            )
+                                          )
+                                        )
+                                      )
+                                    ) 
+                                  )
+                                )
+                              )
+                            )
+                          ) 
+                        )
+                      )
+                    )
+                  ) 
+                  (as_clause as 
+                    (func_keyw_id cs_buyer
+                    )
+                  )
+                ) , 
+                (select_element 
+                  (expression 
+                    (functions_and_vars 
+                      (function convert 
+                        ( 
+                          (data_type 
+                            (data_type_el 
+                              (keyw_id 
+                                (keyw_id_part 
+                                  (func_keyw_id bit
+                                  )
+                                )
+                              )
+                            )
+                          ) , 
+                          (expression 
+                            (functions_and_vars 
+                              (function 
+                                (func_name 
+                                  (keyw_id_for_func 
+                                    (keyw_id_orcc 
+                                      (keyw_id_part 
+                                        (func_keyw_id isnull
+                                        )
+                                      )
+                                    )
+                                  )
+                                ) 
+                                (function_args 
+                                  ( 
+                                    (param_list_or_all 
+                                      (param_list 
+                                        (param_list_el 
+                                          (expression 
+                                            (expression 
+                                              (keyw_id_part 
+                                                (func_keyw_id e
+                                                )
+                                              )
+                                            ) . 
+                                            (expression 
+                                              (keyw_id_part 
+                                                (func_keyw_id nike_id_buyer
+                                                )
+                                              )
+                                            )
+                                          )
+                                        ) , 
+                                        (param_list_el 
+                                          (expression 
+                                            (atoms 0
+                                            )
+                                          )
+                                        )
+                                      )
+                                    ) 
+                                  )
+                                )
+                              )
+                            )
+                          ) 
+                        )
+                      )
+                    )
+                  ) 
+                  (as_clause as 
+                    (func_keyw_id nike_id_buyer
+                    )
+                  )
+                ) , 
+                (select_element 
+                  (expression 
+                    (functions_and_vars 
+                      (function convert 
+                        ( 
+                          (data_type 
+                            (data_type_el 
+                              (keyw_id 
+                                (keyw_id_part 
+                                  (func_keyw_id bit
+                                  )
+                                )
+                              )
+                            )
+                          ) , 
+                          (expression 
+                            (functions_and_vars 
+                              (function 
+                                (func_name 
+                                  (keyw_id_for_func 
+                                    (keyw_id_orcc 
+                                      (keyw_id_part 
+                                        (func_keyw_id isnull
+                                        )
+                                      )
+                                    )
+                                  )
+                                ) 
+                                (function_args 
+                                  ( 
+                                    (param_list_or_all 
+                                      (param_list 
+                                        (param_list_el 
+                                          (expression 
+                                            (expression 
+                                              (keyw_id_part 
+                                                (func_keyw_id e
+                                                )
+                                              )
+                                            ) . 
+                                            (expression 
+                                              (keyw_id_part 
+                                                (func_keyw_id mens_buyer
+                                                )
+                                              )
+                                            )
+                                          )
+                                        ) , 
+                                        (param_list_el 
+                                          (expression 
+                                            (atoms 0
+                                            )
+                                          )
+                                        )
+                                      )
+                                    ) 
+                                  )
+                                )
+                              )
+                            )
+                          ) 
+                        )
+                      )
+                    )
+                  ) 
+                  (as_clause as 
+                    (func_keyw_id mens_buyer
+                    )
+                  )
+                ) , 
+                (select_element 
+                  (expression 
+                    (functions_and_vars 
+                      (function convert 
+                        ( 
+                          (data_type 
+                            (data_type_el 
+                              (keyw_id 
+                                (keyw_id_part 
+                                  (func_keyw_id bit
+                                  )
+                                )
+                              )
+                            )
+                          ) , 
+                          (expression 
+                            (functions_and_vars 
+                              (function 
+                                (func_name 
+                                  (keyw_id_for_func 
+                                    (keyw_id_orcc 
+                                      (keyw_id_part 
+                                        (func_keyw_id isnull
+                                        )
+                                      )
+                                    )
+                                  )
+                                ) 
+                                (function_args 
+                                  ( 
+                                    (param_list_or_all 
+                                      (param_list 
+                                        (param_list_el 
+                                          (expression 
+                                            (expression 
+                                              (keyw_id_part 
+                                                (func_keyw_id e
+                                                )
+                                              )
+                                            ) . 
+                                            (expression 
+                                              (keyw_id_part 
+                                                (func_keyw_id womens_buyer
+                                                )
+                                              )
+                                            )
+                                          )
+                                        ) , 
+                                        (param_list_el 
+                                          (expression 
+                                            (atoms 0
+                                            )
+                                          )
+                                        )
+                                      )
+                                    ) 
+                                  )
+                                )
+                              )
+                            )
+                          ) 
+                        )
+                      )
+                    )
+                  ) 
+                  (as_clause as 
+                    (func_keyw_id womens_buyer
+                    )
+                  )
+                ) , 
+                (select_element 
+                  (expression 
+                    (functions_and_vars 
+                      (function convert 
+                        ( 
+                          (data_type 
+                            (data_type_el 
+                              (keyw_id 
+                                (keyw_id_part 
+                                  (func_keyw_id bit
+                                  )
+                                )
+                              )
+                            )
+                          ) , 
+                          (expression 
+                            (functions_and_vars 
+                              (function 
+                                (func_name 
+                                  (keyw_id_for_func 
+                                    (keyw_id_orcc 
+                                      (keyw_id_part 
+                                        (func_keyw_id isnull
+                                        )
+                                      )
+                                    )
+                                  )
+                                ) 
+                                (function_args 
+                                  ( 
+                                    (param_list_or_all 
+                                      (param_list 
+                                        (param_list_el 
+                                          (expression 
+                                            (expression 
+                                              (keyw_id_part 
+                                                (func_keyw_id e
+                                                )
+                                              )
+                                            ) . 
+                                            (expression 
+                                              (keyw_id_part 
+                                                (func_keyw_id catalog_buyer
+                                                )
+                                              )
+                                            )
+                                          )
+                                        ) , 
+                                        (param_list_el 
+                                          (expression 
+                                            (atoms 0
+                                            )
+                                          )
+                                        )
+                                      )
+                                    ) 
+                                  )
+                                )
+                              )
+                            )
+                          ) 
+                        )
+                      )
+                    )
+                  ) 
+                  (as_clause as 
+                    (func_keyw_id catalog_buyer
+                    )
+                  )
+                ) , 
+                (select_element 
+                  (expression 
+                    (functions_and_vars 
+                      (function convert 
+                        ( 
+                          (data_type 
+                            (data_type_el 
+                              (keyw_id 
+                                (keyw_id_part 
+                                  (func_keyw_id bit
+                                  )
+                                )
+                              )
+                            )
+                          ) , 
+                          (expression 
+                            (functions_and_vars 
+                              (function 
+                                (func_name 
+                                  (keyw_id_for_func 
+                                    (keyw_id_orcc 
+                                      (keyw_id_part 
+                                        (func_keyw_id isnull
+                                        )
+                                      )
+                                    )
+                                  )
+                                ) 
+                                (function_args 
+                                  ( 
+                                    (param_list_or_all 
+                                      (param_list 
+                                        (param_list_el 
+                                          (expression 
+                                            (expression 
+                                              (keyw_id_part 
+                                                (func_keyw_id e
+                                                )
+                                              )
+                                            ) . 
+                                            (expression 
+                                              (keyw_id_part 
+                                                (func_keyw_id clearance_store_buyer
+                                                )
+                                              )
+                                            )
+                                          )
+                                        ) , 
+                                        (param_list_el 
+                                          (expression 
+                                            (atoms 0
+                                            )
+                                          )
+                                        )
+                                      )
+                                    ) 
+                                  )
+                                )
+                              )
+                            )
+                          ) 
+                        )
+                      )
+                    )
+                  ) 
+                  (as_clause as 
+                    (func_keyw_id clearance_store_buyer
+                    )
+                  )
+                ) , 
+                (select_element 
+                  (expression 
+                    (functions_and_vars 
+                      (function convert 
+                        ( 
+                          (data_type 
+                            (data_type_el 
+                              (keyw_id 
+                                (keyw_id_part 
+                                  (func_keyw_id bit
+                                  )
+                                )
+                              )
+                            )
+                          ) , 
+                          (expression 
+                            (functions_and_vars 
+                              (function 
+                                (func_name 
+                                  (keyw_id_for_func 
+                                    (keyw_id_orcc 
+                                      (keyw_id_part 
+                                        (func_keyw_id isnull
+                                        )
+                                      )
+                                    )
+                                  )
+                                ) 
+                                (function_args 
+                                  ( 
+                                    (param_list_or_all 
+                                      (param_list 
+                                        (param_list_el 
+                                          (expression 
+                                            (expression 
+                                              (keyw_id_part 
+                                                (func_keyw_id e
+                                                )
+                                              )
+                                            ) . 
+                                            (expression 
+                                              (keyw_id_part 
+                                                (func_keyw_id clientele_buyer
+                                                )
+                                              )
+                                            )
+                                          )
+                                        ) , 
+                                        (param_list_el 
+                                          (expression 
+                                            (atoms 0
+                                            )
+                                          )
+                                        )
+                                      )
+                                    ) 
+                                  )
+                                )
+                              )
+                            )
+                          ) 
+                        )
+                      )
+                    )
+                  ) 
+                  (as_clause as 
+                    (func_keyw_id clientele_buyer
+                    )
+                  )
+                ) , 
+                (select_element 
+                  (expression 
+                    (functions_and_vars 
+                      (function convert 
+                        ( 
+                          (data_type 
+                            (data_type_el 
+                              (keyw_id 
+                                (keyw_id_part 
+                                  (func_keyw_id bit
+                                  )
+                                )
+                              )
+                            )
+                          ) , 
+                          (expression 
+                            (functions_and_vars 
+                              (function 
+                                (func_name 
+                                  (keyw_id_for_func 
+                                    (keyw_id_orcc 
+                                      (keyw_id_part 
+                                        (func_keyw_id isnull
+                                        )
+                                      )
+                                    )
+                                  )
+                                ) 
+                                (function_args 
+                                  ( 
+                                    (param_list_or_all 
+                                      (param_list 
+                                        (param_list_el 
+                                          (expression 
+                                            (expression 
+                                              (keyw_id_part 
+                                                (func_keyw_id e
+                                                )
+                                              )
+                                            ) . 
+                                            (expression 
+                                              (keyw_id_part 
+                                                (func_keyw_id dm_buyer
+                                                )
+                                              )
+                                            )
+                                          )
+                                        ) , 
+                                        (param_list_el 
+                                          (expression 
+                                            (atoms 0
+                                            )
+                                          )
+                                        )
+                                      )
+                                    ) 
+                                  )
+                                )
+                              )
+                            )
+                          ) 
+                        )
+                      )
+                    )
+                  ) 
+                  (as_clause as 
+                    (func_keyw_id dm_buyer
+                    )
+                  )
+                ) , 
+                (select_element 
+                  (expression 
+                    (functions_and_vars 
+                      (function convert 
+                        ( 
+                          (data_type 
+                            (data_type_el 
+                              (keyw_id 
+                                (keyw_id_part 
+                                  (func_keyw_id bit
+                                  )
+                                )
+                              )
+                            )
+                          ) , 
+                          (expression 
+                            (functions_and_vars 
+                              (function 
+                                (func_name 
+                                  (keyw_id_for_func 
+                                    (keyw_id_orcc 
+                                      (keyw_id_part 
+                                        (func_keyw_id isnull
+                                        )
+                                      )
+                                    )
+                                  )
+                                ) 
+                                (function_args 
+                                  ( 
+                                    (param_list_or_all 
+                                      (param_list 
+                                        (param_list_el 
+                                          (expression 
+                                            (expression 
+                                              (keyw_id_part 
+                                                (func_keyw_id e
+                                                )
+                                              )
+                                            ) . 
+                                            (expression 
+                                              (keyw_id_part 
+                                                (func_keyw_id returner
+                                                )
+                                              )
+                                            )
+                                          )
+                                        ) , 
+                                        (param_list_el 
+                                          (expression 
+                                            (atoms 0
+                                            )
+                                          )
+                                        )
+                                      )
+                                    ) 
+                                  )
+                                )
+                              )
+                            )
+                          ) 
+                        )
+                      )
+                    )
+                  ) 
+                  (as_clause as 
+                    (func_keyw_id returner
+                    )
+                  )
+                ) , 
+                (select_element 
+                  (expression 
+                    (functions_and_vars 
+                      (function convert 
+                        ( 
+                          (data_type 
+                            (data_type_el 
+                              (keyw_id 
+                                (keyw_id_part 
+                                  (func_keyw_id bit
+                                  )
+                                )
+                              )
+                            )
+                          ) , 
+                          (expression 
+                            (case_expression case 
+                              (case_boolean_when_clause when 
+                                (search_condition 
+                                  (predicate 
+                                    (expression 
+                                      (expression 
+                                        (keyw_id_part 
+                                          (func_keyw_id r
+                                          )
+                                        )
+                                      ) . 
+                                      (expression 
+                                        (keyw_id_part 
+                                          (func_keyw_id mid
+                                          )
+                                        )
+                                      )
+                                    ) is not null
+                                  )
+                                ) then 
+                                (expression 
+                                  (atoms 1
+                                  )
+                                )
+                              ) 
+                              (case_else else 
+                                (expression 
+                                  (atoms 0
+                                  )
+                                )
+                              ) end
+                            )
+                          ) 
+                        )
+                      )
+                    )
+                  ) 
+                  (as_clause as 
+                    (func_keyw_id clientele_customer
+                    )
+                  )
+                ) , 
+                (select_element 
+                  (expression 
+                    (functions_and_vars 
+                      (function convert 
+                        ( 
+                          (data_type 
+                            (data_type_el 
+                              (keyw_id 
+                                (keyw_id_part 
+                                  (func_keyw_id bit
+                                  )
+                                )
+                              )
+                            )
+                          ) , 
+                          (expression 
+                            (case_expression case 
+                              (case_boolean_when_clause when 
+                                (search_condition 
+                                  (predicate 
+                                    (expression 
+                                      (expression 
+                                        (keyw_id_part 
+                                          (func_keyw_id h
+                                          )
+                                        )
+                                      ) . 
+                                      (expression 
+                                        (keyw_id_part 
+                                          (func_keyw_id mid
+                                          )
+                                        )
+                                      )
+                                    ) is not null
+                                  )
+                                ) then 
+                                (expression 
+                                  (atoms 1
+                                  )
+                                )
+                              ) 
+                              (case_else else 
+                                (expression 
+                                  (atoms 0
+                                  )
+                                )
+                              ) end
+                            )
+                          ) 
+                        )
+                      )
+                    )
+                  ) 
+                  (as_clause as 
+                    (func_keyw_id catalog_requester
+                    )
+                  )
+                ) , 
+                (select_element 
+                  (expression 
+                    (functions_and_vars 
+                      (function convert 
+                        ( 
+                          (data_type 
+                            (data_type_el 
+                              (keyw_id 
+                                (keyw_id_part 
+                                  (func_keyw_id bit
+                                  )
+                                )
+                              )
+                            )
+                          ) , 
+                          (expression 
+                            (case_expression case 
+                              (case_boolean_when_clause when 
+                                (search_condition 
+                                  (predicate 
+                                    (expression 
+                                      (expression 
+                                        (keyw_id_part 
+                                          (func_keyw_id i
+                                          )
+                                        )
+                                      ) . 
+                                      (expression 
+                                        (keyw_id_part 
+                                          (func_keyw_id mid
+                                          )
+                                        )
+                                      )
+                                    ) is not null
+                                  )
+                                ) then 
+                                (expression 
+                                  (atoms 1
+                                  )
+                                )
+                              ) 
+                              (case_else else 
+                                (expression 
+                                  (atoms 0
+                                  )
+                                )
+                              ) end
+                            )
+                          ) 
+                        )
+                      )
+                    )
+                  ) 
+                  (as_clause as 
+                    (func_keyw_id store_requester
+                    )
+                  )
+                ) , 
+                (select_element 
+                  (expression 
+                    (functions_and_vars 
+                      (function convert 
+                        ( 
+                          (data_type 
+                            (data_type_el 
+                              (keyw_id 
+                                (keyw_id_part 
+                                  (func_keyw_id bit
+                                  )
+                                )
+                              )
+                            )
+                          ) , 
+                          (expression 
+                            (case_expression case 
+                              (case_boolean_when_clause when 
+                                (search_condition 
+                                  (predicate 
+                                    (expression 
+                                      (expression 
+                                        (keyw_id_part 
+                                          (func_keyw_id k
+                                          )
+                                        )
+                                      ) . 
+                                      (expression 
+                                        (keyw_id_part 
+                                          (func_keyw_id mid
+                                          )
+                                        )
+                                      )
+                                    ) is not null
+                                  )
+                                ) then 
+                                (expression 
+                                  (atoms 1
+                                  )
+                                )
+                              ) 
+                              (case_else else 
+                                (expression 
+                                  (atoms 0
+                                  )
+                                )
+                              ) end
+                            )
+                          ) 
+                        )
+                      )
+                    )
+                  ) 
+                  (as_clause as 
+                    (func_keyw_id siebel_contact
+                    )
+                  )
+                ) , 
+                (select_element 
+                  (expression 
+                    (functions_and_vars 
+                      (function convert 
+                        ( 
+                          (data_type 
+                            (data_type_el 
+                              (keyw_id 
+                                (keyw_id_part 
+                                  (func_keyw_id bit
+                                  )
+                                )
+                              )
+                            )
+                          ) , 
+                          (expression 
+                            (functions_and_vars 
+                              (function 
+                                (func_name 
+                                  (keyw_id_for_func 
+                                    (keyw_id_orcc 
+                                      (keyw_id_part 
+                                        (func_keyw_id isnull
+                                        )
+                                      )
+                                    )
+                                  )
+                                ) 
+                                (function_args 
+                                  ( 
+                                    (param_list_or_all 
+                                      (param_list 
+                                        (param_list_el 
+                                          (expression 
+                                            (expression 
+                                              (keyw_id_part 
+                                                (func_keyw_id l
+                                                )
+                                              )
+                                            ) . 
+                                            (expression 
+                                              (keyw_id_part 
+                                                (func_keyw_id siebel_positive
+                                                )
+                                              )
+                                            )
+                                          )
+                                        ) , 
+                                        (param_list_el 
+                                          (expression 
+                                            (atoms 0
+                                            )
+                                          )
+                                        )
+                                      )
+                                    ) 
+                                  )
+                                )
+                              )
+                            )
+                          ) 
+                        )
+                      )
+                    )
+                  ) 
+                  (as_clause as 
+                    (func_keyw_id siebel_positive
+                    )
+                  )
+                ) , 
+                (select_element 
+                  (expression 
+                    (functions_and_vars 
+                      (function convert 
+                        ( 
+                          (data_type 
+                            (data_type_el 
+                              (keyw_id 
+                                (keyw_id_part 
+                                  (func_keyw_id bit
+                                  )
+                                )
+                              )
+                            )
+                          ) , 
+                          (expression 
+                            (functions_and_vars 
+                              (function 
+                                (func_name 
+                                  (keyw_id_for_func 
+                                    (keyw_id_orcc 
+                                      (keyw_id_part 
+                                        (func_keyw_id isnull
+                                        )
+                                      )
+                                    )
+                                  )
+                                ) 
+                                (function_args 
+                                  ( 
+                                    (param_list_or_all 
+                                      (param_list 
+                                        (param_list_el 
+                                          (expression 
+                                            (expression 
+                                              (keyw_id_part 
+                                                (func_keyw_id l
+                                                )
+                                              )
+                                            ) . 
+                                            (expression 
+                                              (keyw_id_part 
+                                                (func_keyw_id siebel_negative
+                                                )
+                                              )
+                                            )
+                                          )
+                                        ) , 
+                                        (param_list_el 
+                                          (expression 
+                                            (atoms 0
+                                            )
+                                          )
+                                        )
+                                      )
+                                    ) 
+                                  )
+                                )
+                              )
+                            )
+                          ) 
+                        )
+                      )
+                    )
+                  ) 
+                  (as_clause as 
+                    (func_keyw_id siebel_negative
+                    )
+                  )
+                ) , 
+                (select_element 
+                  (expression 
+                    (functions_and_vars 
+                      (function convert 
+                        ( 
+                          (data_type 
+                            (data_type_el 
+                              (keyw_id 
+                                (keyw_id_part 
+                                  (func_keyw_id bit
+                                  )
+                                )
+                              )
+                            )
+                          ) , 
+                          (expression 
+                            (case_expression case 
+                              (case_boolean_when_clause when 
+                                (search_condition 
+                                  (search_condition 
+                                    (predicate 
+                                      (expression 
+                                        (expression 
+                                          (keyw_id_part 
+                                            (func_keyw_id l
+                                            )
+                                          )
+                                        ) . 
+                                        (expression 
+                                          (expression 
+                                            (expression 
+                                              (keyw_id_part 
+                                                (func_keyw_id catalog_opt_out
+                                                )
+                                              )
+                                            ) = 
+                                            (expression 
+                                              (atoms 1
+                                              )
+                                            )
+                                          ) or 
+                                          (expression 
+                                            (expression 
+                                              (keyw_id_part 
+                                                (func_keyw_id q
+                                                )
+                                              )
+                                            ) . 
+                                            (expression 
+                                              (keyw_id_part 
+                                                (func_keyw_id mid
+                                                )
+                                              )
+                                            )
+                                          )
+                                        )
+                                      ) is not null
+                                    )
+                                  ) or 
+                                  (search_condition 
+                                    (predicate 
+                                      (expression 
+                                        (expression 
+                                          (keyw_id_part 
+                                            (func_keyw_id h
+                                            )
+                                          )
+                                        ) . 
+                                        (expression 
+                                          (expression 
+                                            (keyw_id_part 
+                                              (func_keyw_id catalog_opt_out
+                                              )
+                                            )
+                                          ) = 
+                                          (expression 
+                                            (atoms 1
+                                            )
+                                          )
+                                        )
+                                      )
+                                    )
+                                  )
+                                ) then 
+                                (expression 
+                                  (atoms 1
+                                  )
+                                )
+                              ) 
+                              (case_else else 
+                                (expression 
+                                  (atoms 0
+                                  )
+                                )
+                              ) end
+                            )
+                          ) 
+                        )
+                      )
+                    )
+                  ) 
+                  (as_clause as 
+                    (func_keyw_id catalog_opt_out
+                    )
+                  )
+                ) , 
+                (select_element 
+                  (expression 
+                    (functions_and_vars 
+                      (function convert 
+                        ( 
+                          (data_type 
+                            (data_type_el 
+                              (keyw_id 
+                                (keyw_id_part 
+                                  (func_keyw_id bit
+                                  )
+                                )
+                              )
+                            )
+                          ) , 
+                          (expression 
+                            (case_expression case 
+                              (case_boolean_when_clause when 
+                                (search_condition 
+                                  (search_condition 
+                                    (predicate 
+                                      (expression 
+                                        (expression 
+                                          (expression 
+                                            (functions_and_vars 
+                                              (function 
+                                                (func_name 
+                                                  (keyw_id_for_func 
+                                                    (keyw_id_orcc 
+                                                      (keyw_id_part 
+                                                        (func_keyw_id isnull
+                                                        )
+                                                      )
+                                                    )
+                                                  )
+                                                ) 
+                                                (function_args 
+                                                  ( 
+                                                    (param_list_or_all 
+                                                      (param_list 
+                                                        (param_list_el 
+                                                          (expression 
+                                                            (expression 
+                                                              (keyw_id_part 
+                                                                (func_keyw_id e
+                                                                )
+                                                              )
+                                                            ) . 
+                                                            (expression 
+                                                              (keyw_id_part 
+                                                                (func_keyw_id buyer
+                                                                )
+                                                              )
+                                                            )
+                                                          )
+                                                        ) , 
+                                                        (param_list_el 
+                                                          (expression 
+                                                            (atoms 0
+                                                            )
+                                                          )
+                                                        )
+                                                      )
+                                                    ) 
+                                                  )
+                                                )
+                                              )
+                                            )
+                                          ) = 
+                                          (expression 
+                                            (atoms 0
+                                            )
+                                          )
+                                        ) and 
+                                        (expression 
+                                          (expression 
+                                            (keyw_id_part 
+                                              (func_keyw_id g
+                                              )
+                                            )
+                                          ) . 
+                                          (expression 
+                                            (keyw_id_part 
+                                              (func_keyw_id mid
+                                              )
+                                            )
+                                          )
+                                        )
+                                      ) is null
+                                    )
+                                  ) and 
+                                  (search_condition 
+                                    (predicate 
+                                      (expression 
+                                        (expression 
+                                          (keyw_id_part 
+                                            (func_keyw_id n
+                                            )
+                                          )
+                                        ) . 
+                                        (expression 
+                                          (keyw_id_part 
+                                            (func_keyw_id mid
+                                            )
+                                          )
+                                        )
+                                      ) is null
+                                    )
+                                  )
+                                ) then 
+                                (expression 
+                                  (atoms 1
+                                  )
+                                )
+                              ) 
+                              (case_else else 
+                                (expression 
+                                  (atoms 0
+                                  )
+                                )
+                              ) end
+                            )
+                          ) 
+                        )
+                      )
+                    )
+                  ) 
+                  (as_clause as 
+                    (func_keyw_id orphan
+                    )
+                  )
+                ) , 
+                (select_element 
+                  (expression 
+                    (functions_and_vars 
+                      (function convert 
+                        ( 
+                          (data_type 
+                            (data_type_el 
+                              (keyw_id 
+                                (keyw_id_part 
+                                  (func_keyw_id bit
+                                  )
+                                )
+                              )
+                            )
+                          ) , 
+                          (expression 
+                            (functions_and_vars 
+                              (function 
+                                (func_name 
+                                  (keyw_id_for_func 
+                                    (keyw_id_orcc 
+                                      (keyw_id_part 
+                                        (func_keyw_id isnull
+                                        )
+                                      )
+                                    )
+                                  )
+                                ) 
+                                (function_args 
+                                  ( 
+                                    (param_list_or_all 
+                                      (param_list 
+                                        (param_list_el 
+                                          (expression 
+                                            (expression 
+                                              (keyw_id_part 
+                                                (func_keyw_id m
+                                                )
+                                              )
+                                            ) . 
+                                            (expression 
+                                              (keyw_id_part 
+                                                (func_keyw_id prospect
+                                                )
+                                              )
+                                            )
+                                          )
+                                        ) , 
+                                        (param_list_el 
+                                          (expression 
+                                            (atoms 0
+                                            )
+                                          )
+                                        )
+                                      )
+                                    ) 
+                                  )
+                                )
+                              )
+                            )
+                          ) 
+                        )
+                      )
+                    )
+                  ) 
+                  (as_clause as 
+                    (func_keyw_id prospect
+                    )
+                  )
+                ) , 
+                (select_element 
+                  (expression 
+                    (functions_and_vars 
+                      (function convert 
+                        ( 
+                          (data_type 
+                            (data_type_el 
+                              (keyw_id 
+                                (keyw_id_part 
+                                  (func_keyw_id bit
+                                  )
+                                )
+                              )
+                            )
+                          ) , 
+                          (expression 
+                            (functions_and_vars 
+                              (function 
+                                (func_name 
+                                  (keyw_id_for_func 
+                                    (keyw_id_orcc 
+                                      (keyw_id_part 
+                                        (func_keyw_id isnull
+                                        )
+                                      )
+                                    )
+                                  )
+                                ) 
+                                (function_args 
+                                  ( 
+                                    (param_list_or_all 
+                                      (param_list 
+                                        (param_list_el 
+                                          (expression 
+                                            (expression 
+                                              (keyw_id_part 
+                                                (func_keyw_id m
+                                                )
+                                              )
+                                            ) . 
+                                            (expression 
+                                              (keyw_id_part 
+                                                (func_keyw_id rental
+                                                )
+                                              )
+                                            )
+                                          )
+                                        ) , 
+                                        (param_list_el 
+                                          (expression 
+                                            (atoms 0
+                                            )
+                                          )
+                                        )
+                                      )
+                                    ) 
+                                  )
+                                )
+                              )
+                            )
+                          ) 
+                        )
+                      )
+                    )
+                  ) 
+                  (as_clause as 
+                    (func_keyw_id rental
+                    )
+                  )
+                ) , 
+                (select_element 
+                  (expression 
+                    (functions_and_vars 
+                      (function convert 
+                        ( 
+                          (data_type 
+                            (data_type_el 
+                              (keyw_id 
+                                (keyw_id_part 
+                                  (func_keyw_id int
+                                  )
+                                )
+                              )
+                            )
+                          ) , 
+                          (expression 
+                            (expression 
+                              (keyw_id_part 
+                                (func_keyw_id p
+                                )
+                              )
+                            ) . 
+                            (expression 
+                              (keyw_id_part 
+                                (func_keyw_id age
+                                )
+                              )
+                            )
+                          ) 
+                        )
+                      )
+                    )
+                  ) 
+                  (as_clause as 
+                    (func_keyw_id age
+                    )
+                  )
+                ) , 
+                (select_element 
+                  (expression 
+                    (functions_and_vars 
+                      (function convert 
+                        ( 
+                          (data_type 
+                            (data_type_el 
+                              (keyw_id 
+                                (keyw_id_part 
+                                  (func_keyw_id char
+                                  )
+                                )
+                              ) 
+                              ( 1 
+                              )
+                            )
+                          ) , 
+                          (expression 
+                            (expression 
+                              (keyw_id_part 
+                                (func_keyw_id p
+                                )
+                              )
+                            ) . 
+                            (expression 
+                              (keyw_id_part 
+                                (func_keyw_id gender
+                                )
+                              )
+                            )
+                          ) 
+                        )
+                      )
+                    )
+                  ) 
+                  (as_clause as 
+                    (func_keyw_id gender
+                    )
+                  )
+                ) , 
+                (select_element 
+                  (expression 
+                    (expression 
+                      (keyw_id_part 
+                        (func_keyw_id o
+                        )
+                      )
+                    ) . 
+                    (expression 
+                      (keyw_id_part 
+                        (func_keyw_id last_communication
+                        )
+                      )
+                    )
+                  )
+                ) , 
+                (select_element 
+                  (expression 
+                    (expression 
+                      (keyw_id_part 
+                        (func_keyw_id o
+                        )
+                      )
+                    ) . 
+                    (expression 
+                      (keyw_id_part 
+                        (func_keyw_id last_communication_email
+                        )
+                      )
+                    )
+                  )
+                ) , 
+                (select_element 
+                  (expression 
+                    (expression 
+                      (keyw_id_part 
+                        (func_keyw_id c
+                        )
+                      )
+                    ) . 
+                    (expression 
+                      (keyw_id_part 
+                        (func_keyw_id first_registration
+                        )
+                      )
+                    )
+                  )
+                ) , 
+                (select_element 
+                  (expression 
+                    (expression 
+                      (keyw_id_part 
+                        (func_keyw_id c
+                        )
+                      )
+                    ) . 
+                    (expression 
+                      (keyw_id_part 
+                        (func_keyw_id last_registration
+                        )
+                      )
+                    )
+                  )
+                ) , 
+                (select_element 
+                  (expression 
+                    (expression 
+                      (keyw_id_part 
+                        (func_keyw_id d
+                        )
+                      )
+                    ) . 
+                    (expression 
+                      (keyw_id_part 
+                        (func_keyw_id first_optin
+                        )
+                      )
+                    )
+                  )
+                ) , 
+                (select_element 
+                  (expression 
+                    (expression 
+                      (keyw_id_part 
+                        (func_keyw_id d
+                        )
+                      )
+                    ) . 
+                    (expression 
+                      (keyw_id_part 
+                        (func_keyw_id last_optin
+                        )
+                      )
+                    )
+                  )
+                ) , 
+                (select_element 
+                  (expression 
+                    (expression 
+                      (keyw_id_part 
+                        (func_keyw_id h
+                        )
+                      )
+                    ) . 
+                    (expression 
+                      (keyw_id_part 
+                        (func_keyw_id first_request
+                        )
+                      )
+                    )
+                  )
+                ) , 
+                (select_element 
+                  (expression 
+                    (expression 
+                      (keyw_id_part 
+                        (func_keyw_id h
+                        )
+                      )
+                    ) . 
+                    (expression 
+                      (keyw_id_part 
+                        (func_keyw_id last_request
+                        )
+                      )
+                    )
+                  )
+                ) , 
+                (select_element 
+                  (expression 
+                    (expression 
+                      (keyw_id_part 
+                        (func_keyw_id l
+                        )
+                      )
+                    ) . 
+                    (expression 
+                      (keyw_id_part 
+                        (func_keyw_id first_siebel_contact
+                        )
+                      )
+                    )
+                  )
+                ) , 
+                (select_element 
+                  (expression 
+                    (expression 
+                      (keyw_id_part 
+                        (func_keyw_id l
+                        )
+                      )
+                    ) . 
+                    (expression 
+                      (keyw_id_part 
+                        (func_keyw_id last_siebel_contact
+                        )
+                      )
+                    )
+                  )
+                ) , 
+                (select_element 
+                  (expression 
+                    (expression 
+                      (keyw_id_part 
+                        (func_keyw_id e
+                        )
+                      )
+                    ) . 
+                    (expression 
+                      (keyw_id_part 
+                        (func_keyw_id first_order
+                        )
+                      )
+                    )
+                  )
+                ) , 
+                (select_element 
+                  (expression 
+                    (expression 
+                      (keyw_id_part 
+                        (func_keyw_id e
+                        )
+                      )
+                    ) . 
+                    (expression 
+                      (keyw_id_part 
+                        (func_keyw_id last_order
+                        )
+                      )
+                    )
+                  )
+                ) , 
+                (select_element 
+                  (expression 
+                    (expression 
+                      (keyw_id_part 
+                        (func_keyw_id e
+                        )
+                      )
+                    ) . 
+                    (expression 
+                      (keyw_id_part 
+                        (func_keyw_id first_purchase
+                        )
+                      )
+                    )
+                  )
+                ) , 
+                (select_element 
+                  (expression 
+                    (expression 
+                      (keyw_id_part 
+                        (func_keyw_id e
+                        )
+                      )
+                    ) . 
+                    (expression 
+                      (keyw_id_part 
+                        (func_keyw_id last_purchase
+                        )
+                      )
+                    )
+                  )
+                )
+              ) 
+              (into_clause into 
+                (keyw_id 
+                  (keyw_id_part 
+                    (func_keyw_id agg
+                    )
+                  ) . 
+                  (keyw_id_part 
+                    (func_keyw_id dbo
+                    )
+                  ) . 
+                  (keyw_id_part 
+                    (func_keyw_id individual_agg_new_1
+                    )
+                  )
+                )
+              ) 
+              (from_clause from 
+                (table_source_list 
+                  (table_source 
+                    (tableSourceElement 
+                      (table_source_primitive 
+                        (primitive_table 
+                          (keyw_id 
+                            (keyw_id_part 
+                              (func_keyw_id agg
+                              )
+                            ) . 
+                            (keyw_id_part 
+                              (func_keyw_id dbo
+                              )
+                            ) . 
+                            (keyw_id_part 
+                              (func_keyw_id individual_agg_base
+                              )
+                            )
+                          ) 
+                          (as_clause 
+                            (func_keyw_id a
+                            )
+                          )
+                        )
+                      ) 
+                      (join_type_prefix left
+                      ) join 
+                      (tableSourceElement 
+                        (table_source_primitive 
+                          (primitive_table 
+                            (keyw_id 
+                              (keyw_id_part 
+                                (func_keyw_id agg
+                                )
+                              ) . 
+                              (keyw_id_part 
+                                (func_keyw_id dbo
+                                )
+                              ) . 
+                              (keyw_id_part 
+                                (func_keyw_id atg_promotion_rollup
+                                )
+                              )
+                            ) 
+                            (as_clause 
+                              (func_keyw_id b
+                              )
+                            )
+                          )
+                        )
+                      ) 
+                      (on_join on 
+                        (search_condition 
+                          (predicate 
+                            (expression 
+                              (expression 
+                                (keyw_id_part 
+                                  (func_keyw_id a
+                                  )
+                                )
+                              ) . 
+                              (expression 
+                                (expression 
+                                  (keyw_id_part 
+                                    (func_keyw_id mid
+                                    )
+                                  )
+                                ) = 
+                                (expression 
+                                  (expression 
+                                    (keyw_id_part 
+                                      (func_keyw_id b
+                                      )
+                                    )
+                                  ) . 
+                                  (expression 
+                                    (keyw_id_part 
+                                      (func_keyw_id mid
+                                      )
+                                    )
+                                  )
+                                )
+                              )
+                            )
+                          )
+                        )
+                      ) 
+                      (join_type_prefix left
+                      ) join 
+                      (tableSourceElement 
+                        (table_source_primitive 
+                          (primitive_table 
+                            (keyw_id 
+                              (keyw_id_part 
+                                (func_keyw_id agg
+                                )
+                              ) . 
+                              (keyw_id_part 
+                                (func_keyw_id dbo
+                                )
+                              ) . 
+                              (keyw_id_part 
+                                (func_keyw_id email_rollup
+                                )
+                              )
+                            ) 
+                            (as_clause 
+                              (func_keyw_id c
+                              )
+                            )
+                          )
+                        )
+                      ) 
+                      (on_join on 
+                        (search_condition 
+                          (predicate 
+                            (expression 
+                              (expression 
+                                (keyw_id_part 
+                                  (func_keyw_id a
+                                  )
+                                )
+                              ) . 
+                              (expression 
+                                (expression 
+                                  (keyw_id_part 
+                                    (func_keyw_id mid
+                                    )
+                                  )
+                                ) = 
+                                (expression 
+                                  (expression 
+                                    (keyw_id_part 
+                                      (func_keyw_id c
+                                      )
+                                    )
+                                  ) . 
+                                  (expression 
+                                    (keyw_id_part 
+                                      (func_keyw_id mid
+                                      )
+                                    )
+                                  )
+                                )
+                              )
+                            )
+                          )
+                        )
+                      ) 
+                      (join_type_prefix left
+                      ) join 
+                      (tableSourceElement 
+                        (table_source_primitive 
+                          (primitive_table 
+                            (keyw_id 
+                              (keyw_id_part 
+                                (func_keyw_id agg
+                                )
+                              ) . 
+                              (keyw_id_part 
+                                (func_keyw_id dbo
+                                )
+                              ) . 
+                              (keyw_id_part 
+                                (func_keyw_id email_opt_rollup
+                                )
+                              )
+                            ) 
+                            (as_clause 
+                              (func_keyw_id d
+                              )
+                            )
+                          )
+                        )
+                      ) 
+                      (on_join on 
+                        (search_condition 
+                          (predicate 
+                            (expression 
+                              (expression 
+                                (keyw_id_part 
+                                  (func_keyw_id a
+                                  )
+                                )
+                              ) . 
+                              (expression 
+                                (expression 
+                                  (keyw_id_part 
+                                    (func_keyw_id mid
+                                    )
+                                  )
+                                ) = 
+                                (expression 
+                                  (expression 
+                                    (keyw_id_part 
+                                      (func_keyw_id d
+                                      )
+                                    )
+                                  ) . 
+                                  (expression 
+                                    (keyw_id_part 
+                                      (func_keyw_id mid
+                                      )
+                                    )
+                                  )
+                                )
+                              )
+                            )
+                          )
+                        )
+                      ) 
+                      (join_type_prefix left
+                      ) join 
+                      (tableSourceElement 
+                        (table_source_primitive 
+                          (primitive_table 
+                            (keyw_id 
+                              (keyw_id_part 
+                                (func_keyw_id agg
+                                )
+                              ) . 
+                              (keyw_id_part 
+                                (func_keyw_id dbo
+                                )
+                              ) . 
+                              (keyw_id_part 
+                                (func_keyw_id orders_rollup
+                                )
+                              )
+                            ) 
+                            (as_clause 
+                              (func_keyw_id e
+                              )
+                            )
+                          )
+                        )
+                      ) 
+                      (on_join on 
+                        (search_condition 
+                          (predicate 
+                            (expression 
+                              (expression 
+                                (keyw_id_part 
+                                  (func_keyw_id a
+                                  )
+                                )
+                              ) . 
+                              (expression 
+                                (expression 
+                                  (keyw_id_part 
+                                    (func_keyw_id mid
+                                    )
+                                  )
+                                ) = 
+                                (expression 
+                                  (expression 
+                                    (keyw_id_part 
+                                      (func_keyw_id e
+                                      )
+                                    )
+                                  ) . 
+                                  (expression 
+                                    (keyw_id_part 
+                                      (func_keyw_id mid
+                                      )
+                                    )
+                                  )
+                                )
+                              )
+                            )
+                          )
+                        )
+                      ) 
+                      (join_type_prefix left
+                      ) join 
+                      (tableSourceElement 
+                        (table_source_primitive 
+                          (primitive_table 
+                            (keyw_id 
+                              (keyw_id_part 
+                                (func_keyw_id agg
+                                )
+                              ) . 
+                              (keyw_id_part 
+                                (func_keyw_id dbo
+                                )
+                              ) . 
+                              (keyw_id_part 
+                                (func_keyw_id orders_payer_rollup
+                                )
+                              )
+                            ) 
+                            (as_clause 
+                              (func_keyw_id f
+                              )
+                            )
+                          )
+                        )
+                      ) 
+                      (on_join on 
+                        (search_condition 
+                          (predicate 
+                            (expression 
+                              (expression 
+                                (keyw_id_part 
+                                  (func_keyw_id a
+                                  )
+                                )
+                              ) . 
+                              (expression 
+                                (expression 
+                                  (keyw_id_part 
+                                    (func_keyw_id mid
+                                    )
+                                  )
+                                ) = 
+                                (expression 
+                                  (expression 
+                                    (keyw_id_part 
+                                      (func_keyw_id f
+                                      )
+                                    )
+                                  ) . 
+                                  (expression 
+                                    (keyw_id_part 
+                                      (func_keyw_id mid
+                                      )
+                                    )
+                                  )
+                                )
+                              )
+                            )
+                          )
+                        )
+                      ) 
+                      (join_type_prefix left
+                      ) join 
+                      (tableSourceElement 
+                        (table_source_primitive 
+                          (primitive_table 
+                            (keyw_id 
+                              (keyw_id_part 
+                                (func_keyw_id agg
+                                )
+                              ) . 
+                              (keyw_id_part 
+                                (func_keyw_id dbo
+                                )
+                              ) . 
+                              (keyw_id_part 
+                                (func_keyw_id orders_shipto_giftee
+                                )
+                              )
+                            ) 
+                            (as_clause 
+                              (func_keyw_id g
+                              )
+                            )
+                          )
+                        )
+                      ) 
+                      (on_join on 
+                        (search_condition 
+                          (predicate 
+                            (expression 
+                              (expression 
+                                (keyw_id_part 
+                                  (func_keyw_id a
+                                  )
+                                )
+                              ) . 
+                              (expression 
+                                (expression 
+                                  (keyw_id_part 
+                                    (func_keyw_id mid
+                                    )
+                                  )
+                                ) = 
+                                (expression 
+                                  (expression 
+                                    (keyw_id_part 
+                                      (func_keyw_id g
+                                      )
+                                    )
+                                  ) . 
+                                  (expression 
+                                    (keyw_id_part 
+                                      (func_keyw_id mid
+                                      )
+                                    )
+                                  )
+                                )
+                              )
+                            )
+                          )
+                        )
+                      ) 
+                      (join_type_prefix left
+                      ) join 
+                      (tableSourceElement 
+                        (table_source_primitive 
+                          (primitive_table 
+                            (keyw_id 
+                              (keyw_id_part 
+                                (func_keyw_id agg
+                                )
+                              ) . 
+                              (keyw_id_part 
+                                (func_keyw_id dbo
+                                )
+                              ) . 
+                              (keyw_id_part 
+                                (func_keyw_id request_rollup
+                                )
+                              )
+                            ) 
+                            (as_clause 
+                              (func_keyw_id h
+                              )
+                            )
+                          )
+                        )
+                      ) 
+                      (on_join on 
+                        (search_condition 
+                          (predicate 
+                            (expression 
+                              (expression 
+                                (keyw_id_part 
+                                  (func_keyw_id a
+                                  )
+                                )
+                              ) . 
+                              (expression 
+                                (expression 
+                                  (keyw_id_part 
+                                    (func_keyw_id mid
+                                    )
+                                  )
+                                ) = 
+                                (expression 
+                                  (expression 
+                                    (keyw_id_part 
+                                      (func_keyw_id h
+                                      )
+                                    )
+                                  ) . 
+                                  (expression 
+                                    (keyw_id_part 
+                                      (func_keyw_id mid
+                                      )
+                                    )
+                                  )
+                                )
+                              )
+                            )
+                          )
+                        )
+                      ) 
+                      (join_type_prefix left
+                      ) join 
+                      (tableSourceElement 
+                        (table_source_primitive 
+                          (primitive_table 
+                            (keyw_id 
+                              (keyw_id_part 
+                                (func_keyw_id agg
+                                )
+                              ) . 
+                              (keyw_id_part 
+                                (func_keyw_id dbo
+                                )
+                              ) . 
+                              (keyw_id_part 
+                                (func_keyw_id store_request_rollup
+                                )
+                              )
+                            ) 
+                            (as_clause 
+                              (func_keyw_id i
+                              )
+                            )
+                          )
+                        )
+                      ) 
+                      (on_join on 
+                        (search_condition 
+                          (predicate 
+                            (expression 
+                              (expression 
+                                (keyw_id_part 
+                                  (func_keyw_id a
+                                  )
+                                )
+                              ) . 
+                              (expression 
+                                (expression 
+                                  (keyw_id_part 
+                                    (func_keyw_id mid
+                                    )
+                                  )
+                                ) = 
+                                (expression 
+                                  (expression 
+                                    (keyw_id_part 
+                                      (func_keyw_id i
+                                      )
+                                    )
+                                  ) . 
+                                  (expression 
+                                    (keyw_id_part 
+                                      (func_keyw_id mid
+                                      )
+                                    )
+                                  )
+                                )
+                              )
+                            )
+                          )
+                        )
+                      ) 
+                      (join_type_prefix left
+                      ) join 
+                      (tableSourceElement 
+                        (table_source_primitive 
+                          (primitive_table 
+                            (keyw_id 
+                              (keyw_id_part 
+                                (func_keyw_id agg
+                                )
+                              ) . 
+                              (keyw_id_part 
+                                (func_keyw_id dbo
+                                )
+                              ) . 
+                              (keyw_id_part 
+                                (func_keyw_id email_activity_rollup
+                                )
+                              )
+                            ) 
+                            (as_clause 
+                              (func_keyw_id j
+                              )
+                            )
+                          )
+                        )
+                      ) 
+                      (on_join on 
+                        (search_condition 
+                          (predicate 
+                            (expression 
+                              (expression 
+                                (keyw_id_part 
+                                  (func_keyw_id a
+                                  )
+                                )
+                              ) . 
+                              (expression 
+                                (expression 
+                                  (keyw_id_part 
+                                    (func_keyw_id mid
+                                    )
+                                  )
+                                ) = 
+                                (expression 
+                                  (expression 
+                                    (keyw_id_part 
+                                      (func_keyw_id j
+                                      )
+                                    )
+                                  ) . 
+                                  (expression 
+                                    (keyw_id_part 
+                                      (func_keyw_id mid
+                                      )
+                                    )
+                                  )
+                                )
+                              )
+                            )
+                          )
+                        )
+                      ) 
+                      (join_type_prefix left
+                      ) join 
+                      (tableSourceElement 
+                        (table_source_primitive 
+                          (primitive_table 
+                            (keyw_id 
+                              (keyw_id_part 
+                                (func_keyw_id agg
+                                )
+                              ) . 
+                              (keyw_id_part 
+                                (func_keyw_id dbo
+                                )
+                              ) . 
+                              (keyw_id_part 
+                                (func_keyw_id siebel_contact_rollup
+                                )
+                              )
+                            ) 
+                            (as_clause 
+                              (func_keyw_id k
+                              )
+                            )
+                          )
+                        )
+                      ) 
+                      (on_join on 
+                        (search_condition 
+                          (predicate 
+                            (expression 
+                              (expression 
+                                (keyw_id_part 
+                                  (func_keyw_id a
+                                  )
+                                )
+                              ) . 
+                              (expression 
+                                (expression 
+                                  (keyw_id_part 
+                                    (func_keyw_id mid
+                                    )
+                                  )
+                                ) = 
+                                (expression 
+                                  (expression 
+                                    (keyw_id_part 
+                                      (func_keyw_id k
+                                      )
+                                    )
+                                  ) . 
+                                  (expression 
+                                    (keyw_id_part 
+                                      (func_keyw_id mid
+                                      )
+                                    )
+                                  )
+                                )
+                              )
+                            )
+                          )
+                        )
+                      ) 
+                      (join_type_prefix left
+                      ) join 
+                      (tableSourceElement 
+                        (table_source_primitive 
+                          (primitive_table 
+                            (keyw_id 
+                              (keyw_id_part 
+                                (func_keyw_id agg
+                                )
+                              ) . 
+                              (keyw_id_part 
+                                (func_keyw_id dbo
+                                )
+                              ) . 
+                              (keyw_id_part 
+                                (func_keyw_id siebel_event_rollup
+                                )
+                              )
+                            ) 
+                            (as_clause 
+                              (func_keyw_id l
+                              )
+                            )
+                          )
+                        )
+                      ) 
+                      (on_join on 
+                        (search_condition 
+                          (predicate 
+                            (expression 
+                              (expression 
+                                (keyw_id_part 
+                                  (func_keyw_id a
+                                  )
+                                )
+                              ) . 
+                              (expression 
+                                (expression 
+                                  (keyw_id_part 
+                                    (func_keyw_id mid
+                                    )
+                                  )
+                                ) = 
+                                (expression 
+                                  (expression 
+                                    (keyw_id_part 
+                                      (func_keyw_id l
+                                      )
+                                    )
+                                  ) . 
+                                  (expression 
+                                    (keyw_id_part 
+                                      (func_keyw_id mid
+                                      )
+                                    )
+                                  )
+                                )
+                              )
+                            )
+                          )
+                        )
+                      ) 
+                      (join_type_prefix left
+                      ) join 
+                      (tableSourceElement 
+                        (table_source_primitive 
+                          (primitive_table 
+                            (keyw_id 
+                              (keyw_id_part 
+                                (func_keyw_id agg
+                                )
+                              ) . 
+                              (keyw_id_part 
+                                (func_keyw_id dbo
+                                )
+                              ) . 
+                              (keyw_id_part 
+                                (func_keyw_id prospect_rollup
+                                )
+                              )
+                            ) 
+                            (as_clause 
+                              (func_keyw_id m
+                              )
+                            )
+                          )
+                        )
+                      ) 
+                      (on_join on 
+                        (search_condition 
+                          (predicate 
+                            (expression 
+                              (expression 
+                                (keyw_id_part 
+                                  (func_keyw_id a
+                                  )
+                                )
+                              ) . 
+                              (expression 
+                                (expression 
+                                  (keyw_id_part 
+                                    (func_keyw_id mid
+                                    )
+                                  )
+                                ) = 
+                                (expression 
+                                  (expression 
+                                    (keyw_id_part 
+                                      (func_keyw_id m
+                                      )
+                                    )
+                                  ) . 
+                                  (expression 
+                                    (keyw_id_part 
+                                      (func_keyw_id mid
+                                      )
+                                    )
+                                  )
+                                )
+                              )
+                            )
+                          )
+                        )
+                      ) 
+                      (join_type_prefix left
+                      ) join 
+                      (tableSourceElement 
+                        (table_source_primitive 
+                          (primitive_table 
+                            (keyw_id 
+                              (keyw_id_part 
+                                (func_keyw_id agg
+                                )
+                              ) . 
+                              (keyw_id_part 
+                                (func_keyw_id dbo
+                                )
+                              ) . 
+                              (keyw_id_part 
+                                (func_keyw_id sports_interest_rollup
+                                )
+                              )
+                            ) 
+                            (as_clause 
+                              (func_keyw_id n
+                              )
+                            )
+                          )
+                        )
+                      ) 
+                      (on_join on 
+                        (search_condition 
+                          (predicate 
+                            (expression 
+                              (expression 
+                                (keyw_id_part 
+                                  (func_keyw_id a
+                                  )
+                                )
+                              ) . 
+                              (expression 
+                                (expression 
+                                  (keyw_id_part 
+                                    (func_keyw_id mid
+                                    )
+                                  )
+                                ) = 
+                                (expression 
+                                  (expression 
+                                    (keyw_id_part 
+                                      (func_keyw_id n
+                                      )
+                                    )
+                                  ) . 
+                                  (expression 
+                                    (keyw_id_part 
+                                      (func_keyw_id mid
+                                      )
+                                    )
+                                  )
+                                )
+                              )
+                            )
+                          )
+                        )
+                      ) 
+                      (join_type_prefix left
+                      ) join 
+                      (tableSourceElement 
+                        (table_source_primitive 
+                          (primitive_table 
+                            (keyw_id 
+                              (keyw_id_part 
+                                (func_keyw_id agg
+                                )
+                              ) . 
+                              (keyw_id_part 
+                                (func_keyw_id dbo
+                                )
+                              ) . 
+                              (keyw_id_part 
+                                (func_keyw_id communication_rollup
+                                )
+                              )
+                            ) 
+                            (as_clause 
+                              (func_keyw_id o
+                              )
+                            )
+                          )
+                        )
+                      ) 
+                      (on_join on 
+                        (search_condition 
+                          (predicate 
+                            (expression 
+                              (expression 
+                                (keyw_id_part 
+                                  (func_keyw_id a
+                                  )
+                                )
+                              ) . 
+                              (expression 
+                                (expression 
+                                  (keyw_id_part 
+                                    (func_keyw_id mid
+                                    )
+                                  )
+                                ) = 
+                                (expression 
+                                  (expression 
+                                    (keyw_id_part 
+                                      (func_keyw_id o
+                                      )
+                                    )
+                                  ) . 
+                                  (expression 
+                                    (keyw_id_part 
+                                      (func_keyw_id mid
+                                      )
+                                    )
+                                  )
+                                )
+                              )
+                            )
+                          )
+                        )
+                      ) 
+                      (join_type_prefix left
+                      ) join 
+                      (tableSourceElement 
+                        (table_source_primitive 
+                          (primitive_table 
+                            (keyw_id 
+                              (keyw_id_part 
+                                (func_keyw_id agg
+                                )
+                              ) . 
+                              (keyw_id_part 
+                                (func_keyw_id dbo
+                                )
+                              ) . 
+                              (keyw_id_part 
+                                (func_keyw_id demographic_rollup
+                                )
+                              )
+                            ) 
+                            (as_clause 
+                              (func_keyw_id p
+                              )
+                            )
+                          )
+                        )
+                      ) 
+                      (on_join on 
+                        (search_condition 
+                          (predicate 
+                            (expression 
+                              (expression 
+                                (keyw_id_part 
+                                  (func_keyw_id a
+                                  )
+                                )
+                              ) . 
+                              (expression 
+                                (expression 
+                                  (keyw_id_part 
+                                    (func_keyw_id mid
+                                    )
+                                  )
+                                ) = 
+                                (expression 
+                                  (expression 
+                                    (keyw_id_part 
+                                      (func_keyw_id p
+                                      )
+                                    )
+                                  ) . 
+                                  (expression 
+                                    (keyw_id_part 
+                                      (func_keyw_id mid
+                                      )
+                                    )
+                                  )
+                                )
+                              )
+                            )
+                          )
+                        )
+                      ) 
+                      (join_type_prefix left
+                      ) join 
+                      (tableSourceElement 
+                        (table_source_primitive 
+                          (primitive_table 
+                            (keyw_id 
+                              (keyw_id_part 
+                                (func_keyw_id agg
+                                )
+                              ) . 
+                              (keyw_id_part 
+                                (func_keyw_id dbo
+                                )
+                              ) . 
+                              (keyw_id_part 
+                                (func_keyw_id siebel_supp_rollup
+                                )
+                              )
+                            ) 
+                            (as_clause 
+                              (func_keyw_id q
+                              )
+                            )
+                          )
+                        )
+                      ) 
+                      (on_join on 
+                        (search_condition 
+                          (predicate 
+                            (expression 
+                              (expression 
+                                (keyw_id_part 
+                                  (func_keyw_id a
+                                  )
+                                )
+                              ) . 
+                              (expression 
+                                (expression 
+                                  (keyw_id_part 
+                                    (func_keyw_id mid
+                                    )
+                                  )
+                                ) = 
+                                (expression 
+                                  (expression 
+                                    (keyw_id_part 
+                                      (func_keyw_id q
+                                      )
+                                    )
+                                  ) . 
+                                  (expression 
+                                    (keyw_id_part 
+                                      (func_keyw_id mid
+                                      )
+                                    )
+                                  )
+                                )
+                              )
+                            )
+                          )
+                        )
+                      ) 
+                      (join_type_prefix left
+                      ) join 
+                      (tableSourceElement 
+                        (table_source_primitive 
+                          (primitive_table 
+                            (keyw_id 
+                              (keyw_id_part 
+                                (func_keyw_id agg
+                                )
+                              ) . 
+                              (keyw_id_part 
+                                (func_keyw_id dbo
+                                )
+                              ) . 
+                              (keyw_id_part 
+                                (func_keyw_id clientele_rollup
+                                )
+                              )
+                            ) 
+                            (as_clause 
+                              (func_keyw_id r
+                              )
+                            )
+                          )
+                        )
+                      ) 
+                      (on_join on 
+                        (search_condition 
+                          (predicate 
+                            (expression 
+                              (expression 
+                                (keyw_id_part 
+                                  (func_keyw_id a
+                                  )
+                                )
+                              ) . 
+                              (expression 
+                                (expression 
+                                  (keyw_id_part 
+                                    (func_keyw_id mid
+                                    )
+                                  )
+                                ) = 
+                                (expression 
+                                  (expression 
+                                    (keyw_id_part 
+                                      (func_keyw_id r
+                                      )
+                                    )
+                                  ) . 
+                                  (expression 
+                                    (keyw_id_part 
+                                      (func_keyw_id mid
+                                      )
+                                    )
+                                  )
+                                )
+                              )
+                            )
+                          )
+                        )
+                      )
+                    )
+                  )
+                )
+              )
+            )
+          )
+        )
+      )
+    )
+  ) <EOF>
+)

@@ -1,0 +1,27 @@
+digraph ParseTree {
+  n0 -> n1 [label="batch_statements"];
+  n1 -> n2 [label="statements"];
+  n2 -> n3 [label="sql_statements"];
+  n3 -> n4 [label="miscellaneous_statements"];
+  n4 -> n5 [label="restore_statement"];
+  n5 -> n6 [label="RESTORE"];
+  n5 -> n7 [label="restore_key"];
+  n7 -> n8 [label="SERVICE"];
+  n7 -> n9 [label="MASTER"];
+  n7 -> n10 [label="KEY"];
+  n7 -> n11 [label="rk_from"];
+  n11 -> n12 [label="FROM"];
+  n11 -> n13 [label="FILE"];
+  n11 -> n14 [label="="];
+  n11 -> n15 [label="'c:\temp_backups\keys\service_master_key'"];
+  n7 -> n16 [label="ak_password_option"];
+  n16 -> n17 [label="DECRYPTION"];
+  n16 -> n18 [label="BY"];
+  n16 -> n19 [label="PASSWORD"];
+  n16 -> n20 [label="="];
+  n16 -> n21 [label="'3dH85Hhk003GHk2597gheij4'"];
+  n5 -> n22 [label=";"];
+  n1 -> n23 [label="statements"];
+  n23 -> n24 [label="GO"];
+  n0 -> n25 [label="<EOF>"];
+}

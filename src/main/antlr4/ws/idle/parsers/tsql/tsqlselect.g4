@@ -1,3 +1,25 @@
+// MIT License
+//
+// Copyright (c) 2004-2024 Jim Idle
+//
+// Permission is hereby granted, free of charge, to any person obtaining a copy
+// of this software and associated documentation files (the "Software"), to deal
+// in the Software without restriction, including without limitation the rights
+// to use, copy, modify, merge, publish, distribute, sublicense, and/or sell
+// copies of the Software, and to permit persons to whom the Software is
+// furnished to do so, subject to the following conditions:
+//
+// The above copyright notice and this permission notice shall be included in all
+// copies or substantial portions of the Software.
+//
+// THE SOFTWARE IS PROVIDED "AS IS", WITHOUT WARRANTY OF ANY KIND, EXPRESS OR
+// IMPLIED, INCLUDING BUT NOT LIMITED TO THE WARRANTIES OF MERCHANTABILITY,
+// FITNESS FOR A PARTICULAR PURPOSE AND NONINFRINGEMENT. IN NO EVENT SHALL THE
+// AUTHORS OR COPYRIGHT HOLDERS BE LIABLE FOR ANY CLAIM, DAMAGES OR OTHER
+// LIABILITY, WHETHER IN AN ACTION OF CONTRACT, TORT OR OTHERWISE, ARISING FROM,
+// OUT OF OR IN CONNECTION WITH THE SOFTWARE OR THE USE OR OTHER DEALINGS IN THE
+// SOFTWARE.
+
 // The TSQL SELECT statement
 //
 parser grammar tsqlselect;
@@ -79,20 +101,19 @@ select_list
 		;
 
 select_element
-		: OPMUL														// Simply select all columns in the 'table'
-		| func_keyw_id OPEQ expression		// Assignment of column alias to something
-		| expression                      			// Your semantic phase should validate the expression and OPEQ etc
+		: OPMUL									// Simply select all columns in the 'table'
+		| func_keyw_id OPEQ expression		    // Assignment of column alias to something
+		| expression                     		// Your semantic phase should validate the expression and OPEQ etc
 			(
-				  ( ac=as_clause) 			// A function such as an aggregate or OVER functions
-				| DOT OPMUL				// All columns at a level such as table, view, table alias
-				| c=COLON COLON f=func_keyw_id				// Means we were actually parsing a udt CLR routine
+				  ( ac=as_clause) 			    // A function such as an aggregate or OVER functions
+				| DOT OPMUL				        // All columns at a level such as table, view, table alias
+				| c=COLON COLON f=func_keyw_id	// Means we were actually parsing a udt CLR routine
 				|
 			)
 		;
 
 as_clause
 		: // Watch out for SELECT 'x'\n Label, as may be ambiguous in parse
-
             AS? (func_keyw_id | SQ_LITERAL |DQ_LITERAL)
 		;
 
@@ -428,9 +449,22 @@ optimize_hint_set
 		;
 
 group_by_clause
-		:  GROUP BY (ALL)? expression_list
-				(WITH (CUBE | ROLLUP))?
+		:  GROUP BY
+		    (
+		         ALL? expression_list (WITH (CUBE | ROLLUP))?
+			    | md_sets
+			)
 		;
+
+md_sets
+    : (ROLLUP | CUBE | GROUPING SETS)
+        LPAREN
+            (
+                  expression
+                | (LPAREN expression_list? RPAREN COMMA?)+
+            )
+        RPAREN
+    ;
 
 // End: SELECT statements
 ///////////////////////////////////////////////////////////

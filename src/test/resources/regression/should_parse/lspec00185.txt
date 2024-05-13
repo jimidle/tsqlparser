@@ -1,0 +1,1 @@
+(aaa_translation_unit (batch_statements (statements (ddl_statements (alter_statement ALTER (alter_login LOGIN (keyw_id (keyw_id_part (func_keyw_id Mary5))) WITH (set_option_list (set_option NAME = (keyw_id (keyw_id_part (func_keyw_id Joe2))))) ;))))) <EOF>)

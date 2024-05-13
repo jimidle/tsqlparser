@@ -1,0 +1,25 @@
+digraph ParseTree {
+  n0 -> n1 [label="batch_statements"];
+  n1 -> n2 [label="statements"];
+  n2 -> n3 [label="ddl_statements"];
+  n3 -> n4 [label="create_statement"];
+  n4 -> n5 [label="CREATE"];
+  n4 -> n6 [label="create_credential"];
+  n6 -> n7 [label="CREDENTIAL"];
+  n6 -> n8 [label="keyw_id"];
+  n8 -> n9 [label="keyw_id_part"];
+  n9 -> n10 [label="func_keyw_id"];
+  n10 -> n11 [label="AlterEgo"];
+  n6 -> n12 [label="WITH"];
+  n6 -> n13 [label="IDENTITY"];
+  n6 -> n14 [label="="];
+  n6 -> n15 [label="'RettigB'"];
+  n6 -> n16 [label=","];
+  n6 -> n17 [label="SECRET"];
+  n6 -> n18 [label="="];
+  n6 -> n19 [label="'sdrlk8$40-dksli87nNN8'"];
+  n6 -> n20 [label=";"];
+  n1 -> n21 [label="statements"];
+  n21 -> n22 [label="GO"];
+  n0 -> n23 [label="<EOF>"];
+}

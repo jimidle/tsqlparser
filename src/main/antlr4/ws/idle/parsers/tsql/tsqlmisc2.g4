@@ -1,6 +1,28 @@
+// MIT License
+//
+// Copyright (c) 2004-2024 Jim Idle
+//
+// Permission is hereby granted, free of charge, to any person obtaining a copy
+// of this software and associated documentation files (the "Software"), to deal
+// in the Software without restriction, including without limitation the rights
+// to use, copy, modify, merge, publish, distribute, sublicense, and/or sell
+// copies of the Software, and to permit persons to whom the Software is
+// furnished to do so, subject to the following conditions:
+//
+// The above copyright notice and this permission notice shall be included in all
+// copies or substantial portions of the Software.
+//
+// THE SOFTWARE IS PROVIDED "AS IS", WITHOUT WARRANTY OF ANY KIND, EXPRESS OR
+// IMPLIED, INCLUDING BUT NOT LIMITED TO THE WARRANTIES OF MERCHANTABILITY,
+// FITNESS FOR A PARTICULAR PURPOSE AND NONINFRINGEMENT. IN NO EVENT SHALL THE
+// AUTHORS OR COPYRIGHT HOLDERS BE LIABLE FOR ANY CLAIM, DAMAGES OR OTHER
+// LIABILITY, WHETHER IN AN ACTION OF CONTRACT, TORT OR OTHERWISE, ARISING FROM,
+// OUT OF OR IN CONNECTION WITH THE SOFTWARE OR THE USE OR OTHER DEALINGS IN THE
+// SOFTWARE.
+
 /**
  * This grammar covers T-SQL statements that don't particularly fall in to
- * any other category.
+ * any other category. Not even the others that don't fall into a category.
  */
 parser grammar tsqlmisc2;
 
@@ -374,8 +396,6 @@ merge_set_clause
 
 merge_set_list
     : s+=set_vars (COMMA s+=set_vars)*
-
-
     ;
     
 merge_not_matched
@@ -785,35 +805,36 @@ send_message_type
 // SET statement
 //
 set_statement
-    : SET
-        (
-              set_vars
-            | set_flags
-        )
-        SEMI?
+    : SET (special_flags (ON | OFF)? | set_vars) SEMI?
     ;
 
-set_flags
-    : common_flags_list (ON|OFF|keyw_id|SQ_LITERAL|INTEGER|HEXNUM)
-    | special_flags     (ON|OFF|keyw_id|SQ_LITERAL|INTEGER|HEXNUM)?
+set_vars
+    : set_var_list e1=expression? e2=expression?
+        (   : assop e3=expression
+            | ON
+            | OFF
+        )?
     ;
 
-common_flags_list
-    : c+=common_flags (COMMA c+=common_flags)*
-
-
+assop
+    : OPEQ
+    | OPPLUSEQ
+    | OPMINUSEQ
+    | OPMULEQ
+    | OPDIVEQ
+    | OPMODEQ
+    | OPBANDEQ
+    | OPBOREQ
+    | OPBXOREQ
     ;
 
-common_flags
-    : keyw_id                    // Anything that is a flag that isn't a special keyword
-    | IDENTITY_INSERT keyw_id
-    | NUMERIC_ROUNDABORT
-    | CONCAT_NULL_YIELDS_NULL
+set_var_list
+    : keyw_id (COMMA keyw_id)*
     ;
 
+// Parsed by expression
 special_flags
     : DEADLOCK_PRIORITY
-
         (
               LOW
             | NORMAL
@@ -829,52 +850,8 @@ special_flags
             | SNAPSHOT
             | SERIALIZABLE
         )
-    ;
-
-set_vars
-    : set_target
-      setOperators
-      set_source
-    ;
-
-setOperators
-    : OPEQ
-    | OPPLUSEQ
-    | OPMINUSEQ
-    | OPMULEQ
-    | OPDIVEQ
-    | OPMODEQ
-    | OPBANDEQ
-    | OPBOREQ
-    | OPBXOREQ
-    ;
-    
-set_target
-    : keyw_id
-        (
-            // Static property
-            //
-            COLON COLON keyw_id
-        )?
-    ;
-
-set_source
-    : expression
-        (
-            // Static property
-            //
-            COLON COLON keyw_id
-        )?
-            (set_func_parms)?
-
     | CURSOR common_cursor_decl
     | DEFAULT
-    ;
-
-set_func_parms
-    : LPAREN e=expression_list RPAREN
-
-
     ;
 // End: SET
 ///////////////////////////////////////////////////////////
@@ -885,7 +862,7 @@ set_func_parms
 set_user
     : SETUSER
         (
-            keyw_id (WITH RESET)?
+            (keyw_id | SQ_LITERAL) (WITH RESET)?
         )?
     ;
 // End:
@@ -905,9 +882,7 @@ shutdown_statement
 //
 truncate_statement
     : TRUNCATE TABLE
-
         keyw_id
-
         SEMI?
     ;
 // End:
@@ -918,12 +893,10 @@ truncate_statement
 //
 update_statement
     : UPDATE
-
         (
               update_table
             | update_statistics
         )
-
         SEMI?
     ;
 
@@ -944,16 +917,14 @@ update_set
 
 update_set_list
     : u+=update_element (COMMA u+=update_element)*
-
-
     ;
 
 update_element
     : keyw_id
         (
 
-              OPEQ (expression|DEFAULT) (OPEQ (expression|DEFAULT))?
-            | set_func_parms
+              OPEQ (expression  | DEFAULT) (OPEQ (expression | DEFAULT))?
+            | LPAREN expression_list RPAREN
         )
     ;
 
@@ -989,8 +960,6 @@ update_stats_with
 
 update_stats_streams
     : s+=uss_stream (COMMA s+=uss_stream)*
-
-
     ;
 
 uss_stream

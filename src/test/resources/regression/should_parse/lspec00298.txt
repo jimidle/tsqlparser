@@ -1,0 +1,1 @@
+(aaa_translation_unit (batch_statements (statements (ddl_statements (bulk_statement BULK INSERT (keyw_id (keyw_id_part (func_keyw_id bulktest)) . . (keyw_id_part (func_keyw_id t_float))) FROM 'C:\t_float-c.dat' WITH ( (bulk_option_list (bulk_option FORMATFILE = 'C:\t_floatformat-c-xml.xml')) )))) ; (statements GO)) <EOF>)

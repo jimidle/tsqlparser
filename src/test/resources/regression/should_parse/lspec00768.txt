@@ -1,0 +1,1 @@
+(aaa_translation_unit (batch_statements (statements (sql_statements (miscellaneous_statements (kill_statement KILL (kill_process (kill_process_uow 53)) ;)))) (statements GO)) <EOF>)

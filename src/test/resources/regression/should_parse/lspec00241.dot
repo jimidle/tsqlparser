@@ -1,0 +1,16 @@
+digraph ParseTree {
+  n0 -> n1 [label="batch_statements"];
+  n1 -> n2 [label="statements"];
+  n2 -> n3 [label="ddl_statements"];
+  n3 -> n4 [label="create_statement"];
+  n4 -> n5 [label="CREATE"];
+  n4 -> n6 [label="create_xml"];
+  n6 -> n7 [label="XML"];
+  n6 -> n8 [label="SCHEMA"];
+  n6 -> n9 [label="COLLECTION"];
+  n6 -> n10 [label="AS"];
+  n6 -> n11 [label="N'
+<xsd:schema>....</xsd:schema>
+<xsd:schema>...</xsd:schema>'"];
+  n0 -> n12 [label="<EOF>"];
+}

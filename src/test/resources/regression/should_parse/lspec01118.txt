@@ -1,0 +1,1 @@
+(aaa_translation_unit (batch_statements (statements (ddl_statements (alter_statement ALTER (alter_database DATABASE (keyw_id (keyw_id_part (func_keyw_id AdventureWorks2008R2))) (ad_set_database_options SET (ad_optionspec_list (ad_optionspec (ad_compatibility COMPATIBILITY_LEVEL = 90)))) ;)))) (statements GO)) <EOF>)

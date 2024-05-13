@@ -1,0 +1,1 @@
+(aaa_translation_unit (batch_statements (statements (execute_statement (exec_one EXECUTE (exec_body (exec_as AS (exec_context LOGIN = 'login1')) ;)))) (statements GO) (statements (execute_statement (exec_one EXECUTE (exec_body (exec_sp (exec_sp_func (keyw_id (keyw_id_part (func_keyw_id dbo)) . (keyw_id_part (func_keyw_id usp_myproc))))) ;))))) <EOF>)

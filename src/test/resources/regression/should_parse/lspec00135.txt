@@ -1,0 +1,1 @@
+(aaa_translation_unit (batch_statements (statements (ddl_statements (alter_statement ALTER (alter_assembly ASSEMBLY (assembly_name (keyw_id (keyw_id_part (func_keyw_id ComplexNumber)))) (assembly_with WITH (assembly_option_list (assembly_option PERMISSION_SET = EXTERNAL_ACCESS)))))))) <EOF>)

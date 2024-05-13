@@ -1,0 +1,1 @@
+(aaa_translation_unit (batch_statements (statements (sql_statements (miscellaneous_statements (set_statement SET (set_vars (set_var_list (keyw_id (keyw_id_part (func_keyw_id LOCK_TIMEOUT)))) (expression (atoms 1800))))))) (statements GO)) <EOF>)

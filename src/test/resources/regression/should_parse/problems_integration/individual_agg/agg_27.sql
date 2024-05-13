@@ -8,7 +8,7 @@ a.vulgar as vulgar_name,
 a.fraud, 
 convert(bit, case when a.employee = 1 or c.hid is not null then 1 else 0 end) as employee,
 a.customer, 
---household suppression fields
+
 b.dsf,
 b.state,
 b.zip,
@@ -32,7 +32,7 @@ left join kc..adhoc_suppression_individual d on a.mid = d.mid
 union all
 select distinct a.mid, NULL, convert(bit, 0), convert(bit, 0), convert(bit, 0), convert(bit, 0),
 convert(bit, 0), convert(bit, 0), convert(bit, 0), convert(bit, 1), 
---household suppression place holders
+
 convert(bit, 0), convert(bit, 0), convert(bit, 0), convert(bit, 0), convert(bit, 0),
 convert(bit, 0), convert(bit, 0), convert(bit, 0), convert(bit, 0), case when c.mid is not null then 1 else 0 end,
 convert(bit, 0), convert(bit, 0), convert(bit, 0)

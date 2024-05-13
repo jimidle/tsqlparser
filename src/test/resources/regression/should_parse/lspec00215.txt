@@ -1,0 +1,1 @@
+(aaa_translation_unit (batch_statements (statements (ddl_statements (alter_statement ALTER (alter_service SERVICE (as_master MASTER KEY (as_recover_opt WITH OLD_ACCOUNT = 'AdvWorks\MiraG' , OLD_PASSWORD = '0i0035MDFh6##gfk576t')) ;)))) (statements GO)) <EOF>)

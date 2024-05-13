@@ -13,22 +13,22 @@ convert(bit, case when f.mid is not null then 1 else 0 end) as payer,
 convert(bit, case when g.mid is not null then 1 else 0 end) as shipto,
 convert(bit, coalesce(g.gift_recipient, 0)) as gift_recipient,
 convert(bit, isnull(e.web_buyer, 0)) as web_buyer,
--- Added by pyoung on 3/24/2006
+
 convert(bit, isnull(e.online_buyer, 0)) as online_buyer,
--- Added by pyoung on 3/23/2006
+
 convert(bit, isnull(e.retail_buyer, 0)) as retail_buyer,
 convert(bit, isnull(e.cs_buyer, 0)) as cs_buyer,
 convert(bit, isnull(e.nike_id_buyer, 0)) as nike_id_buyer,
 convert(bit, isnull(e.mens_buyer, 0)) as mens_buyer,
 convert(bit, isnull(e.womens_buyer, 0)) as womens_buyer,convert(bit, isnull(e.catalog_buyer, 0)) as catalog_buyer,
----added by TForhad on 03/19/2007
+
 convert(bit, isnull(e.clearance_store_buyer, 0)) as clearance_store_buyer,
---convert(bit, isnull(t.retail_catalog_buyer, 0)) as retail_catalog_buyer,
--- Added by pyoung on 3/23/2006
---convert(bit,case when r.opt_in = 0 then 1 else 0 end) as retail_restricted,
---Added by mbenson 6/1/2007
+
+
+
+
 convert(bit, isnull(e.clientele_buyer, 0)) as clientele_buyer,
---Added by Deepu Jose 6/6/2007
+
 convert(bit, isnull(e.dm_buyer, 0)) as dm_buyer,
 convert(bit, isnull(e.returner, 0)) as returner,
 convert(bit, case when r.mid is not null then 1 else 0 end) as clientele_customer,

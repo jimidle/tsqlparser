@@ -1,0 +1,59 @@
+digraph ParseTree {
+  n0 -> n1 [label="batch_statements"];
+  n1 -> n2 [label="statements"];
+  n2 -> n3 [label="ddl_statements"];
+  n3 -> n4 [label="create_statement"];
+  n4 -> n5 [label="CREATE"];
+  n4 -> n6 [label="create_xml"];
+  n6 -> n7 [label="XML"];
+  n6 -> n8 [label="SCHEMA"];
+  n6 -> n9 [label="COLLECTION"];
+  n6 -> n10 [label="keyw_id"];
+  n10 -> n11 [label="keyw_id_part"];
+  n11 -> n12 [label="func_keyw_id"];
+  n12 -> n13 [label="mySC"];
+  n6 -> n14 [label="AS"];
+  n6 -> n15 [label="'
+<schema xmlns="http://www.w3.org/2001/XMLSchema">
+      <element name="root" type="string"/>
+</schema>
+'"];
+  n1 -> n16 [label="statements"];
+  n16 -> n17 [label="GO"];
+  n1 -> n18 [label="statements"];
+  n18 -> n19 [label="ddl_statements"];
+  n19 -> n20 [label="create_statement"];
+  n20 -> n21 [label="CREATE"];
+  n20 -> n22 [label="create_table"];
+  n22 -> n23 [label="TABLE"];
+  n22 -> n24 [label="keyw_id"];
+  n24 -> n25 [label="keyw_id_part"];
+  n25 -> n26 [label="func_keyw_id"];
+  n26 -> n27 [label="T"];
+  n22 -> n28 [label="("];
+  n22 -> n29 [label="ct_col_def_list"];
+  n29 -> n30 [label="ct_col_def_list_element"];
+  n30 -> n31 [label="ct_column_def_plus"];
+  n31 -> n32 [label="ct_column_definition"];
+  n32 -> n33 [label="keyw_id"];
+  n33 -> n34 [label="keyw_id_part"];
+  n34 -> n35 [label="func_keyw_id"];
+  n35 -> n36 [label="Col1"];
+  n32 -> n37 [label="ct_data_type"];
+  n37 -> n38 [label="ct_data"];
+  n38 -> n39 [label="keyw_id"];
+  n39 -> n40 [label="keyw_id_part"];
+  n40 -> n41 [label="func_keyw_id"];
+  n41 -> n42 [label="keywords"];
+  n42 -> n43 [label="xml"];
+  n38 -> n44 [label="("];
+  n38 -> n45 [label="keyw_id"];
+  n45 -> n46 [label="keyw_id_part"];
+  n46 -> n47 [label="func_keyw_id"];
+  n47 -> n48 [label="mySC"];
+  n38 -> n49 [label=")"];
+  n22 -> n50 [label=")"];
+  n1 -> n51 [label="statements"];
+  n51 -> n52 [label="GO"];
+  n0 -> n53 [label="<EOF>"];
+}

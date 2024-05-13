@@ -1,0 +1,22 @@
+digraph ParseTree {
+  n0 -> n1 [label="batch_statements"];
+  n1 -> n2 [label="statements"];
+  n2 -> n3 [label="ddl_statements"];
+  n3 -> n4 [label="create_statement"];
+  n4 -> n5 [label="CREATE"];
+  n4 -> n6 [label="create_route"];
+  n6 -> n7 [label="ROUTE"];
+  n6 -> n8 [label="keyw_id_part"];
+  n8 -> n9 [label="func_keyw_id"];
+  n9 -> n10 [label="ExpenseRoute"];
+  n6 -> n11 [label="route_with"];
+  n11 -> n12 [label="WITH"];
+  n11 -> n13 [label="route_option_list"];
+  n13 -> n14 [label="route_option"];
+  n14 -> n15 [label="route_option_element"];
+  n15 -> n16 [label="ADDRESS"];
+  n15 -> n17 [label="="];
+  n15 -> n18 [label="'TCP://dispatch.Adventure-Works.com'"];
+  n6 -> n19 [label=";"];
+  n0 -> n20 [label="<EOF>"];
+}

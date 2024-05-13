@@ -1,0 +1,22 @@
+digraph ParseTree {
+  n0 -> n1 [label="batch_statements"];
+  n1 -> n2 [label="statements"];
+  n2 -> n3 [label="ddl_statements"];
+  n3 -> n4 [label="alter_statement"];
+  n4 -> n5 [label="ALTER"];
+  n4 -> n6 [label="alter_assembly"];
+  n6 -> n7 [label="ASSEMBLY"];
+  n6 -> n8 [label="assembly_name"];
+  n8 -> n9 [label="keyw_id"];
+  n9 -> n10 [label="keyw_id_part"];
+  n10 -> n11 [label="func_keyw_id"];
+  n11 -> n12 [label="ComplexNumber"];
+  n6 -> n13 [label="assembly_with"];
+  n13 -> n14 [label="WITH"];
+  n13 -> n15 [label="assembly_option_list"];
+  n15 -> n16 [label="assembly_option"];
+  n16 -> n17 [label="PERMISSION_SET"];
+  n16 -> n18 [label="="];
+  n16 -> n19 [label="EXTERNAL_ACCESS"];
+  n0 -> n20 [label="<EOF>"];
+}

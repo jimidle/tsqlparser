@@ -1,4 +1,27 @@
+// MIT License
+//
+// Copyright (c) 2004-2024 Jim Idle
+//
+// Permission is hereby granted, free of charge, to any person obtaining a copy
+// of this software and associated documentation files (the "Software"), to deal
+// in the Software without restriction, including without limitation the rights
+// to use, copy, modify, merge, publish, distribute, sublicense, and/or sell
+// copies of the Software, and to permit persons to whom the Software is
+// furnished to do so, subject to the following conditions:
+//
+// The above copyright notice and this permission notice shall be included in all
+// copies or substantial portions of the Software.
+//
+// THE SOFTWARE IS PROVIDED "AS IS", WITHOUT WARRANTY OF ANY KIND, EXPRESS OR
+// IMPLIED, INCLUDING BUT NOT LIMITED TO THE WARRANTIES OF MERCHANTABILITY,
+// FITNESS FOR A PARTICULAR PURPOSE AND NONINFRINGEMENT. IN NO EVENT SHALL THE
+// AUTHORS OR COPYRIGHT HOLDERS BE LIABLE FOR ANY CLAIM, DAMAGES OR OTHER
+// LIABILITY, WHETHER IN AN ACTION OF CONTRACT, TORT OR OTHERWISE, ARISING FROM,
+// OUT OF OR IN CONNECTION WITH THE SOFTWARE OR THE USE OR OTHER DEALINGS IN THE
+// SOFTWARE.
+
 parser grammar tsqlcreate;
+
 
 ///////////////////////////////////////////////////////////
 // CREATE statements
@@ -217,13 +240,17 @@ create_credential
 //
 create_database
     : DATABASE keyw_id
-		cd_on_clause?
-        cd_for_option?
-		cd_log_option?
-    	cd_collate_clause?
-    	cd_with_clause?
-        cd_as?
+		cd_option*
     	SEMI?
+    ;
+
+cd_option
+    : cd_on_clause
+    | cd_for_option
+    | cd_log_option
+    | cd_collate_clause
+    | cd_with_clause
+    | cd_as
     ;
 
 cd_collate_clause
@@ -272,8 +299,6 @@ cd_log_option
 	
 cd_filegroup_list
 	: cf+=cd_filegroup (COMMA cf+=cd_filegroup)*
-
-
 	;
 	
 cd_filegroup
@@ -508,8 +533,19 @@ create_index
     		ci_on3
     		ci_xml_index_using?
             ci_xml_index_with?
+         | spatial_index
     	)
     	SEMI?
+    ;
+
+spatial_index
+    : SPATIAL KINDEX keyw_id
+        ON
+        (
+            (keyw_id | DEFAULT)
+            | LPAREN column_name RPAREN
+            // TODO: Implement all spatial index syntax
+        )
     ;
 
 ci_xml_index_with
@@ -1112,8 +1148,6 @@ ct_with
 
 table_option_list
     : t+=table_option (COMMA t+=table_option)*
-
-
     ;
 
 table_option
@@ -1127,10 +1161,9 @@ ct_on_partitions
             partition_list
         RPAREN
     ;
+
 partition_list
     : p+=partition_list_el (COMMA p+=partition_list_el)*
-
-
     ;
 
 partition_list_el
@@ -1149,49 +1182,50 @@ ct_partition
     ;
 
 ct_col_def_list
-    : c+=ct_col_def_list_element (COMMA c+=ct_col_def_list_element)*
-
-
+    : ct_col_def_list_element (COMMA ct_col_def_list_element)*
     ;
 
 ct_col_def_list_element
-    : c=ct_column_definition ct=ct_constraint_list?
-    | ct_constraint_list_el
+    : ct_column_def_plus ct_col_table_constraint*
+    | ct_col_table_constraint
     ;
 
-ct_constraint_list
-    : cc+=ct_constraint_list_el+
-
-
+ct_column_def_plus
+    : ct_column_definition col_def_option*
     ;
-    
-ct_constraint_list_el
-    : ct=ct_col_table_constraint
+
+col_def_option
+    : FILESTREAM
+    | ct_collate
+    | MASKED WITH (FUNCTION OPEQ SQ_LITERAL)
+    | IDENTITY ( LPAREN OPMINUS? INTEGER COMMA OPMINUS? INTEGER RPAREN )?
+    | not_for_replication
+    | ROWGUIDCOL
+    | SPARSE
+    // TODO: GENERATED, ENCRYPTED
     ;
+
 
 ct_column_definition
-	
 	: keyw_id       	// Column name (might be just 'timestamp' or something like that)
         (
               ct_data_type
-              ct_collate?
-              
             | AS expression			// Computed
                 (PERSISTED )?
-               
+            | column_set_definition
         )?
 	;
 
-ct_constraint_identity
-    : IDENTITY ( LPAREN OPMINUS? INTEGER COMMA OPMINUS? INTEGER RPAREN )? (not_for_replication)?
+column_set_definition
+    : XML COLUMN_SET FOR ALL_SPARSE_COLUMNS
     ;
-    
+
 ct_data_type
     : ct_data
     ;
 
 ct_data
-    : (CURSOR|keyw_id) ID? VARYING? // (keyw_id (keyw_id)?)?	// type name (can be 'national character varying' for instance)
+    : (CURSOR | keyw_id) ID? VARYING? // (keyw_id (keyw_id)?)?	// type name (can be 'national character varying' for instance)
               (
 				LPAREN
 					( 
@@ -1233,8 +1267,6 @@ ct_col_table_constraint
             | DEFAULT expression opt_with_values? (FOR keyw_id)?
 
             | ROWGUIDCOL
-
-            | ct_constraint_identity
 		)
 	;
 

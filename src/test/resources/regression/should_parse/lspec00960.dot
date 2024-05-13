@@ -1,0 +1,16 @@
+digraph ParseTree {
+  n0 -> n1 [label="batch_statements"];
+  n1 -> n2 [label="statements"];
+  n2 -> n3 [label="sql_statements"];
+  n3 -> n4 [label="miscellaneous_statements"];
+  n4 -> n5 [label="shutdown_statement"];
+  n5 -> n6 [label="SHUTDOWN"];
+  n1 -> n7 [label="statements"];
+  n7 -> n8 [label="sql_statements"];
+  n8 -> n9 [label="miscellaneous_statements"];
+  n9 -> n10 [label="shutdown_statement"];
+  n10 -> n11 [label="SHUTDOWN"];
+  n10 -> n12 [label="WITH"];
+  n10 -> n13 [label="NOWAIT"];
+  n0 -> n14 [label="<EOF>"];
+}

@@ -1,0 +1,1 @@
+(aaa_translation_unit (batch_statements (statements (sql_statements (miscellaneous_statements (restore_statement RESTORE (restore_other FILELISTONLY (restore_from FROM (backup_device_list (backup_device (keyw_id (keyw_id_part (func_keyw_id AdventureWorksBackups)))))) (restore_with WITH (rest_with_option (rest_with_options FILE = 2)))) ;)))) (statements GO)) <EOF>)

@@ -1,0 +1,30 @@
+digraph ParseTree {
+  n0 -> n1 [label="batch_statements"];
+  n1 -> n2 [label="statements"];
+  n2 -> n3 [label="sql_statements"];
+  n3 -> n4 [label="miscellaneous_statements"];
+  n4 -> n5 [label="restore_statement"];
+  n5 -> n6 [label="RESTORE"];
+  n5 -> n7 [label="restore_other"];
+  n7 -> n8 [label="HEADERONLY"];
+  n7 -> n9 [label="restore_from"];
+  n9 -> n10 [label="FROM"];
+  n9 -> n11 [label="backup_device_list"];
+  n11 -> n12 [label="backup_device"];
+  n12 -> n13 [label="DISK"];
+  n12 -> n14 [label="="];
+  n12 -> n15 [label="N'C:\AdventureWorks-FullBackup.bak'"];
+  n7 -> n16 [label="restore_with"];
+  n16 -> n17 [label="WITH"];
+  n16 -> n18 [label="rest_with_option"];
+  n18 -> n19 [label="rest_with_options"];
+  n19 -> n20 [label="keyw_id"];
+  n20 -> n21 [label="keyw_id_part"];
+  n21 -> n22 [label="func_keyw_id"];
+  n22 -> n23 [label="keywords"];
+  n23 -> n24 [label="NOUNLOAD"];
+  n5 -> n25 [label=";"];
+  n1 -> n26 [label="statements"];
+  n26 -> n27 [label="GO"];
+  n0 -> n28 [label="<EOF>"];
+}

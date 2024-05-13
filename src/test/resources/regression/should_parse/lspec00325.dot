@@ -1,0 +1,12 @@
+digraph ParseTree {
+  n0 -> n1 [label="batch_statements"];
+  n1 -> n2 [label="statements"];
+  n2 -> n3 [label="sql_statements"];
+  n3 -> n4 [label="miscellaneous_statements"];
+  n4 -> n5 [label="checkpoint_statement"];
+  n5 -> n6 [label="CHECKPOINT"];
+  n5 -> n7 [label="expression"];
+  n7 -> n8 [label="atoms"];
+  n8 -> n9 [label="666"];
+  n0 -> n10 [label="<EOF>"];
+}

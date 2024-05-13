@@ -1,0 +1,308 @@
+digraph ParseTree {
+  n0 -> n1 [label="batch_statements"];
+  n1 -> n2 [label="statements"];
+  n2 -> n3 [label="sql_statements"];
+  n3 -> n4 [label="miscellaneous_statements"];
+  n4 -> n5 [label="declare_statement"];
+  n5 -> n6 [label="DECLARE"];
+  n5 -> n7 [label="declare_list"];
+  n7 -> n8 [label="declare_list_item"];
+  n8 -> n9 [label="keyw_id"];
+  n9 -> n10 [label="keyw_id_part"];
+  n10 -> n11 [label="func_keyw_id"];
+  n11 -> n12 [label="@hdoc"];
+  n8 -> n13 [label="declare_as"];
+  n13 -> n14 [label="opt_as"];
+  n13 -> n15 [label="declare_as_opts"];
+  n15 -> n16 [label="cr_type_data_type"];
+  n16 -> n17 [label="cr_type_data"];
+  n17 -> n18 [label="keyw_id"];
+  n18 -> n19 [label="keyw_id_part"];
+  n19 -> n20 [label="func_keyw_id"];
+  n20 -> n21 [label="int"];
+  n1 -> n22 [label="statements"];
+  n22 -> n23 [label="sql_statements"];
+  n23 -> n24 [label="miscellaneous_statements"];
+  n24 -> n25 [label="declare_statement"];
+  n25 -> n26 [label="DECLARE"];
+  n25 -> n27 [label="declare_list"];
+  n27 -> n28 [label="declare_list_item"];
+  n28 -> n29 [label="keyw_id"];
+  n29 -> n30 [label="keyw_id_part"];
+  n30 -> n31 [label="func_keyw_id"];
+  n31 -> n32 [label="@doc"];
+  n28 -> n33 [label="declare_as"];
+  n33 -> n34 [label="opt_as"];
+  n33 -> n35 [label="declare_as_opts"];
+  n35 -> n36 [label="cr_type_data_type"];
+  n36 -> n37 [label="cr_type_data"];
+  n37 -> n38 [label="keyw_id"];
+  n38 -> n39 [label="keyw_id_part"];
+  n39 -> n40 [label="func_keyw_id"];
+  n40 -> n41 [label="varchar"];
+  n37 -> n42 [label="("];
+  n37 -> n43 [label="1000"];
+  n37 -> n44 [label=")"];
+  n1 -> n45 [label="statements"];
+  n45 -> n46 [label="sql_statements"];
+  n46 -> n47 [label="miscellaneous_statements"];
+  n47 -> n48 [label="set_statement"];
+  n48 -> n49 [label="SET"];
+  n48 -> n50 [label="set_vars"];
+  n50 -> n51 [label="set_var_list"];
+  n51 -> n52 [label="keyw_id"];
+  n52 -> n53 [label="keyw_id_part"];
+  n53 -> n54 [label="func_keyw_id"];
+  n54 -> n55 [label="@doc"];
+  n50 -> n56 [label="="];
+  n50 -> n57 [label="expression"];
+  n57 -> n58 [label="atoms"];
+  n58 -> n59 [label="'
+<ROOT>
+<Customer CustomerID="VINET" ContactName="Paul Henriot">
+   <Order CustomerID="VINET" EmployeeID="5" OrderDate="1996-07-04T00:00:00">
+      <OrderDetail OrderID="10248" ProductID="11" Quantity="12"/>
+      <OrderDetail OrderID="10248" ProductID="42" Quantity="10"/>
+   </Order>
+</Customer>
+<Customer CustomerID="LILAS" ContactName="Carlos Gonzlez">
+   <Order CustomerID="LILAS" EmployeeID="3" OrderDate="1996-08-16T00:00:00">
+      <OrderDetail OrderID="10283" ProductID="72" Quantity="3"/>
+   </Order>
+</Customer>
+</ROOT>'"];
+  n1 -> n60 [label="statements"];
+  n60 -> n61 [label="execute_statement"];
+  n61 -> n62 [label="exec_one"];
+  n62 -> n63 [label="EXEC"];
+  n62 -> n64 [label="exec_body"];
+  n64 -> n65 [label="exec_sp"];
+  n65 -> n66 [label="exec_sp_func"];
+  n66 -> n67 [label="keyw_id"];
+  n67 -> n68 [label="keyw_id_part"];
+  n68 -> n69 [label="func_keyw_id"];
+  n69 -> n70 [label="sp_xml_preparedocument"];
+  n66 -> n71 [label="exec_sp_param_list"];
+  n71 -> n72 [label="exec_sp_param"];
+  n72 -> n73 [label="expression"];
+  n73 -> n74 [label="keyw_id_part"];
+  n74 -> n75 [label="func_keyw_id"];
+  n75 -> n76 [label="@hdoc"];
+  n72 -> n77 [label="OUTPUT"];
+  n71 -> n78 [label=","];
+  n71 -> n79 [label="exec_sp_param"];
+  n79 -> n80 [label="expression"];
+  n80 -> n81 [label="keyw_id_part"];
+  n81 -> n82 [label="func_keyw_id"];
+  n82 -> n83 [label="@doc"];
+  n1 -> n84 [label="statements"];
+  n84 -> n85 [label="execute_statement"];
+  n85 -> n86 [label="exec_one"];
+  n86 -> n87 [label="exec"];
+  n86 -> n88 [label="exec_body"];
+  n88 -> n89 [label="exec_sp"];
+  n89 -> n90 [label="exec_sp_func"];
+  n90 -> n91 [label="keyw_id"];
+  n91 -> n92 [label="keyw_id_part"];
+  n92 -> n93 [label="func_keyw_id"];
+  n93 -> n94 [label="sp_xml_removedocument"];
+  n90 -> n95 [label="exec_sp_param_list"];
+  n95 -> n96 [label="exec_sp_param"];
+  n96 -> n97 [label="expression"];
+  n97 -> n98 [label="keyw_id_part"];
+  n98 -> n99 [label="func_keyw_id"];
+  n99 -> n100 [label="@hdoc"];
+  n1 -> n101 [label="statements"];
+  n101 -> n102 [label="sql_statements"];
+  n102 -> n103 [label="miscellaneous_statements"];
+  n103 -> n104 [label="declare_statement"];
+  n104 -> n105 [label="DECLARE"];
+  n104 -> n106 [label="declare_list"];
+  n106 -> n107 [label="declare_list_item"];
+  n107 -> n108 [label="keyw_id"];
+  n108 -> n109 [label="keyw_id_part"];
+  n109 -> n110 [label="func_keyw_id"];
+  n110 -> n111 [label="@hdoc"];
+  n107 -> n112 [label="declare_as"];
+  n112 -> n113 [label="opt_as"];
+  n112 -> n114 [label="declare_as_opts"];
+  n114 -> n115 [label="cr_type_data_type"];
+  n115 -> n116 [label="cr_type_data"];
+  n116 -> n117 [label="keyw_id"];
+  n117 -> n118 [label="keyw_id_part"];
+  n118 -> n119 [label="func_keyw_id"];
+  n119 -> n120 [label="int"];
+  n1 -> n121 [label="statements"];
+  n121 -> n122 [label="sql_statements"];
+  n122 -> n123 [label="miscellaneous_statements"];
+  n123 -> n124 [label="declare_statement"];
+  n124 -> n125 [label="DECLARE"];
+  n124 -> n126 [label="declare_list"];
+  n126 -> n127 [label="declare_list_item"];
+  n127 -> n128 [label="keyw_id"];
+  n128 -> n129 [label="keyw_id_part"];
+  n129 -> n130 [label="func_keyw_id"];
+  n130 -> n131 [label="@doc"];
+  n127 -> n132 [label="declare_as"];
+  n132 -> n133 [label="opt_as"];
+  n132 -> n134 [label="declare_as_opts"];
+  n134 -> n135 [label="cr_type_data_type"];
+  n135 -> n136 [label="cr_type_data"];
+  n136 -> n137 [label="keyw_id"];
+  n137 -> n138 [label="keyw_id_part"];
+  n138 -> n139 [label="func_keyw_id"];
+  n139 -> n140 [label="varchar"];
+  n136 -> n141 [label="("];
+  n136 -> n142 [label="2000"];
+  n136 -> n143 [label=")"];
+  n1 -> n144 [label="statements"];
+  n144 -> n145 [label="sql_statements"];
+  n145 -> n146 [label="miscellaneous_statements"];
+  n146 -> n147 [label="set_statement"];
+  n147 -> n148 [label="SET"];
+  n147 -> n149 [label="set_vars"];
+  n149 -> n150 [label="set_var_list"];
+  n150 -> n151 [label="keyw_id"];
+  n151 -> n152 [label="keyw_id_part"];
+  n152 -> n153 [label="func_keyw_id"];
+  n153 -> n154 [label="@doc"];
+  n149 -> n155 [label="="];
+  n149 -> n156 [label="expression"];
+  n156 -> n157 [label="atoms"];
+  n157 -> n158 [label="'
+<?xml version="1.0" encoding="UTF-8" ?> 
+<!DOCTYPE root 
+[<!ELEMENT root (Customers)*>
+<!ELEMENT Customers EMPTY>
+<!ATTLIST Customers CustomerID CDATA #IMPLIED ContactName CDATA #IMPLIED>]>
+<root>
+<Customers CustomerID="ALFKI" ContactName="Maria Anders"/>
+</root>'"];
+  n1 -> n159 [label="statements"];
+  n159 -> n160 [label="execute_statement"];
+  n160 -> n161 [label="exec_one"];
+  n161 -> n162 [label="EXEC"];
+  n161 -> n163 [label="exec_body"];
+  n163 -> n164 [label="exec_sp"];
+  n164 -> n165 [label="exec_sp_func"];
+  n165 -> n166 [label="keyw_id"];
+  n166 -> n167 [label="keyw_id_part"];
+  n167 -> n168 [label="func_keyw_id"];
+  n168 -> n169 [label="sp_xml_preparedocument"];
+  n165 -> n170 [label="exec_sp_param_list"];
+  n170 -> n171 [label="exec_sp_param"];
+  n171 -> n172 [label="expression"];
+  n172 -> n173 [label="keyw_id_part"];
+  n173 -> n174 [label="func_keyw_id"];
+  n174 -> n175 [label="@hdoc"];
+  n171 -> n176 [label="OUTPUT"];
+  n170 -> n177 [label=","];
+  n170 -> n178 [label="exec_sp_param"];
+  n178 -> n179 [label="expression"];
+  n179 -> n180 [label="keyw_id_part"];
+  n180 -> n181 [label="func_keyw_id"];
+  n181 -> n182 [label="@doc"];
+  n1 -> n183 [label="statements"];
+  n183 -> n184 [label="sql_statements"];
+  n184 -> n185 [label="miscellaneous_statements"];
+  n185 -> n186 [label="declare_statement"];
+  n186 -> n187 [label="DECLARE"];
+  n186 -> n188 [label="declare_list"];
+  n188 -> n189 [label="declare_list_item"];
+  n189 -> n190 [label="keyw_id"];
+  n190 -> n191 [label="keyw_id_part"];
+  n191 -> n192 [label="func_keyw_id"];
+  n192 -> n193 [label="@hdoc"];
+  n189 -> n194 [label="declare_as"];
+  n194 -> n195 [label="opt_as"];
+  n194 -> n196 [label="declare_as_opts"];
+  n196 -> n197 [label="cr_type_data_type"];
+  n197 -> n198 [label="cr_type_data"];
+  n198 -> n199 [label="keyw_id"];
+  n199 -> n200 [label="keyw_id_part"];
+  n200 -> n201 [label="func_keyw_id"];
+  n201 -> n202 [label="int"];
+  n1 -> n203 [label="statements"];
+  n203 -> n204 [label="sql_statements"];
+  n204 -> n205 [label="miscellaneous_statements"];
+  n205 -> n206 [label="declare_statement"];
+  n206 -> n207 [label="DECLARE"];
+  n206 -> n208 [label="declare_list"];
+  n208 -> n209 [label="declare_list_item"];
+  n209 -> n210 [label="keyw_id"];
+  n210 -> n211 [label="keyw_id_part"];
+  n211 -> n212 [label="func_keyw_id"];
+  n212 -> n213 [label="@doc"];
+  n209 -> n214 [label="declare_as"];
+  n214 -> n215 [label="opt_as"];
+  n214 -> n216 [label="declare_as_opts"];
+  n216 -> n217 [label="cr_type_data_type"];
+  n217 -> n218 [label="cr_type_data"];
+  n218 -> n219 [label="keyw_id"];
+  n219 -> n220 [label="keyw_id_part"];
+  n220 -> n221 [label="func_keyw_id"];
+  n221 -> n222 [label="varchar"];
+  n218 -> n223 [label="("];
+  n218 -> n224 [label="1000"];
+  n218 -> n225 [label=")"];
+  n1 -> n226 [label="statements"];
+  n226 -> n227 [label="sql_statements"];
+  n227 -> n228 [label="miscellaneous_statements"];
+  n228 -> n229 [label="set_statement"];
+  n229 -> n230 [label="SET"];
+  n229 -> n231 [label="set_vars"];
+  n231 -> n232 [label="set_var_list"];
+  n232 -> n233 [label="keyw_id"];
+  n233 -> n234 [label="keyw_id_part"];
+  n234 -> n235 [label="func_keyw_id"];
+  n235 -> n236 [label="@doc"];
+  n231 -> n237 [label="="];
+  n231 -> n238 [label="expression"];
+  n238 -> n239 [label="atoms"];
+  n239 -> n240 [label="'
+<ROOT>
+<Customer CustomerID="VINET" ContactName="Paul Henriot">
+   <Order CustomerID="VINET" EmployeeID="5" 
+           OrderDate="1996-07-04T00:00:00">
+	      <OrderDetail OrderID="10248" ProductID="11" Quantity="12"/>
+	      <OrderDetail OrderID="10248" ProductID="42" Quantity="10"/>
+	   </Order>
+	</Customer>
+	<Customer CustomerID="LILAS" ContactName="Carlos Gonzlez">
+	   <Order CustomerID="LILAS" EmployeeID="3" 
+	           OrderDate="1996-08-16T00:00:00">
+		      <OrderDetail OrderID="10283" ProductID="72" Quantity="3"/>
+		   </Order>
+		</Customer>
+		</ROOT>'"];
+  n1 -> n241 [label="statements"];
+  n241 -> n242 [label="execute_statement"];
+  n242 -> n243 [label="exec_one"];
+  n243 -> n244 [label="EXEC"];
+  n243 -> n245 [label="exec_body"];
+  n245 -> n246 [label="exec_sp"];
+  n246 -> n247 [label="exec_sp_func"];
+  n247 -> n248 [label="keyw_id"];
+  n248 -> n249 [label="keyw_id_part"];
+  n249 -> n250 [label="func_keyw_id"];
+  n250 -> n251 [label="sp_xml_preparedocument"];
+  n247 -> n252 [label="exec_sp_param_list"];
+  n252 -> n253 [label="exec_sp_param"];
+  n253 -> n254 [label="expression"];
+  n254 -> n255 [label="keyw_id_part"];
+  n255 -> n256 [label="func_keyw_id"];
+  n256 -> n257 [label="@hdoc"];
+  n253 -> n258 [label="OUTPUT"];
+  n252 -> n259 [label=","];
+  n252 -> n260 [label="exec_sp_param"];
+  n260 -> n261 [label="expression"];
+  n261 -> n262 [label="keyw_id_part"];
+  n262 -> n263 [label="func_keyw_id"];
+  n263 -> n264 [label="@doc"];
+  n252 -> n265 [label=","];
+  n252 -> n266 [label="exec_sp_param"];
+  n266 -> n267 [label="expression"];
+  n267 -> n268 [label="atoms"];
+  n268 -> n269 [label="'<ROOT xmlns:xyz="urn:MyNamespace"/>'"];
+  n0 -> n270 [label="<EOF>"];
+}

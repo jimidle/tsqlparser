@@ -1,0 +1,1 @@
+(aaa_translation_unit (batch_statements (statements (ddl_statements (permissions_ddl (grant_statement GRANT (permission_set (permission_set_element (permission_name (permission_spec CONNECT)))) (permission_to TO (keyw_id_list (keyw_id (keyw_id_part (func_keyw_id guest))))) ;)))) (statements GO)) <EOF>)

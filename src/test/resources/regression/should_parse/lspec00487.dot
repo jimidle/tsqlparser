@@ -1,0 +1,35 @@
+digraph ParseTree {
+  n0 -> n1 [label="batch_statements"];
+  n1 -> n2 [label="statements"];
+  n2 -> n3 [label="ddl_statements"];
+  n3 -> n4 [label="create_statement"];
+  n4 -> n5 [label="CREATE"];
+  n4 -> n6 [label="create_symmetric"];
+  n6 -> n7 [label="SYMMETRIC"];
+  n6 -> n8 [label="KEY"];
+  n6 -> n9 [label="keyw_id"];
+  n9 -> n10 [label="keyw_id_part"];
+  n10 -> n11 [label="func_keyw_id"];
+  n11 -> n12 [label="JanainaKey09"];
+  n6 -> n13 [label="create_sym_key_options"];
+  n13 -> n14 [label="WITH"];
+  n13 -> n15 [label="key_options"];
+  n15 -> n16 [label="key_option"];
+  n16 -> n17 [label="ALGORITHM"];
+  n16 -> n18 [label="="];
+  n16 -> n19 [label="AES_256"];
+  n6 -> n20 [label="create_sym_encryption"];
+  n20 -> n21 [label="ENCRYPTION"];
+  n20 -> n22 [label="BY"];
+  n20 -> n23 [label="encrypting_mechanisms"];
+  n23 -> n24 [label="encrypting_mechanism"];
+  n24 -> n25 [label="CERTIFICATE"];
+  n24 -> n26 [label="keyw_id"];
+  n26 -> n27 [label="keyw_id_part"];
+  n27 -> n28 [label="func_keyw_id"];
+  n28 -> n29 [label="Shipping04"];
+  n6 -> n30 [label=";"];
+  n1 -> n31 [label="statements"];
+  n31 -> n32 [label="GO"];
+  n0 -> n33 [label="<EOF>"];
+}

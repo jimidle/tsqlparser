@@ -1,0 +1,7 @@
+-- Commented out for now as lots of work for this syntax
+-- CREATE SPATIAL INDEX SIndx_SpatialTable_geography_col3
+--    ON SpatialTable(geography_col)
+--    WITH ( BOUNDING_BOX = ( 0, 0, 500, 200 ),
+-- 	        GRIDS = ( LEVEL_3 = LOW ),
+-- 			        DROP_EXISTING = ON );
+--

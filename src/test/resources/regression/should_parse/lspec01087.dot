@@ -1,0 +1,34 @@
+digraph ParseTree {
+  n0 -> n1 [label="batch_statements"];
+  n1 -> n2 [label="statements"];
+  n2 -> n3 [label="execute_statement"];
+  n3 -> n4 [label="exec_one"];
+  n4 -> n5 [label="EXEC"];
+  n4 -> n6 [label="exec_body"];
+  n6 -> n7 [label="exec_sp"];
+  n7 -> n8 [label="exec_sp_func"];
+  n8 -> n9 [label="keyw_id"];
+  n9 -> n10 [label="keyw_id_part"];
+  n10 -> n11 [label="func_keyw_id"];
+  n11 -> n12 [label="sp_configure"];
+  n8 -> n13 [label="exec_sp_param_list"];
+  n13 -> n14 [label="exec_sp_param"];
+  n14 -> n15 [label="expression"];
+  n15 -> n16 [label="keyw_id_part"];
+  n16 -> n17 [label="func_keyw_id"];
+  n17 -> n18 [label="filestream_access_level"];
+  n13 -> n19 [label=","];
+  n13 -> n20 [label="exec_sp_param"];
+  n20 -> n21 [label="expression"];
+  n21 -> n22 [label="atoms"];
+  n22 -> n23 [label="2"];
+  n2 -> n24 [label="first_exec"];
+  n24 -> n25 [label="exec_sp"];
+  n25 -> n26 [label="exec_sp_func"];
+  n26 -> n27 [label="keyw_id"];
+  n27 -> n28 [label="keyw_id_part"];
+  n28 -> n29 [label="func_keyw_id"];
+  n29 -> n30 [label="keywords"];
+  n30 -> n31 [label="RECONFIGURE"];
+  n0 -> n32 [label="<EOF>"];
+}

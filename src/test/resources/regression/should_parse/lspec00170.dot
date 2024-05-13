@@ -1,0 +1,34 @@
+digraph ParseTree {
+  n0 -> n1 [label="batch_statements"];
+  n1 -> n2 [label="statements"];
+  n2 -> n3 [label="ddl_statements"];
+  n3 -> n4 [label="alter_statement"];
+  n4 -> n5 [label="ALTER"];
+  n4 -> n6 [label="alter_endpoint"];
+  n6 -> n7 [label="ENDPOINT"];
+  n6 -> n8 [label="keyw_id"];
+  n8 -> n9 [label="keyw_id_part"];
+  n9 -> n10 [label="func_keyw_id"];
+  n10 -> n11 [label="sql_endpoint"];
+  n6 -> n12 [label="ae_for"];
+  n12 -> n13 [label="FOR"];
+  n12 -> n14 [label="ep_languages"];
+  n14 -> n15 [label="ep_soap"];
+  n15 -> n16 [label="SOAP"];
+  n15 -> n17 [label="("];
+  n15 -> n18 [label="ep_add_webmethod_list"];
+  n18 -> n19 [label="ep_add_webmethod"];
+  n19 -> n20 [label="ADD"];
+  n19 -> n21 [label="WEBMETHOD"];
+  n19 -> n22 [label="'SayHello'"];
+  n19 -> n23 [label="ep_wm_params"];
+  n23 -> n24 [label="("];
+  n23 -> n25 [label="ep_wm_params_name"];
+  n25 -> n26 [label="name"];
+  n25 -> n27 [label="="];
+  n25 -> n28 [label="'AdventureWorks.dbo.SayHello'"];
+  n23 -> n29 [label=")"];
+  n15 -> n30 [label=")"];
+  n6 -> n31 [label=";"];
+  n0 -> n32 [label="<EOF>"];
+}

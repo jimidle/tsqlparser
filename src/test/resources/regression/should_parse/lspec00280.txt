@@ -1,0 +1,1 @@
+(aaa_translation_unit (batch_statements (statements (sql_statements (miscellaneous_statements (begin_statement BEGIN CONVERSATION TIMER ( (keyw_id (keyw_id_part (func_keyw_id @dialog_handle))) ) TIMEOUT = 120 ;))))) <EOF>)

@@ -1,0 +1,36 @@
+digraph ParseTree {
+  n0 -> n1 [label="batch_statements"];
+  n1 -> n2 [label="statements"];
+  n2 -> n3 [label="sql_statements"];
+  n3 -> n4 [label="use_statement"];
+  n4 -> n5 [label="USE"];
+  n4 -> n6 [label="keyw_id"];
+  n6 -> n7 [label="keyw_id_part"];
+  n7 -> n8 [label="func_keyw_id"];
+  n8 -> n9 [label="AdventureWorks"];
+  n4 -> n10 [label=";"];
+  n1 -> n11 [label="statements"];
+  n11 -> n12 [label="sql_statements"];
+  n12 -> n13 [label="miscellaneous_statements"];
+  n13 -> n14 [label="open_statement"];
+  n14 -> n15 [label="OPEN"];
+  n14 -> n16 [label="open_key"];
+  n16 -> n17 [label="SYMMETRIC"];
+  n16 -> n18 [label="KEY"];
+  n16 -> n19 [label="keyw_id"];
+  n19 -> n20 [label="keyw_id_part"];
+  n20 -> n21 [label="func_keyw_id"];
+  n21 -> n22 [label="SymKeyMarketing3"];
+  n16 -> n23 [label="DECRYPTION"];
+  n16 -> n24 [label="BY"];
+  n16 -> n25 [label="ok_encrypting_mechanism"];
+  n25 -> n26 [label="CERTIFICATE"];
+  n25 -> n27 [label="keyw_id"];
+  n27 -> n28 [label="keyw_id_part"];
+  n28 -> n29 [label="func_keyw_id"];
+  n29 -> n30 [label="MarketingCert9"];
+  n14 -> n31 [label=";"];
+  n1 -> n32 [label="statements"];
+  n32 -> n33 [label="GO"];
+  n0 -> n34 [label="<EOF>"];
+}

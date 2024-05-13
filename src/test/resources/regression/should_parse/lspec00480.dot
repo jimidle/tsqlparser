@@ -1,0 +1,25 @@
+digraph ParseTree {
+  n0 -> n1 [label="batch_statements"];
+  n1 -> n2 [label="statements"];
+  n2 -> n3 [label="ddl_statements"];
+  n3 -> n4 [label="create_statement"];
+  n4 -> n5 [label="CREATE"];
+  n4 -> n6 [label="create_rule"];
+  n6 -> n7 [label="RULE"];
+  n6 -> n8 [label="keyw_id"];
+  n8 -> n9 [label="keyw_id_part"];
+  n9 -> n10 [label="func_keyw_id"];
+  n10 -> n11 [label="pattern_rule"];
+  n6 -> n12 [label="AS"];
+  n6 -> n13 [label="search_condition"];
+  n13 -> n14 [label="predicate"];
+  n14 -> n15 [label="expression"];
+  n15 -> n16 [label="keyw_id_part"];
+  n16 -> n17 [label="func_keyw_id"];
+  n17 -> n18 [label="@value"];
+  n14 -> n19 [label="LIKE"];
+  n14 -> n20 [label="expression"];
+  n20 -> n21 [label="atoms"];
+  n21 -> n22 [label="'__-%[0-9]'"];
+  n0 -> n23 [label="<EOF>"];
+}

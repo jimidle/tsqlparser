@@ -1,0 +1,19 @@
+digraph ParseTree {
+  n0 -> n1 [label="batch_statements"];
+  n1 -> n2 [label="statements"];
+  n2 -> n3 [label="ddl_statements"];
+  n3 -> n4 [label="create_statement"];
+  n4 -> n5 [label="CREATE"];
+  n4 -> n6 [label="create_message"];
+  n6 -> n7 [label="MESSAGE"];
+  n6 -> n8 [label="TYPE"];
+  n6 -> n9 [label="keyw_id_part"];
+  n9 -> n10 [label="func_keyw_id"];
+  n10 -> n11 [label="[//Adventure-Works.com/Expenses/ReceiptImage]"];
+  n6 -> n12 [label="cm_validation"];
+  n12 -> n13 [label="VALIDATION"];
+  n12 -> n14 [label="="];
+  n12 -> n15 [label="NONE"];
+  n6 -> n16 [label=";"];
+  n0 -> n17 [label="<EOF>"];
+}

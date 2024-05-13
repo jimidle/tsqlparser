@@ -1,0 +1,1 @@
+(aaa_translation_unit (batch_statements (statements (ddl_statements (alter_statement ALTER (alter_table TABLE (keyw_id (keyw_id_part (func_keyw_id T1))) REBUILD WITH ( (index_option_list (index_option (table_option DATA_COMPRESSION = PAGE))) ) ;)))) (statements GO)) <EOF>)

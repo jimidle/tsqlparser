@@ -1,0 +1,1 @@
+(aaa_translation_unit (batch_statements (statements (ddl_statements (alter_statement ALTER (alter_service SERVICE (as_master MASTER KEY (as_recover_opt WITH NEW_ACCOUNT = 'AdvWorks\Sandeep' , NEW_PASSWORD = 'dslk#d9700mMdlgf8')) ;)))) (statements GO)) <EOF>)

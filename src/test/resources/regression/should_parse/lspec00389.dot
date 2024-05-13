@@ -1,0 +1,30 @@
+digraph ParseTree {
+  n0 -> n1 [label="batch_statements"];
+  n1 -> n2 [label="statements"];
+  n2 -> n3 [label="sql_statements"];
+  n3 -> n4 [label="select_statement"];
+  n4 -> n5 [label="query_expression"];
+  n5 -> n6 [label="query_specification"];
+  n6 -> n7 [label="SELECT"];
+  n6 -> n8 [label="select_list"];
+  n8 -> n9 [label="select_element"];
+  n9 -> n10 [label="*"];
+  n6 -> n11 [label="from_clause"];
+  n11 -> n12 [label="FROM"];
+  n11 -> n13 [label="table_source_list"];
+  n13 -> n14 [label="table_source"];
+  n14 -> n15 [label="tableSourceElement"];
+  n15 -> n16 [label="table_source_primitive"];
+  n16 -> n17 [label="primitive_table"];
+  n17 -> n18 [label="keyw_id"];
+  n18 -> n19 [label="keyw_id_part"];
+  n19 -> n20 [label="func_keyw_id"];
+  n20 -> n21 [label="keywords"];
+  n21 -> n22 [label="sys"];
+  n18 -> n23 [label="."];
+  n18 -> n24 [label="keyw_id_part"];
+  n24 -> n25 [label="func_keyw_id"];
+  n25 -> n26 [label="endpoints"];
+  n4 -> n27 [label=";"];
+  n0 -> n28 [label="<EOF>"];
+}

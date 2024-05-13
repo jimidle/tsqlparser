@@ -1,0 +1,1 @@
+(aaa_translation_unit (batch_statements (statements (ddl_statements (create_statement CREATE (create_rule RULE (keyw_id (keyw_id_part (func_keyw_id pattern_rule))) AS (search_condition (predicate (expression (keyw_id_part (func_keyw_id @value))) LIKE (expression (atoms '__-%[0-9]'))))))))) <EOF>)

@@ -1,0 +1,1 @@
+(aaa_translation_unit (batch_statements (statements (ddl_statements (alter_statement ALTER (alter_assembly ASSEMBLY (assembly_name (keyw_id (keyw_id_part (func_keyw_id MyClass)))) (assembly_add ADD FILE FROM (client_file_specifier 'C:\MyClassProject\Class1.cs')) ;))))) <EOF>)

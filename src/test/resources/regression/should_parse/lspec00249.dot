@@ -1,0 +1,13 @@
+digraph ParseTree {
+  n0 -> n1 [label="batch_statements"];
+  n1 -> n2 [label="statements"];
+  n2 -> n3 [label="sql_statements"];
+  n3 -> n4 [label="miscellaneous_statements"];
+  n4 -> n5 [label="commit_statement"];
+  n5 -> n6 [label="COMMIT"];
+  n5 -> n7 [label="TRAN"];
+  n5 -> n8 [label=";"];
+  n1 -> n9 [label="statements"];
+  n9 -> n10 [label="GO"];
+  n0 -> n11 [label="<EOF>"];
+}
