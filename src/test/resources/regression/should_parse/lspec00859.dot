@@ -245,7 +245,7 @@ digraph ParseTree {
   n243 -> n244 [label="param_list_el"];
   n244 -> n245 [label="expression"];
   n245 -> n246 [label="atoms"];
-  n246 -> n247 [label="'declare namespace rpt = "http://Adventure-Works.com/schemas/expenseReport"
+  n246 -> n247 [label="'declare namespace rpt = http://Adventure-Works.com/schemas/expenseReport
 			   (/rpt:ExpenseReport/rpt:EmployeeID)[1]'"];
   n243 -> n248 [label=","];
   n243 -> n249 [label="param_list_el"];
@@ -318,7 +318,7 @@ digraph ParseTree {
   n315 -> n316 [label="param_list_el"];
   n316 -> n317 [label="expression"];
   n317 -> n318 [label="atoms"];
-  n318 -> n319 [label="'declare namespace rpt = "http://Adventure-Works.com/schemas/expenseReport" 
+  n318 -> n319 [label="'declare namespace rpt = http://Adventure-Works.com/schemas/expenseReport 
 				     /rpt:ExpenseReport/rpt:ItemDetail'"];
   n312 -> n320 [label=")"];
   n266 -> n321 [label="case_else"];

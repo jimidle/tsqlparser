@@ -118,7 +118,7 @@ digraph ParseTree {
   n114 -> n117 [label="expression_list"];
   n117 -> n118 [label="expression"];
   n118 -> n119 [label="atoms"];
-  n119 -> n120 [label="'You must disable Trigger "safety" to drop synonyms!'"];
+  n119 -> n120 [label="'You must disable Trigger safety to drop synonyms!'"];
   n117 -> n121 [label=","];
   n117 -> n122 [label="expression"];
   n122 -> n123 [label="atoms"];

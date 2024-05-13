@@ -14,10 +14,10 @@ digraph ParseTree {
   n12 -> n13 [label="MyCollection"];
   n6 -> n14 [label="AS"];
   n6 -> n15 [label="N'
-<xsd:schema xmlns:xsd="http://www.w3.org/2001/XMLSchema">
+<xsd:schema xmlns:xsd=http://www.w3.org/2001/XMLSchema>
 <!-- Contents of schema here -->  
 </xsd:schema>
-<xsd:schema xmlns:xsd="http://www.w3.org/2001/XMLSchema">
+<xsd:schema xmlns:xsd=http://www.w3.org/2001/XMLSchema>
 <!-- Contents of schema here -->
 </xsd:schema>'"];
   n0 -> n16 [label="<EOF>"];

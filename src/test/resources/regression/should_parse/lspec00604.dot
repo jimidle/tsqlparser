@@ -155,7 +155,7 @@ digraph ParseTree {
   n153 -> n154 [label="PRINT"];
   n153 -> n155 [label="expression"];
   n155 -> n156 [label="atoms"];
-  n156 -> n157 [label="'You must disable Trigger "safety" to drop or alter tables!'"];
+  n156 -> n157 [label="'You must disable Trigger safety to drop or alter tables!'"];
   n149 -> n158 [label="statements"];
   n158 -> n159 [label="sql_statements"];
   n159 -> n160 [label="miscellaneous_statements"];

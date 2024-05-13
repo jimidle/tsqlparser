@@ -31,11 +31,12 @@ digraph ParseTree {
   n29 -> n30 [label="keyw_id_part"];
   n30 -> n31 [label="func_keyw_id"];
   n31 -> n32 [label="@myid"];
-  n27 -> n33 [label="="];
-  n27 -> n34 [label="expression"];
-  n34 -> n35 [label="atoms"];
-  n35 -> n36 [label="'A972C577-DFB0-064E-1189-0154C99310DAAC12'"];
-  n1 -> n37 [label="statements"];
-  n37 -> n38 [label="GO"];
-  n0 -> n39 [label="<EOF>"];
+  n27 -> n33 [label="assop"];
+  n33 -> n34 [label="="];
+  n27 -> n35 [label="expression"];
+  n35 -> n36 [label="atoms"];
+  n36 -> n37 [label="'A972C577-DFB0-064E-1189-0154C99310DAAC12'"];
+  n1 -> n38 [label="statements"];
+  n38 -> n39 [label="GO"];
+  n0 -> n40 [label="<EOF>"];
 }

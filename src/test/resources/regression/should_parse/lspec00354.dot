@@ -67,7 +67,7 @@ digraph ParseTree {
   n58 -> n66 [label="param_list_el"];
   n66 -> n67 [label="expression"];
   n67 -> n68 [label="atoms"];
-  n68 -> n69 [label="'"chain*" OR "full*"'"];
+  n68 -> n69 [label="'chain* OR full*'"];
   n55 -> n70 [label=")"];
   n15 -> n71 [label=";"];
   n1 -> n72 [label="statements"];

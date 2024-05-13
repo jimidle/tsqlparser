@@ -53,12 +53,11 @@ digraph ParseTree {
   n51 -> n52 [label="RateChangeDate"];
   n48 -> n53 [label="BETWEEN"];
   n48 -> n54 [label="expression"];
-  n54 -> n55 [label="expression"];
-  n55 -> n56 [label="atoms"];
-  n56 -> n57 [label="'19971212'"];
-  n54 -> n58 [label="AND"];
-  n54 -> n59 [label="expression"];
-  n59 -> n60 [label="atoms"];
-  n60 -> n61 [label="'19980105'"];
-  n0 -> n62 [label="<EOF>"];
+  n54 -> n55 [label="atoms"];
+  n55 -> n56 [label="'19971212'"];
+  n48 -> n57 [label="AND"];
+  n48 -> n58 [label="expression"];
+  n58 -> n59 [label="atoms"];
+  n59 -> n60 [label="'19980105'"];
+  n0 -> n61 [label="<EOF>"];
 }

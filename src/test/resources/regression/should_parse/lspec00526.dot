@@ -14,8 +14,8 @@ digraph ParseTree {
   n12 -> n13 [label="mySC"];
   n6 -> n14 [label="AS"];
   n6 -> n15 [label="'
-<schema xmlns="http://www.w3.org/2001/XMLSchema">
-      <element name="root" type="string"/>
+<schema xmlns=http://www.w3.org/2001/XMLSchema>
+      <element name=root type=string/>
 </schema>
 '"];
   n1 -> n16 [label="statements"];

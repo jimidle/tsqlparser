@@ -97,8 +97,8 @@ digraph ParseTree {
   n82 -> n96 [label="param_list_el"];
   n96 -> n97 [label="expression"];
   n97 -> n98 [label="atoms"];
-  n98 -> n99 [label="'("sweet and savory" NEAR sauces) OR
-        ("sweet and savory" NEAR candies)'"];
+  n98 -> n99 [label="'(sweet and savory NEAR sauces) OR
+        (sweet and savory NEAR candies)'"];
   n82 -> n100 [label=","];
   n82 -> n101 [label="param_list_el"];
   n101 -> n102 [label="expression"];

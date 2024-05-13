@@ -35,36 +35,36 @@ digraph ParseTree {
   n33 -> n34 [label="func_keyw_id"];
   n34 -> n35 [label="ManuInstructionsSchemaCollection"];
   n28 -> n36 [label="AS"];
-  n28 -> n37 [label="N'<?xml version="1.0" encoding="UTF-16"?>
-<xsd:schema targetNamespace="http://schemas.microsoft.com/sqlserver/2004/07/adventure-works/ProductModelManuInstructions" 
-   xmlns          ="http://schemas.microsoft.com/sqlserver/2004/07/adventure-works/ProductModelManuInstructions" 
-   elementFormDefault="qualified" 
-   attributeFormDefault="unqualified"
-   xmlns:xsd="http://www.w3.org/2001/XMLSchema" >
+  n28 -> n37 [label="N'<?xml version=1.0 encoding=UTF-16?>
+<xsd:schema targetNamespace=http://schemas.microsoft.com/sqlserver/2004/07/adventure-works/ProductModelManuInstructions 
+   xmlns          =http://schemas.microsoft.com/sqlserver/2004/07/adventure-works/ProductModelManuInstructions 
+   elementFormDefault=qualified 
+   attributeFormDefault=unqualified
+   xmlns:xsd=http://www.w3.org/2001/XMLSchema >
 
-    <xsd:complexType name="StepType" mixed="true" >
-        <xsd:choice  minOccurs="0" maxOccurs="unbounded" > 
-            <xsd:element name="tool" type="xsd:string" />
-            <xsd:element name="material" type="xsd:string" />
-            <xsd:element name="blueprint" type="xsd:string" />
-            <xsd:element name="specs" type="xsd:string" />
-            <xsd:element name="diag" type="xsd:string" />
+    <xsd:complexType name=StepType mixed=true >
+        <xsd:choice  minOccurs=0 maxOccurs=unbounded > 
+            <xsd:element name=tool type=xsd:string />
+            <xsd:element name=material type=xsd:string />
+            <xsd:element name=blueprint type=xsd:string />
+            <xsd:element name=specs type=xsd:string />
+            <xsd:element name=diag type=xsd:string />
         </xsd:choice> 
     </xsd:complexType>
 
-    <xsd:element  name="root">
-        <xsd:complexType mixed="true">
+    <xsd:element  name=root>
+        <xsd:complexType mixed=true>
             <xsd:sequence>
-                <xsd:element name="Location" minOccurs="1" maxOccurs="unbounded">
-                    <xsd:complexType mixed="true">
+                <xsd:element name=Location minOccurs=1 maxOccurs=unbounded>
+                    <xsd:complexType mixed=true>
                         <xsd:sequence>
-                            <xsd:element name="step" type="StepType" minOccurs="1" maxOccurs="unbounded" />
+                            <xsd:element name=step type=StepType minOccurs=1 maxOccurs=unbounded />
                         </xsd:sequence>
-                        <xsd:attribute name="LocationID" type="xsd:integer" use="required"/>
-                        <xsd:attribute name="SetupHours" type="xsd:decimal" use="optional"/>
-                        <xsd:attribute name="MachineHours" type="xsd:decimal" use="optional"/>
-                        <xsd:attribute name="LaborHours" type="xsd:decimal" use="optional"/>
-                        <xsd:attribute name="LotSize" type="xsd:decimal" use="optional"/>
+                        <xsd:attribute name=LocationID type=xsd:integer use=required/>
+                        <xsd:attribute name=SetupHours type=xsd:decimal use=optional/>
+                        <xsd:attribute name=MachineHours type=xsd:decimal use=optional/>
+                        <xsd:attribute name=LaborHours type=xsd:decimal use=optional/>
+                        <xsd:attribute name=LotSize type=xsd:decimal use=optional/>
                     </xsd:complexType>
                 </xsd:element>
             </xsd:sequence>
@@ -182,95 +182,94 @@ digraph ParseTree {
   n145 -> n146 [label="keyw_id_part"];
   n146 -> n147 [label="func_keyw_id"];
   n147 -> n148 [label="int"];
-  n136 -> n149 [label="ct_constraint_list"];
-  n149 -> n150 [label="ct_col_table_constraint"];
-  n150 -> n151 [label="primary"];
-  n150 -> n152 [label="key"];
-  n135 -> n153 [label=","];
-  n135 -> n154 [label="ct_col_def_list_element"];
-  n154 -> n155 [label="ct_column_def_plus"];
-  n155 -> n156 [label="ct_column_definition"];
-  n156 -> n157 [label="keyw_id"];
-  n157 -> n158 [label="keyw_id_part"];
-  n158 -> n159 [label="func_keyw_id"];
-  n159 -> n160 [label="x"];
-  n156 -> n161 [label="ct_data_type"];
-  n161 -> n162 [label="ct_data"];
-  n162 -> n163 [label="keyw_id"];
-  n163 -> n164 [label="keyw_id_part"];
-  n164 -> n165 [label="func_keyw_id"];
-  n165 -> n166 [label="keywords"];
-  n166 -> n167 [label="xml"];
-  n162 -> n168 [label="("];
-  n162 -> n169 [label="keyw_id"];
-  n169 -> n170 [label="keyw_id_part"];
-  n170 -> n171 [label="func_keyw_id"];
-  n171 -> n172 [label="ManuInstructionsSchemaCollection"];
-  n162 -> n173 [label=")"];
-  n128 -> n174 [label=")"];
-  n1 -> n175 [label="statements"];
-  n175 -> n176 [label="GO"];
-  n1 -> n177 [label="statements"];
-  n177 -> n178 [label="ddl_statements"];
-  n178 -> n179 [label="drop_statement"];
-  n179 -> n180 [label="DROP"];
-  n179 -> n181 [label="dropCommonList"];
-  n181 -> n182 [label="dropListElements"];
-  n182 -> n183 [label="TABLE"];
-  n181 -> n184 [label="keyw_id_list"];
-  n184 -> n185 [label="keyw_id"];
-  n185 -> n186 [label="keyw_id_part"];
-  n186 -> n187 [label="func_keyw_id"];
-  n187 -> n188 [label="T"];
-  n1 -> n189 [label="statements"];
-  n189 -> n190 [label="GO"];
-  n1 -> n191 [label="statements"];
-  n191 -> n192 [label="ddl_statements"];
-  n192 -> n193 [label="drop_statement"];
-  n193 -> n194 [label="DROP"];
-  n193 -> n195 [label="dropCommon"];
-  n195 -> n196 [label="dropElements"];
-  n196 -> n197 [label="XML"];
-  n196 -> n198 [label="SCHEMA"];
-  n196 -> n199 [label="COLLECTION"];
-  n195 -> n200 [label="keyw_id"];
-  n200 -> n201 [label="keyw_id_part"];
-  n201 -> n202 [label="func_keyw_id"];
-  n202 -> n203 [label="ManuInstructionsSchemaCollection"];
-  n1 -> n204 [label="statements"];
-  n204 -> n205 [label="Go"];
-  n1 -> n206 [label="statements"];
-  n206 -> n207 [label="sql_statements"];
-  n207 -> n208 [label="use_statement"];
-  n208 -> n209 [label="USE"];
-  n208 -> n210 [label="keyw_id"];
-  n210 -> n211 [label="keyw_id_part"];
-  n211 -> n212 [label="func_keyw_id"];
-  n212 -> n213 [label="keywords"];
-  n213 -> n214 [label="Master"];
-  n1 -> n215 [label="statements"];
-  n215 -> n216 [label="GO"];
-  n215 -> n217 [label="first_exec"];
-  n217 -> n218 [label="exec_sp"];
-  n218 -> n219 [label="exec_sp_func"];
-  n219 -> n220 [label="keyw_id"];
-  n220 -> n221 [label="keyw_id_part"];
-  n221 -> n222 [label="func_keyw_id"];
-  n222 -> n223 [label="keywords"];
-  n223 -> n224 [label="DROP"];
-  n219 -> n225 [label="exec_sp_param_list"];
-  n225 -> n226 [label="exec_sp_param"];
-  n226 -> n227 [label="expression"];
-  n227 -> n228 [label="keyw_id_part"];
-  n228 -> n229 [label="func_keyw_id"];
-  n229 -> n230 [label="keywords"];
-  n230 -> n231 [label="DATABASE"];
-  n215 -> n232 [label="first_exec"];
-  n232 -> n233 [label="exec_sp"];
-  n233 -> n234 [label="exec_sp_func"];
-  n234 -> n235 [label="keyw_id"];
-  n235 -> n236 [label="keyw_id_part"];
-  n236 -> n237 [label="func_keyw_id"];
-  n237 -> n238 [label="SampleDB"];
-  n0 -> n239 [label="<EOF>"];
+  n136 -> n149 [label="ct_col_table_constraint"];
+  n149 -> n150 [label="primary"];
+  n149 -> n151 [label="key"];
+  n135 -> n152 [label=","];
+  n135 -> n153 [label="ct_col_def_list_element"];
+  n153 -> n154 [label="ct_column_def_plus"];
+  n154 -> n155 [label="ct_column_definition"];
+  n155 -> n156 [label="keyw_id"];
+  n156 -> n157 [label="keyw_id_part"];
+  n157 -> n158 [label="func_keyw_id"];
+  n158 -> n159 [label="x"];
+  n155 -> n160 [label="ct_data_type"];
+  n160 -> n161 [label="ct_data"];
+  n161 -> n162 [label="keyw_id"];
+  n162 -> n163 [label="keyw_id_part"];
+  n163 -> n164 [label="func_keyw_id"];
+  n164 -> n165 [label="keywords"];
+  n165 -> n166 [label="xml"];
+  n161 -> n167 [label="("];
+  n161 -> n168 [label="keyw_id"];
+  n168 -> n169 [label="keyw_id_part"];
+  n169 -> n170 [label="func_keyw_id"];
+  n170 -> n171 [label="ManuInstructionsSchemaCollection"];
+  n161 -> n172 [label=")"];
+  n128 -> n173 [label=")"];
+  n1 -> n174 [label="statements"];
+  n174 -> n175 [label="GO"];
+  n1 -> n176 [label="statements"];
+  n176 -> n177 [label="ddl_statements"];
+  n177 -> n178 [label="drop_statement"];
+  n178 -> n179 [label="DROP"];
+  n178 -> n180 [label="dropCommonList"];
+  n180 -> n181 [label="dropListElements"];
+  n181 -> n182 [label="TABLE"];
+  n180 -> n183 [label="keyw_id_list"];
+  n183 -> n184 [label="keyw_id"];
+  n184 -> n185 [label="keyw_id_part"];
+  n185 -> n186 [label="func_keyw_id"];
+  n186 -> n187 [label="T"];
+  n1 -> n188 [label="statements"];
+  n188 -> n189 [label="GO"];
+  n1 -> n190 [label="statements"];
+  n190 -> n191 [label="ddl_statements"];
+  n191 -> n192 [label="drop_statement"];
+  n192 -> n193 [label="DROP"];
+  n192 -> n194 [label="dropCommon"];
+  n194 -> n195 [label="dropElements"];
+  n195 -> n196 [label="XML"];
+  n195 -> n197 [label="SCHEMA"];
+  n195 -> n198 [label="COLLECTION"];
+  n194 -> n199 [label="keyw_id"];
+  n199 -> n200 [label="keyw_id_part"];
+  n200 -> n201 [label="func_keyw_id"];
+  n201 -> n202 [label="ManuInstructionsSchemaCollection"];
+  n1 -> n203 [label="statements"];
+  n203 -> n204 [label="Go"];
+  n1 -> n205 [label="statements"];
+  n205 -> n206 [label="sql_statements"];
+  n206 -> n207 [label="use_statement"];
+  n207 -> n208 [label="USE"];
+  n207 -> n209 [label="keyw_id"];
+  n209 -> n210 [label="keyw_id_part"];
+  n210 -> n211 [label="func_keyw_id"];
+  n211 -> n212 [label="keywords"];
+  n212 -> n213 [label="Master"];
+  n1 -> n214 [label="statements"];
+  n214 -> n215 [label="GO"];
+  n214 -> n216 [label="first_exec"];
+  n216 -> n217 [label="exec_sp"];
+  n217 -> n218 [label="exec_sp_func"];
+  n218 -> n219 [label="keyw_id"];
+  n219 -> n220 [label="keyw_id_part"];
+  n220 -> n221 [label="func_keyw_id"];
+  n221 -> n222 [label="keywords"];
+  n222 -> n223 [label="DROP"];
+  n218 -> n224 [label="exec_sp_param_list"];
+  n224 -> n225 [label="exec_sp_param"];
+  n225 -> n226 [label="expression"];
+  n226 -> n227 [label="keyw_id_part"];
+  n227 -> n228 [label="func_keyw_id"];
+  n228 -> n229 [label="keywords"];
+  n229 -> n230 [label="DATABASE"];
+  n214 -> n231 [label="first_exec"];
+  n231 -> n232 [label="exec_sp"];
+  n232 -> n233 [label="exec_sp_func"];
+  n233 -> n234 [label="keyw_id"];
+  n234 -> n235 [label="keyw_id_part"];
+  n235 -> n236 [label="func_keyw_id"];
+  n236 -> n237 [label="SampleDB"];
+  n0 -> n238 [label="<EOF>"];
 }

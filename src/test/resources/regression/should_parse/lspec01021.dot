@@ -129,10 +129,10 @@ digraph ParseTree {
   n127 -> n128 [label="if_statement"];
   n128 -> n129 [label="IF"];
   n128 -> n130 [label="search_condition"];
-  n130 -> n131 [label="predicate"];
-  n131 -> n132 [label="expression"];
-  n132 -> n133 [label="("];
-  n132 -> n134 [label="expression"];
+  n130 -> n131 [label="("];
+  n130 -> n132 [label="search_condition"];
+  n132 -> n133 [label="predicate"];
+  n133 -> n134 [label="expression"];
   n134 -> n135 [label="expression"];
   n135 -> n136 [label="functions_and_vars"];
   n136 -> n137 [label="function"];
@@ -164,7 +164,7 @@ digraph ParseTree {
   n162 -> n163 [label="func_keyw_id"];
   n163 -> n164 [label="PostalCode"];
   n156 -> n165 [label=")"];
-  n132 -> n166 [label=")"];
+  n130 -> n166 [label=")"];
   n128 -> n167 [label="statements"];
   n167 -> n168 [label="sql_statements"];
   n168 -> n169 [label="miscellaneous_statements"];

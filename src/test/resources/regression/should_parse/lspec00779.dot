@@ -210,15 +210,14 @@ digraph ParseTree {
   n208 -> n209 [label="ListPrice"];
   n205 -> n210 [label="between"];
   n205 -> n211 [label="expression"];
-  n211 -> n212 [label="expression"];
-  n212 -> n213 [label="atoms"];
-  n213 -> n214 [label="11.00"];
-  n211 -> n215 [label="and"];
-  n211 -> n216 [label="expression"];
-  n216 -> n217 [label="atoms"];
-  n217 -> n218 [label="20.00"];
-  n15 -> n219 [label=";"];
-  n1 -> n220 [label="statements"];
-  n220 -> n221 [label="GO"];
-  n0 -> n222 [label="<EOF>"];
+  n211 -> n212 [label="atoms"];
+  n212 -> n213 [label="11.00"];
+  n205 -> n214 [label="and"];
+  n205 -> n215 [label="expression"];
+  n215 -> n216 [label="atoms"];
+  n216 -> n217 [label="20.00"];
+  n15 -> n218 [label=";"];
+  n1 -> n219 [label="statements"];
+  n219 -> n220 [label="GO"];
+  n0 -> n221 [label="<EOF>"];
 }

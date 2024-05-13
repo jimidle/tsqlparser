@@ -1,0 +1,53 @@
+= TSQL as of 2008R2
+Jim Idle <Jimi@idle.ws>
+ifdef::env-github[]
+:tip-caption: :bulb:
+:note-caption: :information_source:
+:important-caption: :heavy_exclamation_mark:
+:caution-caption: :fire:
+:warning-caption: :warning:
+endif::[]
+:toc:
+:toc-placement!:
+
+toc::[]
+
+
+== Introduction
+
+This grammar was originally an ANTLR v3 grammar, with at most LL(3) token lookahead, and is now converted
+to ANTLR v4.
+
+The original grammar used the ANTLR3 AST building techniques and as such, some of the grammar rules
+are a little more verbose and eanded out than they strictly need to be. However, as any serious use
+of this grammar will likely involve some form of AST construction, it makes sense to leave it as is.
+
+The expression rule, which is the basis of much of the otherwise overly verbose SQL language, has
+been adapted to use the ANTLR4 left-recursive expression rule pattern, which is easier to deal with
+than the expanded precedence orient rules that v3 required. The predicate pattern has also been
+adapted to v4.
+
+== Why?
+
+There a number of SQL grammars published in the ANTLR contributed grammars repository, but they all
+suffer from being cut-down copies of the normative specs, without regard to the actual language
+and parsing efficiency.
+
+This was a commercial implementation of TSQL and as such, I consider it high
+quality. It does not suffer from the problems of massive ambiguity and in many cases can parse TSQL
+in SLL mode. The mistake of making ';' generally optional, makes otherwise trivially parsed statements
+more ambiguous than they need to be, but that is a relatively minor issue.
+
+
+== Compatibility
+
+This grammar is entirely complete with TSQL 2008R2, but since that time, TSQL has been expanded with
+many constructs that woudl need to be added to catch up withthe latest spec. Contributions are welcome,
+however, thy wil need to be written in the same style as the existing grammar, avoiding ambiguity and
+not just copying the normative spec/BMF.
+
+== LICENSE
+
+The MIT license pretty much allows you to do anything with this grammar other than claim it as your
+own. If you use it, please let me know, I would be interested to know how it is being used. The only
+requirement is attribution.

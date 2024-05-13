@@ -106,13 +106,12 @@ digraph ParseTree {
   n104 -> n105 [label="RowNumber"];
   n101 -> n106 [label="BETWEEN"];
   n101 -> n107 [label="expression"];
-  n107 -> n108 [label="expression"];
-  n108 -> n109 [label="atoms"];
-  n109 -> n110 [label="50"];
-  n107 -> n111 [label="AND"];
-  n107 -> n112 [label="expression"];
-  n112 -> n113 [label="atoms"];
-  n113 -> n114 [label="60"];
-  n80 -> n115 [label=";"];
-  n0 -> n116 [label="<EOF>"];
+  n107 -> n108 [label="atoms"];
+  n108 -> n109 [label="50"];
+  n101 -> n110 [label="AND"];
+  n101 -> n111 [label="expression"];
+  n111 -> n112 [label="atoms"];
+  n112 -> n113 [label="60"];
+  n80 -> n114 [label=";"];
+  n0 -> n115 [label="<EOF>"];
 }
